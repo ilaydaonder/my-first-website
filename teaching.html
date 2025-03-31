@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teaching — Ilayda B. Onder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.4;
+            font-size: 16px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #000;
+            padding-bottom: 5px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #660000;
+            color: #660000;
+        }
+
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 50px auto;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 300px;
+            text-align: center;
+            padding-right: 30px;
+        }
+
+        .left img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        h1.name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .titleblock {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .icons {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .icons a {
+            margin: 0 6px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .icons a:hover {
+            color: #660000;
+        }
+
+        .right {
+            flex: 1;
+            max-width: 800px;
+            align-self: flex-start;
+            padding-top: 0;
+        }
+
+        .category-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .category-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .category-box.active .category-content {
+            display: block;
+        }
+
+        .course-list p {
+            margin: 3px 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 11px;
+            margin: 50px 0 10px 0;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html">PUBLICATIONS</a>
+    <a href="ongoing.html">ONGOING PROJECTS</a>
+    <a href="data.html">DATA</a>
+    <a href="teaching.html" class="active">TEACHING</a>
+</nav>
+
+<div class="container">
+    <div class="left">
+        <img src="profile.webp" alt="Ilayda Onder">
+        <h1 class="name">Ilayda B. Onder</h1>
+        <div class="titleblock">
+            Assistant Professor of Political Science<br>
+            Department of Political Science<br>
+            Texas A&amp;M University
+        </div>
+        <div class="icons">
+            <a href="mailto:ilaydaonder@tamu.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ilaydaonder" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+
+    <div class="right">
+        <h1>Teaching</h1>
+
+        <!-- Box 1 -->
+        <div class="category-box">
+            <div class="category-header">Instructor of Record &#x25BC;</div>
+            <div class="category-content course-list">
+                <p><b>Texas A&amp;M University</b></p>
+                <p>POLS 209 Introduction to Political Science Research, <i>Fall 2024</i></p>
+
+                <br>
+
+                <p><b>Penn State University</b></p>
+                <p>PLSC 418 International Relations Theory, <i>Spring 2024</i></p>
+                <p>PLSC 309 Quantitative Political Analysis, <i>Fall 2023</i></p>
+                <p>R Boot Camp for Incoming Ph.D. Students, <i>Fall 2021</i></p>
+            </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="category-box">
+            <div class="category-header">Guest Lectures &#x25BC;</div>
+            <div class="category-content course-list">
+                <p><b>Penn State University</b></p>
+                <p>PLSC 503 Multivariate Analysis for Political Research, <i>Spring 2022</i></p>
+                <p>PLSC 439 Politics of Terrorism, <i>Spring 2022</i></p>
+                <p>PLSC 439 Politics of Terrorism, <i>Spring 2019</i></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.category-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const box = header.parentElement;
+            box.classList.toggle('active');
+        });
+    });
+</script>
+
+<footer>
+    &copy; 2025 Ilayda B. Onder
+</footer>
+
+</body>
+
+</html>
