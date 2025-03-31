@@ -28,12 +28,14 @@
             text-decoration: none;
             color: #000;
             padding-bottom: 5px;
+            font-weight: bold;  /* make all items bold all the time */
+            font-size: 25px;
         }
 
         nav a:hover,
         nav a.active {
-            border-bottom: 2px solid #660000;
-            color: #660000;
+            border-bottom: 2px solid #3B739E;
+            color: #3B739E;
         }
 
         .container {
@@ -81,7 +83,7 @@
         }
 
         .icons a:hover {
-            color: #660000;
+            color: #3B739E;
         }
 
         .right {
@@ -93,6 +95,12 @@
             width: 100%;
             height: 1000px;
             border: none;
+        }
+
+        a {
+            color: #3B739E;            /* Sets the text color of links to the calm blue you specified */
+            font-weight: bold;         /* Makes all link text bold */
+            text-decoration: none;     /* Removes the default underline from links */
         }
 
         footer {
@@ -110,12 +118,12 @@
 <body>
 
 <nav>
-    <a href="index.html">HOME</a>
+    <a href="index.html">Home</a>
     <a href="cv.html" class="active">CV</a>
-    <a href="publications.html">PUBLICATIONS</a>
-    <a href="ongoing.html">ONGOING PROJECTS</a>
-    <a href="data.html">DATA</a>
-    <a href="teaching.html">TEACHING</a>
+    <a href="publications.html">Publications</a>
+    <a href="ongoing.html">Ongoing Projects</a>
+    <a href="data.html">Data</a>
+    <a href="teaching.html">Teaching</a>
 </nav>
 
 <div class="container">
