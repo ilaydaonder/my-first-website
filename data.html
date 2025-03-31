@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data — Ilayda B. Onder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.4;
+            font-size: 16px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #000;
+            padding-bottom: 5px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #660000;
+            color: #660000;
+        }
+
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 50px auto;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 300px;
+            text-align: center;
+            padding-right: 30px;
+        }
+
+        .left img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        h1.name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .titleblock {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .icons {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .icons a {
+            margin: 0 6px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .icons a:hover {
+            color: #660000;
+        }
+
+        .right {
+            flex: 1;
+            max-width: 800px;
+            align-self: flex-start;
+            padding-top: 0;
+        }
+
+        .right h1, .right .section-title {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .category-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0;
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .category-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .category-box.active .category-content {
+            display: block;
+        }
+
+        .pub-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pub-title {
+            font-weight: bold;
+        }
+
+        .pub-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pub-year {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .pub-arrow {
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+            transition: transform 0.3s;
+        }
+
+        .pub-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .pub-box.active .pub-content {
+            display: block;
+        }
+
+        .pub-box.active .pub-arrow {
+            transform: rotate(180deg);
+        }
+
+        .button-group a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            border: 1px solid #660000;
+            text-decoration: none;
+            color: #660000;
+            font-weight: bold;
+        }
+
+        .button-group a:hover {
+            background-color: #660000;
+            color: #fff;
+        }
+
+
+        footer {
+            text-align: center;
+            font-size: 11px;
+            margin-top: 40px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html">PUBLICATIONS</a>
+    <a href="ongoing.html">ONGOING PROJECTS</a>
+    <a href="data.html" class="active">DATA</a>
+    <a href="teaching.html">TEACHING</a>
+</nav>
+
+<div class="container">
+    <div class="left">
+        <img src="profile.webp" alt="Ilayda Onder">
+        <h1 class="name">Ilayda B. Onder</h1>
+        <div class="titleblock">
+            Assistant Professor of Political Science<br>
+            Department of Political Science<br>
+            Texas A&amp;M University
+        </div>
+        <div class="icons">
+            <a href="mailto:ilaydaonder@tamu.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ilaydaonder" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+
+    <div class="right">
+        <h1>Data</h1>
+
+        <!-- Cross-National Datasets -->
+<div class="category-box">
+    <div class="category-header">Cross-National Datasets &#x25BC;</div>
+    <div class="category-content">
+
+        <!-- Dataset 1 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Rebel Internal Governance Dataset</div>
+                    <div>Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Ongoing</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The dataset covers rebel groups active after the Cold War and compiles data on a wide array of coercive or institutional policies that rebel groups employ to manage or deter intra-group dissent arising among mid-ranking commanders and rank-and-file soldiers. The variables include written codes of conduct for regulating delinquent behavior among fighters, tribunal proceedings to try fighters who violate the group’s code of conduct, executions of rebel fighters accused of disobedience, punishments delivered to the families and loved ones of deserters, and the extent to which other rank-and-file soldiers are included or forced to take part in such punitive practices against former comrades.</p>
+            </div>
+        </div>
+
+        <!-- Dataset 2 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Denial of Responsibility Dataset</div>
+                    <div>Mark Berlin and Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Ongoing</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The dataset encompasses public statements issued by African rebel groups, in which they refute various allegations made by governments or media outlets. These allegations include affiliations with other non-state actors, the arrests of their members, the killings of their leaders, negotiations with governmental authorities, and involvement in criminal activities.</p>
+            </div>
+        </div>
+
+        <!-- Dataset 3 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Inter-Organizational Mobility in Multi-Actor Conflict Dataset</div>
+                    <div>Ilayda B. Onder and Finn Klebe</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Ongoing</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The dataset covers African rebel groups active after the Cold War and compiles time-variant data on soldiers defecting from one organization to join another one or members co-serving in multiple organizations.</p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- Kurdish Insurgency -->
+<div class="category-box">
+    <div class="category-header">Kurdish Insurgency &#x25BC;</div>
+    <div class="category-content">
+
+        <!-- Dataset 1 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Civilian Victimization in the Kurdish Insurgency Dataset</div>
+                    <div>Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Public</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The dataset compiles 572 incidents of the PKK’s coercive acts, either directly targeting civilians or unintentionally harming civilian bystanders in 21 provinces located in southeastern Turkey with significant Kurdish-speaking populations between 2014-2019. 243 of these incidents have not been included in any other publicly available dataset. The characteristics of individuals (e.g., public worker, local politician, pro-government politician, alleged state informant, business owner) are recorded for each incident.</p>
+                <p><b>Cite as:</b> Onder, Ilayda B. 2024. “<a href="https://doi.org/10.1177/00220027241263006" target="_blank">How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies</a>.” <i>Journal of Conflict Resolution</i> 69 (4): 701-730.</p>
+                <div class="button-group">
+                    <a href="https://doi.org/10.7910/DVN/AKAR6Q" target="_blank">DATASET</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dataset 2 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Performative Rebel Governance in Kurdish Insurgency Dataset</div>
+                    <div>Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Forthcoming</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The dataset is designed to capture the alternative expressions of sovereignty employed by Kurdish insurgents, which remain unaddressed by datasets focusing on more institutionalized forms of rebel governance. Specifically, this dataset focuses on the symbolic, rather than the concrete, demonstrations of state functions by the rebels. It compiles incident-level data on roadblocks, identity checks, and martyr funeral rites conducted by the PKK in Southeast Turkey from 2014 to 2022. The dataset comprises over 1,000 recorded incidents, each annotated with the date and district-level location. The dataset will be made publicly available soon.</p>
+                <p>Please contact me at ilaydaonder [dot] tamu [dot] edu if you are interested in using the dataset before it gets published.</p>
+            </div>
+        </div>
+
+        <!-- Dataset 3 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Insurgent Conscription in Kurdish Insurgency Dataset</div>
+                    <div>Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Forthcoming</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The district-level dataset captures where and with what intensity the PKK enforced forced conscription under its "compulsory military service" law in the 1990s. The dataset will be made publicly available soon.</p>
+                <p>Please contact me at ilaydaonder [dot] tamu [dot] edu if you are interested in using the dataset before it gets published.</p>
+            </div>
+        </div>
+
+        <!-- Dataset 4 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Fallen Fighters of Kurdish Insurgency Dataset</div>
+                    <div>Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Forthcoming</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The dataset compiles data on 4,250 combatants who were PKK members and died in combat between 2012 and 2022. Several variables concerning the combatants' pre-and-post recruitment activities are included: gender, date of birth, place of birth, date of recruitment, place of recruitment, date of death, place of death, tribal affiliation, pre-recruitment activism, pre-recruitment imprisonment, family members who were PKK members, history of state-enforced displacement, education, post-recruitment training, special forces membership, highest rank achieved, and battles fought. The dataset will be made publicly available soon.</p>
+                <p>Please contact me at ilaydaonder [dot] tamu [dot] edu if you are interested in using the dataset before it gets published.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- India -->
+<div class="category-box">
+    <div class="category-header">India &#x25BC;</div>
+    <div class="category-content">
+
+        <!-- Dataset 1 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Indian Police and Counterinsurgency Capacity Dataset</div>
+                    <div>Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Public</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>The dataset includes annual subnational-level information on the police, intelligence and counterinsurgency capacity of the police departments in each Indian state/union territory for the period 2004-2016.</p>
+                <p><b>Cite as:</b> Onder, Ilayda B. 2023. “<a href="https://doi.org/10.1080/09546553.2023.2252917" target="_blank">Target Hardening and Non-State Armed Groups’ Target Selection: Evidence from India</a>.” <i>Terrorism and Political Violence</i> 36 (8): 1105-1126.</p>
+                <div class="button-group">
+                    <a href="https://doi.org/10.7910/DVN/GPIYPO" target="_blank">DATASET</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dataset 2 -->
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">Northeast Indian Militant Group Networks Dataset</div>
+                    <div>Ilayda B. Onder</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">Forthcoming</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>This is a time-series network dataset of cooperative and adversarial relations between Northeast Indian militant groups between 1981-2021. The dataset categorizes cooperative and adversarial relations into distinct types: four types of material cooperation (including joint operations, joint training, arms and funds exchange, and intelligence and logistics support), four types of non-material cooperation (such as meetings between leaders, joint public statements, formal umbrella groups, and rhetorical support), two types of violent infighting (armed clashes and assassinations/abductions), and two types of nonviolent rivalry (spying and critical public statements). The dataset will be made publicly available soon.</p>
+                <p>Please contact me at ilaydaonder [dot] tamu [dot] edu if you are interested in using the dataset before it gets published.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+<script>
+    document.querySelectorAll('.category-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const box = header.parentElement;
+            box.classList.toggle('active');
+        });
+    });
+
+    document.querySelectorAll('.pub-header').forEach(header => {
+        header.addEventListener('click', (e) => {
+            const box = header.closest('.pub-box');
+            box.classList.toggle('active');
+        });
+    });
+
+    document.querySelectorAll('.pub-content a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
+</script>
+
+<footer>
+    &copy; 2025 Ilayda B. Onder
+</footer>
+
+</body>
+
+</html>
