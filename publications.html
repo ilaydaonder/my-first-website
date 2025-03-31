@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Publications — Ilayda B. Onder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.4;
+            font-size: 16px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #000;
+            padding-bottom: 5px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #660000;
+            color: #660000;
+        }
+
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 50px auto;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 300px;
+            text-align: center;
+            padding-right: 30px;
+        }
+
+        .left img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        h1.name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .titleblock {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .icons {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .icons a {
+            margin: 0 6px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .icons a:hover {
+            color: #660000;
+        }
+
+        .right {
+            flex: 1;
+            max-width: 800px;
+            align-self: flex-start;
+        }
+
+        h1.section-title {
+            font-size: 30px;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .pub-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .pub-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            column-gap: 15px;  /* adjust this number until you like it */
+        }
+
+        .pub-number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+
+
+        .pub-title {
+            font-weight: bold;
+        }
+
+        .pub-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pub-year {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .pub-arrow {
+            font-size: 28px;
+            font-weight: bold;
+            color: #555;
+            transition: transform 0.3s;
+        }
+
+        .pub-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .pub-box.active .pub-content {
+            display: block;
+        }
+
+        .pub-box.active .pub-arrow {
+            transform: rotate(180deg);
+        }
+
+        .button-group a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            border: 1px solid #660000;
+            text-decoration: none;
+            color: #660000;
+            font-weight: bold;
+        }
+
+        .button-group a:hover {
+            background-color: #660000;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 11px;
+            margin-top: 40px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html" class="active">PUBLICATIONS</a>
+    <a href="ongoing.html">ONGOING PROJECTS</a>
+    <a href="#">DATA</a>
+    <a href="#">TEACHING</a>
+</nav>
+
+<div class="container">
+    <div class="left">
+        <img src="profile.webp" alt="Ilayda Onder">
+        <h1 class="name">Ilayda B. Onder</h1>
+        <div class="titleblock">
+            Assistant Professor of Political Science<br>
+            Department of Political Science<br>
+            Texas A&amp;M University
+        </div>
+        <div class="icons">
+            <a href="mailto:ilaydaonder@tamu.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ilaydaonder" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+
+    <div class="right">
+        <h1 class="section-title">Peer-Reviewed Publications</h1>
+
+        <div class="pub-box">
+            <div class="pub-header">
+                <div class="pub-number">5</div>
+                <div>
+                    <div class="pub-title">Credit Claims and the Survival of Terrorist Organizations</div>
+                    <div>Ilayda B. Onder, Nazli Avdan, and Aaron Hoffman</div>
+                    <div><i>International Interactions</i></div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">2025</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>This study investigates the relationship between terrorist credit claims and government counterterrorism efforts, focusing on the impact of claims on group survival. Using data from the Extended Data on Terrorist Groups (EDTG) and Global Terrorism Database (GTD), we find that groups issuing credit claims have shorter lifespans than groups that remain silent. We are unable, however, to connect this increased mortality to government counterterrorism efforts even though government action is supposed to deter groups from issuing credit claims. Instead, we find that credit claiming groups are more likely to merge with other terrorist organizations, splinter apart, or fade away through inactivity. These findings raise questions about how the prospect of government counterterrorism efforts influences terrorist activity. The idea that the threat of government retaliation dissuades groups from issuing credit claims may require a reassessment.</p>
+                <div class="button-group">
+                    <a href="#" target="_blank">ARTICLE</a>
+                    <a href="pubs 05.pdf" target="_blank">PREPRINT</a>
+                    <a href="#" target="_blank">REPLICATION DATA</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pub-box">
+            <div class="pub-header">
+                <div class="pub-number">4</div>
+                <div>
+                    <div class="pub-title">How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies</div>
+                    <div>Ilayda B. Onder</div>
+                    <div><i>Journal of Conflict Resolution</i> 69 (4): 701-730</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">2024</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>Rebels rely on the support of their civilian constituency, but often victimize them to enforce compliance. Scholars know relatively little about how rebels strategize violence against civilians in conflicts where the rebel constituency overlaps with the government’s political support base. This gap is problematic because the rebel constituency comprises a diverse group with varying attitudinal and behavioral characteristics. Offering a novel typology of rebel constituency members —loyals, disloyals, fence-sitters, and free-riders—this study examines the impact of rebel constituency support for the government on the rebels' targeting of their civilian constituency. Leveraging an original dataset of the PKK’s coercive acts targeting civilians in Kurdish-majority provinces of Turkey between 2014 and 2019, I proxy rebel constituency support for the government with district-level data on incumbent party victory in the 2014 municipal elections and employ a regression-discontinuity approach. I find that the spatial distribution of loyal and disloyal rebel constituency members is crucial in explaining subnational variations in civilian victimization, specifically who is targeted and where. This study enhances our understanding of rebels' use of coercion to alter their constituencies' political allegiances and calls for greater attention to individual or community-level characteristics of civilians, beyond ethnic or identity-cleavages, in rebel-civilian interactions.</p>
+                <div class="button-group">
+                    <a href="https://doi.org/10.1177/00220027241263006" target="_blank">ARTICLE</a>
+                    <a href="pubs 04.pdf" target="_blank">PREPRINT</a>
+                    <a href="https://doi.org/10.7910/DVN/AKAR6Q" target="_blank">REPLICATION DATA</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pub-box">
+            <div class="pub-header">
+                <div class="pub-number">3</div>
+                <div>
+                    <div class="pub-title">The Legacies of Rebel Rule in Southeast Turkey</div>
+                    <div>Cyanne E. Loyle and Ilayda B. Onder</div>
+                    <div><i>Comparative Political Studies</i> 57 (11): 1771-1803</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">2024</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>During armed conflict civilians often inhabit areas of contested governance or areas where rebel groups, NGOs, and/or criminal syndicates vie for authority and challenge the control of the state. As non-state actors confront the authority and legitimacy of the state, civilians become central players in that competition asked to uphold or undercut these alternative governance claims. In this paper we examine the long-term impact of rebel governance for citizens living in spaces where state governance is challenged. Leveraging survey data from areas historically under PKK control in Southeastern Turkey, we focus on the ways in which contestation over governance during the conflict influenced future trust and engagement with the Turkish state. Specifically, we find that individual engagement with rebel governance institutions and personal conflict experience are important factors in understanding the effects of contested governance. Our findings increase our understanding of the long-term impact of armed conflict on civilians and the potential lasting impacts of rebel governance on the post-conflict state.</p>
+                <div class="button-group">
+                    <a href="https://doi.org/10.1177/00104140231204223" target="_blank">ARTICLE</a>
+                    <a href="pubs 03.pdf" target="_blank">PREPRINT</a>
+                    <a href="https://doi.org/10.7910/DVN/LB7L5T" target="_blank">REPLICATION DATA</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pub-box">
+            <div class="pub-header">
+                <div class="pub-number">2</div>
+                <div>
+                    <div class="pub-title">Target Hardening and Non-State Armed Groups' Target Selection: Evidence from India</div>
+                    <div>Ilayda B. Onder</div>
+                    <div><i>Terrorism and Political Violence</i> 36 (8): 1105-1126</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">2023</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>This study explores the variation in the non-state armed group (NSAGs)'s behavior concerning target selection. Scholars of transnational terrorism have investigated transnational NSAGs' target selection. However, we are still missing out on the most common form of terrorism, terrorism perpetrated by domestic NSAGs involved in civil conflicts. This paper’s novel contribution is to the understanding of domestic NSAGs’ strategic logic. I argue that hardening makes soft targets, including civilians, attractive targets when hard targets are no longer attractive. NSAGs tactically adapt to hardening by switching to soft targets or by displacing attacks to adjacent locations within their home country. The empirical results from data on relevant state-group dyads in India between 2004–2016 show that domestic NSAGs (1) switch to soft targets when faced with hardening, (2) less frequently target soft targets when more of their attacks against hard targets have been logistically successful, and (3) commit more attacks in their primary area of operation when more of their attacks in that location have been logistically successful. These findings emphasize a variety of ways through which domestic NSAGs adapt their tactics and underscore potential costs for target hardening.</p>
+                <div class="button-group">
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/09546553.2023.2252917" target="_blank">ARTICLE</a>
+                    <a href="pubs 02.pdf" target="_blank">PREPRINT</a>
+                    <a href="https://doi.org/10.7910/DVN/GPIYPO" target="_blank">REPLICATION DATA</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pub-box">
+            <div class="pub-header">
+                <div class="pub-number">1</div>
+                <div>
+                    <div class="pub-title">Signaling Resolve through Credit-claiming</div>
+                    <div>Ilayda B. Onder</div>
+                    <div><i>International Interactions</i> 49 (5): 755-784</div>
+                </div>
+                <div class="pub-meta">
+                    <span class="pub-year">2023</span>
+                    <span class="pub-arrow">&#x2193;</span>
+                </div>
+            </div>
+            <div class="pub-content">
+                <p>What explains when militant groups claim attacks? In this study, I argue that militant groups are more likely to claim attacks early in the organization’s lifespan and after major blows to reputation like loss of a leader due to leadership decapitation. This is because credit-claiming helps militants signal resolve to a wider audience, thereby burnishing the organization’s reputation. Specifically, I argue that claims of militant attacks are costly for organizations because they may be met with government retaliation. However, groups that are younger or have recently suffered the loss of a leader seek to use government retaliation to signal resolve. I find support for this proposition using two sets of empirical analyses. First, I show that claims increase the risk of government retaliation. Then, using a comprehensive data set of 592 groups, I show that militant groups are more likely to claim attacks in the earliest phases of their lifespans and after their leaders are killed/captured. Although civilian victimization and emerging due to splintering are found to be depressing credit claiming, the findings also suggest that (i) groups that only target security forces, (ii) groups that victimize civilians, (iii) groups that emerged independently without known affiliations with existing groups, and (iv) splinter groups all issue fewer claims as they age. These findings help elucidate a largely overlooked dimension of strategic militant behavior.</p>
+                <div class="button-group">
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/03050629.2023.2216352" target="_blank">ARTICLE</a>
+                    <a href="pubs 01.pdf" target="_blank">PREPRINT</a>
+                    <a href="https://doi.org/10.7910/DVN/JPOLZB" target="_blank">REPLICATION DATA</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.pub-header').forEach(header => {
+        header.addEventListener('click', (e) => {
+            const box = header.closest('.pub-box');
+            box.classList.toggle('active');
+        });
+    });
+
+    // Prevent clicks on links and buttons inside pub-content from toggling
+    document.querySelectorAll('.pub-content a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
+</script>
+
+
+<footer>
+    &copy; 2025 Ilayda B. Onder
+</footer>
+
+</body>
+
+</html>
