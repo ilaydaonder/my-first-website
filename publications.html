@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Publications — Ilayda B. Onder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.4;
+            font-size: 16px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #000;
+            padding-bottom: 5px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid #660000;
+            color: #660000;
+        }
+
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 50px auto;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 300px;
+            text-align: center;
+            padding-right: 30px;
+        }
+
+        .left img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        h1.name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .titleblock {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .icons {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .icons a {
+            margin: 0 6px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .icons a:hover {
+            color: #660000;
+        }
+
+        .right {
+            flex: 1;
+            max-width: 800px;
+        }
+
+        .pub-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pub-title {
+            font-weight: bold;
+        }
+
+        .pub-year {
+            font-weight: bold;
+        }
+
+        .pub-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .pub-box.active .pub-content {
+            display: block;
+        }
+
+        .button-group a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            border: 1px solid #660000;
+            text-decoration: none;
+            color: #660000;
+            font-weight: bold;
+        }
+
+        .button-group a:hover {
+            background-color: #660000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html" class="active">PUBLICATIONS</a>
+    <a href="#">ONGOING PROJECTS</a>
+    <a href="#">DATA</a>
+    <a href="#">TEACHING</a>
+</nav>
+
+<div class="container">
+    <div class="left">
+        <img src="profile.webp" alt="Ilayda Onder">
+        <h1 class="name">Ilayda B. Onder</h1>
+        <div class="titleblock">
+            Assistant Professor of Political Science<br>
+            Department of Political Science<br>
+            Texas A&amp;M University
+        </div>
+        <div class="icons">
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#"><i class="fab fa-orcid"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fas fa-globe"></i></a>
+        </div>
+    </div>
+
+    <div class="right">
+        <h1>Peer-Reviewed Journal Publications</h1>
+
+        <div class="pub-box">
+            <div class="pub-header">
+                <div>
+                    <div class="pub-title">The Party of Reagan External (but not Internal) Personalization</div>
+                    <div><i>Social Science Quarterly</i> — Robert Harmel and Leon B. Kockaya</div>
+                </div>
+                <div class="pub-year">2024 &#9660;</div>
+            </div>
+            <div class="pub-content">
+                <p>This article evaluates whether the relationship between Ronald Reagan and the Republican Party could reasonably be characterized as personalization/de-institutionalization of the party and its administrative organization...</p>
+                <div class="button-group">
+                    <a href="#" target="_blank">ARTICLE</a>
+                    <a href="#" target="_blank">PREPRINT</a>
+                    <a href="#" target="_blank">REPLICATION DATA</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.pub-box').forEach(box => {
+        box.addEventListener('click', () => {
+            box.classList.toggle('active');
+        });
+    });
+</script>
+
+<footer>
+    &copy; 2025 Ilayda B. Onder
+</footer>
+
+</body>
+
+</html>
