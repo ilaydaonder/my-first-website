@@ -41,6 +41,7 @@
             width: 1200px;
             margin: 50px auto;
             align-items: flex-start;
+            flex: 1;  /* <- THIS is what makes footer behave */
         }
 
         .left {
@@ -129,6 +130,11 @@
             cursor: pointer;
         }
 
+        .pub-box.no-toggle .pub-meta {
+            align-self: flex-start;
+            justify-content: flex-start;
+        }
+
         .pub-header {
             display: flex;
             justify-content: space-between;
@@ -185,7 +191,6 @@
             background-color: #660000;
             color: #fff;
         }
-
 
         footer {
             text-align: center;
@@ -416,13 +421,14 @@
             </div>
         </div>
 
-    </div>
-</div>
+    </div> <!-- closes .category-content of India -->
+</div> <!-- closes .category-box of India -->
 
-
-</div>
+</div> <!-- closes .right -->
+</div> <!-- closes .container -->
 
 <script>
+
     document.querySelectorAll('.category-header').forEach(header => {
         header.addEventListener('click', () => {
             const box = header.parentElement;
