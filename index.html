@@ -47,8 +47,24 @@ nav a.active {
     flex-wrap: wrap; /* so it wraps on mobile */
 }
 
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
 
+    .left {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
 
+    .right {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
 
 .left {
     width: 300px;
