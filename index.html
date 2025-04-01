@@ -47,7 +47,6 @@ nav a.active {
     flex-wrap: wrap; /* so it wraps on mobile */
 }
 
-/* Mobile Fix */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -58,11 +57,13 @@ nav a.active {
     .left {
         padding-right: 0;
         margin-bottom: 20px;
+        text-align: center; /* ensure content inside .left stays centered */
     }
 
     .right {
         max-width: 100%;
         padding: 0 10px;
+        text-align: left; /* keep biography left-aligned inside */
     }
 }
 
