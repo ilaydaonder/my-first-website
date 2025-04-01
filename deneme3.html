@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deneme (Fixed)</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* normal desktop */
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 50px 50px 50px 100px;
+            align-items: flex-start;
+        }
+
+        .left {
+            flex: 0 0 300px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .left img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .right {
+            flex: 1;
+            max-width: 800px;
+        }
+
+        /* This is the only thing you were missing all along */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column !important;
+                margin: 20px !important;
+            }
+
+            .left {
+                width: 100% !important;
+                padding-right: 0 !important;
+            }
+
+            .right {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left">
+            <img src="profile.webp" alt="Profile Picture">
+            <h1>Ilayda B. Onder</h1>
+            <div>Assistant Professor of Political Science</div>
+            <div>Department of Political Science</div>
+            <div>Texas A&amp;M University</div>
+        </div>
+
+        <div class="right">
+            <h1>Biography</h1>
+            <p>Now it will actually go **below** on mobile.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
