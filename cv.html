@@ -26,34 +26,38 @@
         nav a {
             margin: 0 20px;
             text-decoration: none;
-            color: #000;
+            color: #808080;
             padding-bottom: 5px;
-            font-weight: bold;  /* make all items bold all the time */
-            font-size: 25px;
+            font-weight: normal;
+            font-size: 18px;
         }
 
         nav a:hover,
         nav a.active {
             border-bottom: 2px solid #3B739E;
             color: #3B739E;
+            font-weight: bold;
         }
 
         .container {
             display: flex;
-            width: 1200px;
-            margin: 50px auto;
+            width: 100%;
+            max-width: 1200px;
+            margin: 50px 0 50px 100px; /* keep your original offset */
             align-items: flex-start;
+            flex-wrap: wrap; /* so it wraps on mobile */
         }
 
         .left {
             width: 300px;
             text-align: center;
-            padding-right: 30px;
+            padding-right: 40px;
+            margin-top: 80px;  /* moves the whole left column down */
         }
 
         .left img {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 50%;
         }
