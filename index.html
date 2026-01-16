@@ -1,225 +1,268 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7HJCT0LDMJ');
+  </script>
 
-  gtag('config', 'G-7HJCT0LDMJ');
-</script>
-
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ilayda B. Onder</title>
-    <style>
-        body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    line-height: 1.4;
-    font-size: 16px;
-}
 
-nav {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-    font-size: 15px;
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-nav a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: #808080;
-    padding-bottom: 5px;
-    font-weight: normal;
-    font-size: 18px;
-}
-
-nav a:hover,
-nav a.active {
-    border-bottom: 2px solid #3B739E;
-    color: #3B739E;
-    font-weight: bold;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 50px 0 50px 100px; /* Keeps original left offset on desktop */
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.left {
-    width: 300px;
-    text-align: center;
-    padding-right: 40px;
-    margin-top: 80px;  /* moves the whole left column down */
-}
-
-.left img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-h1.name {
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-.titleblock {
-    font-size: 15px;
-    line-height: 1.4;
-    margin-bottom: 10px;
-}
-
-.icons {
-    margin-top: 15px;
-    font-size: 20px;
-}
-
-.icons a {
-    margin: 0 6px;
-    text-decoration: none;
-    color: #000;
-}
-
-.icons a:hover {
-    color: #3B739E;
-}
-
-.right {
-    flex: 1;
-    max-width: 800px;
-}
-
-.right h1 {
-    font-size: 30px;
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.right h1:last-of-type {
-    margin-top: 40px;
-}
-
-.right p {
-    margin-bottom: 12px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: justify;
-
-}
-
-a {
-    color: #3B739E; 
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-    opacity: 0.6;
-}
-
-footer {
-    text-align: center;
-    font-size: 11px;
-    margin-top: 40px;
-    color: #999;
-}
-
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px auto; /* Centers only on mobile */
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:#000;
+      line-height:1.5;
+      font-size:13px;
     }
 
-    .left {
-        width: 100%;
-        text-align: center;
-        padding-right: 0;
-        margin-top: 20px;
+    nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      border-bottom:1px solid #ccc;
+      padding:10px 0;
     }
 
-    .right {
-        width: 100%;
-        text-align: left;
+    nav a{
+      margin:5px 15px;
+      text-decoration:none;
+      color:#808080;
+      padding-bottom:5px;
+      font-size:18px;
     }
-}
 
+    nav a:hover,
+    nav a.active{
+      border-bottom:2px solid #3B739E;
+      color:#3B739E;
+      font-weight:bold;
+    }
 
-    </style>
+    .page{
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 0 20px;
+      box-sizing:border-box;
+    }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    .two-col{
+      display:flex;
+      gap:28px;
+      align-items:flex-start;
+    }
 
+    .left{
+      flex: 0 0 260px;
+      text-align:center;
+    }
+
+    .card{
+      border:1px solid #e6e6e6;
+      border-radius:10px;
+      padding:18px;
+      box-sizing:border-box;
+    }
+
+    .left .card{
+      max-width:240px;
+      margin:0 auto;
+    }
+
+    .profile{
+      width: 180px;
+      height: 180px;
+      object-fit:cover;
+      border-radius:50%;
+      border:1px solid #e6e6e6;
+    }
+
+    h1.name{
+      font-size:20px;
+      font-weight:700;
+      margin:14px 0 6px 0;
+    }
+
+    .titleblock{
+      font-size:13px;
+      line-height:1.4;
+      margin:0;
+      color:#444;
+      text-align:center;
+    }
+
+    .icons{
+      margin-top:12px;
+      font-size:18px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .icons a{
+      color:#000;
+      text-decoration:none;
+    }
+
+    .icons a:hover{
+      color:#3B739E;
+    }
+
+    .right{
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    /* IMPORTANT: only style right-side paragraphs (so left title doesn't get justified) */
+    .right p{
+      margin:0 0 12px 0;
+      text-align: justify;
+    }
+
+    h2{
+      font-size:22px;
+      font-weight:700;
+      margin:0 0 12px 0;
+    }
+
+    a{
+      color:#3B739E;
+      font-weight:bold;
+      text-decoration:none;
+    }
+
+    a:hover{
+      opacity:0.7;
+    }
+
+    footer{
+      text-align:center;
+      font-size:11px;
+      margin:40px 0 20px 0;
+      color:#999;
+    }
+
+    @media (max-width: 800px){
+      .two-col{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      .left{
+        flex:none;
+        width:100%;
+        max-width:420px;
+      }
+
+      .left .card{
+        max-width:320px;
+      }
+
+      .right{
+        width:100%;
+      }
+
+      .right p{ text-align:left; }
+    }
+
+    @media (max-width: 600px){
+      .page{
+        margin:20px auto;
+      }
+
+      nav a{
+        margin:5px 10px;
+        font-size:16px;
+      }
+
+      .left .card{
+        max-width:100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<nav>
+  <nav>
     <a href="index.html" class="active">Home</a>
     <a href="cv.html">CV</a>
     <a href="publications.html">Publications</a>
     <a href="ongoing.html">Ongoing Projects</a>
     <a href="data.html">Datasets</a>
     <a href="teaching.html">Teaching</a>
-</nav>
+  </nav>
 
-    
-
-
-<div class="container">
-    <div class="left">
-        <img src="profile.webp" alt="Ilayda Onder">
-    
-        <h1 class="name">Ilayda B. Onder</h1>
-    
-        <div class="titleblock">
-            Assistant Professor of Political Science<br>
+  <main class="page">
+    <div class="two-col">
+      <aside class="left">
+        <div class="card">
+          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
+          <h1 class="name">Ilayda B. Onder</h1>
+          <p class="titleblock">
+            Assistant Professor<br>
             Department of Political Science<br>
             Texas A&amp;M University
-        </div>
-    
-        <div class="icons">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank"><i class="fas fa-globe"></i></a>
-        </div>
-    </div>
+          </p>
 
-    <div class="right">
-        <h1>Biography</h1>
-        <p>I am an Assistant Professor in the Department of Political Science at <a href="https://bush.tamu.edu/pols/" target="_blank">Texas A&amp;M University</a>. I received my Ph.D. in Political Science from The Pennsylvania State University in May 2024.</p>
-        <p>My research investigates political violence and civil conflict processes with a focus on the intersection of violent political behavior and the socio-organizational dimensions of rebellion. Specifically, I examine how rebel organizations' violent and nonviolent interactions with allies, rivals, civilians, and the broader public shape conflict outcomes such as mobilization into rebellion and civilian victimization. My scholarship encompasses two (strongly aligned) lines of inquiry: (1) <b>rebel-civilian interactions</b> and (2) <b>rebel communication strategies</b>, with emerging projects also exploring <b>multi-party civil conflicts</b> and <b>rebel intra-group politics</b>. I use a variety of quantitative methods, including network analysis, text-as-data, quasi-experiments, and survey experiments.</p>
-        <p>My work has been published or is forthcoming in <i>Comparative Political Studies</i>, <i>Journal of Conflict Resolution</i>, <i>Journal of Peace Research</i>, <i>Political Psychology</i>, <i>Political Science Research and Methods</i>, among others. My research has been funded by the Minerva Research Initiative, Scowcroft Institute of International Affairs, and Melbern G. Glasscock Center.</p>
-        <p>I co-organize the <a href="https://junior-quant-conflict-workshop.github.io/" target="_blank">Junior Scholars in Quantitative Conflict Workshop</a>. I am also affiliated with the Peace & Conflict team of the <a href="https://bush.tamu.edu/mosbacher/ledr/" target="_blank">Lab for Economic Development Research (LEDR)</a>.</p>
-        <p>Please reach me at ilaydaonder [at] tamu [dot] edu.</p>
-        <h1>Recent Publications</h1>
-        <p>Onder, Ilayda B., Mark Berlin. 2025. "We Have Nothing to Do With It”: How Statements of Denial by Armed Actors Shape Public Perceptions and Emotions." <i><a href="https://doi.org/10.1111/pops.70079" target="_blank">Political Psychology</a></i>.</p>
-    </div>
-</div>
+          <div class="icons" aria-label="Links">
+            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+      </aside>
 
-<footer>
+      <section class="right">
+        <div class="card">
+          <h2>Biography</h2>
+          <p>I am an Assistant Professor in the Department of Political Science at 
+            <a href="https://bush.tamu.edu/pols/" target="_blank" rel="noopener">Texas A&amp;M University</a>. 
+            I received my Ph.D. in Political Science from The Pennsylvania State University in May 2024.</p>
+
+          <p>My research investigates political violence and civil conflict processes with a focus on the intersection of 
+            violent political behavior and the socio-organizational dimensions of rebellion. Specifically, I examine how 
+            ebel organizations' violent and nonviolent interactions with allies, rivals, civilians, and the broader public 
+            shape conflict outcomes such as mobilization into rebellion and civilian victimization. My scholarship encompasses 
+            two (strongly aligned) lines of inquiry: (1) rebel-civilian interactions and (2) rebel communication strategies, 
+            with emerging projects also exploring multi-party civil conflicts and rebel intra-group politics. I use a variety 
+            of quantitative methods, including network analysis, quasi-experiments, and survey experiments.</p>
+
+          <p>My work has been published or is forthcoming in <i>Comparative Political Studies</i>, 
+            <i>Journal of Conflict Resolution</i>, <i>Journal of Peace Research</i>, <i>Political Psychology</i>, 
+            <i>Political Science Research and Methods</i>, among others. My research has been funded by the 
+            Minerva Research Initiative, Scowcroft Institute of International Affairs, and Melbern G. Glasscock Center.</p>
+
+          <p>I co-organize the <a href="https://junior-quant-conflict-workshop.github.io/" target="_blank" rel="noopener">Junior 
+            Scholars in Quantitative Conflict Workshop</a>. I am also affiliated with the Peace &amp; Conflict team of 
+            the <a href="https://bush.tamu.edu/mosbacher/ledr/" target="_blank" rel="noopener">Lab for Economic Development Research (LEDR)</a>.</p>
+
+          <p>Please reach me at ilaydaonder [at] tamu [dot] edu.</p>
+
+          <h2 style="margin-top:22px;">Recent Publications</h2>
+          <p>Onder, Ilayda B., Mark Berlin. 2025. “We Have Nothing to Do With It”: How Statements of Denial by Armed Actors 
+            Shape Public Perceptions and Emotions. <i><a href="https://doi.org/10.1111/pops.70079" target="_blank" rel="noopener">Political Psychology</a></i>.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
     &copy; 2025 Ilayda B. Onder
-</footer>
-
+  </footer>
 </body>
-
 </html>
