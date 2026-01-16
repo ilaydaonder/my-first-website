@@ -1,446 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7HJCT0LDMJ');
+  </script>
 
-  gtag('config', 'G-7HJCT0LDMJ');
-</script>
-    <meta charset="UTF-8">
-    <title>Publications — Ilayda B. Onder</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.4;
-            font-size: 16px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — Ilayda B. Onder</title>
 
-        nav {
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
-            font-size: 15px;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #808080;
-            padding-bottom: 5px;
-            font-weight: normal;
-            font-size: 18px;
-        }
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:#000;
+      line-height:1.5;
+      font-size:13px;
+    }
 
-        nav a:hover,
-        nav a.active {
-            border-bottom: 2px solid #3B739E;
-            color: #3B739E;
-            font-weight: bold;
-        }
+    nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      border-bottom:1px solid #ccc;
+      padding:10px 0;
+    }
 
-        .container {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            margin: 50px 0 50px 100px; /* keep your original offset */
-            align-items: flex-start;
-            flex-wrap: wrap; /* so it wraps on mobile */
-        }
+    nav a{
+      margin:5px 15px;
+      text-decoration:none;
+      color:#808080;
+      padding-bottom:5px;
+      font-size:18px;
+    }
 
-        .left {
-            width: 300px;
-            text-align: center;
-            padding-right: 40px;
-            margin-top: 80px;  /* moves the whole left column down */
-        }
+    nav a:hover,
+    nav a.active{
+      border-bottom:2px solid #3B739E;
+      color:#3B739E;
+      font-weight:bold;
+    }
 
-        .left img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+    .page{
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 0 20px;
+      box-sizing:border-box;
+    }
 
-        h1.name {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
+    .two-col{
+      display:flex;
+      gap:28px;
+      align-items:flex-start;
+    }
 
-        .titleblock {
-            font-size: 15px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
+    .left{
+      flex: 0 0 260px;
+      text-align:center;
+    }
 
-        .icons {
-            margin-top: 15px;
-            font-size: 20px;
-        }
+    .card{
+      border:1px solid #e6e6e6;
+      border-radius:10px;
+      padding:18px;
+      box-sizing:border-box;
+    }
 
-        .icons a {
-            margin: 0 6px;
-            text-decoration: none;
-            color: #000;
-        }
+    .left .card{
+      max-width:240px;
+      margin:0 auto;
+    }
 
-        .icons a:hover {
-            color: #3B739E;
-        }
+    .profile{
+      width:180px;
+      height:180px;
+      object-fit:cover;
+      border-radius:50%;
+      border:1px solid #e6e6e6;
+    }
 
-        .right {
-            flex: 1;
-            max-width: 800px;
-            align-self: flex-start;
-        }
+    h1.name{
+      font-size:20px;
+      font-weight:700;
+      margin:14px 0 6px 0;
+    }
 
-        h1.section-title {
-            font-size: 30px;
-            font-weight: 800;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
+    .titleblock{
+      font-size:13px;
+      line-height:1.4;
+      margin:0;
+      color:#444;
+      text-align:center;
+    }
 
-        .pub-box {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+    .icons{
+      margin-top:12px;
+      font-size:18px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
 
-        .pub-header {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: center;
-            column-gap: 15px;  /* adjust this number until you like it */
-        }
+    .icons a{
+      color:#000;
+      text-decoration:none;
+    }
 
-        .pub-number {
-            font-size: 36px;
-            font-weight: bold;
-        }
+    .icons a:hover{
+      color:#3B739E;
+    }
 
+    .right{
+      flex: 1 1 auto;
+      min-width: 0;
+    }
 
+    h1.section-title{
+      font-size:22px;
+      font-weight:700;
+      margin:0 0 12px 0;
+    }
 
-        .pub-title {
-            font-weight: bold;
-        }
+    .pub-box{
+      border:1px solid #e6e6e6;
+      border-radius:10px;
+      padding:16px;
+      margin-bottom:14px;
+      cursor:pointer;
+      transition: all 0.2s;
+      background:#fff;
+    }
 
-        .pub-meta {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .pub-header{
+      display:grid;
+      grid-template-columns: auto 1fr auto;
+      align-items:center;
+      column-gap:16px;
+    }
 
-        .pub-year {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
+    .pub-number{
+      font-size:30px;
+      font-weight:700;
+      line-height:1;
+      color:#000;
+      min-width: 28px;
+      text-align:right;
+    }
 
-        .pub-arrow {
-            font-size: 28px;
-            font-weight: bold;
-            color: #555;
-            transition: transform 0.3s;
-        }
+    .pub-title{
+      font-weight:700;
+      margin-bottom:2px;
+    }
 
-        .pub-content {
-            display: none;
-            margin-top: 15px;
-        }
+    .pub-meta{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-width:56px;
+    }
 
-        .pub-box.active .pub-content {
-            display: block;
-        }
+    .pub-year{
+      font-size:16px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
 
-        .pub-box.active .pub-arrow {
-            transform: rotate(180deg);
-        }
+    .pub-arrow{
+      font-size:22px;
+      font-weight:700;
+      color:#555;
+      transition: transform 0.2s;
+      line-height:1;
+    }
 
-        .button-group a {
-            display: inline-block;
-            padding: 5px 10px;
-            margin: 5px 5px 0 0;
-            border: 1px solid #3B739E;
-            text-decoration: none;
-            color: #3B739E;
-            font-weight: bold;
-        }
+    .pub-content{
+      display:none;
+      margin-top:14px;
+    }
 
-        .button-group a:hover {
-            background-color: #3B739E;
-            color: #fff;
-        }
+    .pub-box.active .pub-content{
+      display:block;
+    }
 
-        a {
-            color: #3B739E;            /* Sets the text color of links to the calm blue you specified */
-            font-weight: bold;         /* Makes all link text bold */
-            text-decoration: none;     /* Removes the default underline from links */
-        }
+    .pub-box.active .pub-arrow{
+      transform: rotate(180deg);
+    }
 
-        footer {
-            text-align: center;
-            font-size: 11px;
-            margin-top: 40px;
-            color: #999;
-        }
-    </style>
+    .button-group a{
+      display:inline-block;
+      padding:5px 10px;
+      margin:8px 8px 0 0;
+      border:1px solid #3B739E;
+      border-radius:8px;
+      text-decoration:none;
+      color:#3B739E;
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .button-group a:hover{
+      background-color:#3B739E;
+      color:#fff;
+    }
+
+    a{
+      color:#3B739E;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    footer{
+      text-align:center;
+      font-size:11px;
+      margin:40px 0 20px 0;
+      color:#999;
+    }
+
+    @media (max-width: 800px){
+      .two-col{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      .left{
+        flex:none;
+        width:100%;
+        max-width:420px;
+      }
+
+      .left .card{
+        max-width:320px;
+      }
+
+      .right{
+        width:100%;
+      }
+    }
+
+    @media (max-width: 600px){
+      .page{
+        margin:20px auto;
+      }
+
+      nav a{
+        margin:5px 10px;
+        font-size:16px;
+      }
+
+      .left .card{
+        max-width:100%;
+      }
+
+      .pub-header{
+        grid-template-columns: auto 1fr auto;
+        column-gap:12px;
+      }
+
+      .pub-number{
+        font-size:26px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<nav>
+  <nav>
     <a href="index.html">Home</a>
     <a href="cv.html">CV</a>
     <a href="publications.html" class="active">Publications</a>
     <a href="ongoing.html">Ongoing Projects</a>
     <a href="data.html">Datasets</a>
     <a href="teaching.html">Teaching</a>
-</nav>
+  </nav>
 
-<div class="container">
-    <div class="left">
-        <img src="profile.webp" alt="Ilayda Onder">
-        <h1 class="name">Ilayda B. Onder</h1>
-        <div class="titleblock">
-            Assistant Professor of Political Science<br>
+  <main class="page">
+    <div class="two-col">
+      <aside class="left">
+        <div class="card">
+          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
+          <h1 class="name">Ilayda B. Onder</h1>
+          <p class="titleblock">
+            Assistant Professor<br>
             Department of Political Science<br>
             Texas A&amp;M University
+          </p>
+          <div class="icons" aria-label="Links">
+            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
+          </div>
         </div>
-        <div class="icons">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank"><i class="fas fa-globe"></i></a>
-        </div>
-    </div>
+      </aside>
 
-    <div class="right">
+      <section class="right">
         <h1 class="section-title">Peer-Reviewed Publications</h1>
 
         <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">8</div>
-                <div>
-                    <div class="pub-title">A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups</div>
-                    <div>Ilayda B. Onder</div>
-                    <div><i>Political Science Research and Methods.</i></div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2026</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          <div class="pub-header">
+            <div class="pub-number">8</div>
+            <div>
+              <div class="pub-title">A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups</div>
+              <div>Ilayda B. Onder</div>
+              <div><i>Political Science Research and Methods.</i></div>
             </div>
-            <div class="pub-content">
-                <img src="abstract8.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="#" target="_blank">ARTICLE</a>
-                    <a href="pubs 08.pdf" target="_blank">PREPRINT</a>
-                    <a href="#" target="_blank">REPLICATION DATA</a>
-                </div>
+            <div class="pub-meta">
+              <span class="pub-year">2026</span>
+              <span class="pub-arrow">&#x2193;</span>
             </div>
-        </div>
-        
-        <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">7</div>
-                <div>
-                    <div class="pub-title">Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset (JLD)</div>
-                    <div>Maria Amjad, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner</div>
-                    <div><i>Journal of Peace Research.</i></div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2026</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract8.png" style="max-width:100%; height:auto;" alt="Abstract 8">
+            <div class="button-group">
+              <a href="#" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 08.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="#" target="_blank" rel="noopener">REPLICATION DATA</a>
             </div>
-            <div class="pub-content">
-                <img src="abstract6.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="#" target="_blank">ARTICLE</a>
-                    <a href="pubs 06.pdf" target="_blank">PREPRINT</a>
-                    <a href="#" target="_blank">REPLICATION DATA</a>
-                </div>
-            </div>
+          </div>
         </div>
 
         <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">6</div>
-                <div>
-                    <div class="pub-title">How Statements of Denial by Armed Actors Shape Public Perceptions and Emotions</div>
-                    <div>Ilayda B. Onder and Mark Berlin</div>
-                    <div><i>Political Psychology.</i></div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2025</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          <div class="pub-header">
+            <div class="pub-number">7</div>
+            <div>
+              <div class="pub-title">Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset (JLD)</div>
+              <div>Maria Amjad, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner</div>
+              <div><i>Journal of Peace Research.</i></div>
             </div>
-            <div class="pub-content">
-                <img src="abstract7.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="https://doi.org/10.1111/pops.70079" target="_blank">ARTICLE</a>
-                    <a href="pubs 07.pdf" target="_blank">PREPRINT</a>
-                    <a href="#" target="_blank">REPLICATION DATA</a>
-                </div>
+            <div class="pub-meta">
+              <span class="pub-year">2026</span>
+              <span class="pub-arrow">&#x2193;</span>
             </div>
-        </div>
-        
-        <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">5</div>
-                <div>
-                    <div class="pub-title">Credit Claims and the Survival of Terrorist Organizations</div>
-                    <div>Ilayda B. Onder, Nazli Avdan, and Aaron Hoffman</div>
-                    <div><i>International Interactions</i> 51 (6): 1050–1066</div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2025</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract6.png" style="max-width:100%; height:auto;" alt="Abstract 6">
+            <div class="button-group">
+              <a href="#" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 06.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="#" target="_blank" rel="noopener">REPLICATION DATA</a>
             </div>
-            <div class="pub-content">
-                <img src="abstract5.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="https://doi.org/10.1080/03050629.2025.2505010" target="_blank">ARTICLE</a>
-                    <a href="pubs 05.pdf" target="_blank">PREPRINT</a>
-                    <a href="#" target="_blank">REPLICATION DATA</a>
-                </div>
-            </div>
+          </div>
         </div>
 
         <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">4</div>
-                <div>
-                    <div class="pub-title">How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies</div>
-                    <div>Ilayda B. Onder</div>
-                    <div><i>Journal of Conflict Resolution</i> 69 (4): 701-730</div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2024</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          <div class="pub-header">
+            <div class="pub-number">6</div>
+            <div>
+              <div class="pub-title">How Statements of Denial by Armed Actors Shape Public Perceptions and Emotions</div>
+              <div>Ilayda B. Onder and Mark Berlin</div>
+              <div><i>Political Psychology.</i></div>
             </div>
-            <div class="pub-content">
-                <img src="abstract4.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="https://doi.org/10.1177/00220027241263006" target="_blank">ARTICLE</a>
-                    <a href="pubs 04.pdf" target="_blank">PREPRINT</a>
-                    <a href="https://doi.org/10.7910/DVN/AKAR6Q" target="_blank">REPLICATION DATA</a>
-                </div>
+            <div class="pub-meta">
+              <span class="pub-year">2025</span>
+              <span class="pub-arrow">&#x2193;</span>
             </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract7.png" style="max-width:100%; height:auto;" alt="Abstract 7">
+            <div class="button-group">
+              <a href="https://doi.org/10.1111/pops.70079" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 07.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="#" target="_blank" rel="noopener">REPLICATION DATA</a>
+            </div>
+          </div>
         </div>
 
         <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">3</div>
-                <div>
-                    <div class="pub-title">The Legacies of Rebel Rule in Southeast Turkey</div>
-                    <div>Cyanne E. Loyle and Ilayda B. Onder</div>
-                    <div><i>Comparative Political Studies</i> 57 (11): 1771-1803</div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2024</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          <div class="pub-header">
+            <div class="pub-number">5</div>
+            <div>
+              <div class="pub-title">Credit Claims and the Survival of Terrorist Organizations</div>
+              <div>Ilayda B. Onder, Nazli Avdan, and Aaron Hoffman</div>
+              <div><i>International Interactions</i> 51 (6): 1050–1066</div>
             </div>
-            <div class="pub-content">
-                <img src="abstract3.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="https://doi.org/10.1177/00104140231204223" target="_blank">ARTICLE</a>
-                    <a href="pubs 03.pdf" target="_blank">PREPRINT</a>
-                    <a href="https://doi.org/10.7910/DVN/LB7L5T" target="_blank">REPLICATION DATA</a>
-                </div>
+            <div class="pub-meta">
+              <span class="pub-year">2025</span>
+              <span class="pub-arrow">&#x2193;</span>
             </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract5.png" style="max-width:100%; height:auto;" alt="Abstract 5">
+            <div class="button-group">
+              <a href="https://doi.org/10.1080/03050629.2025.2505010" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 05.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="#" target="_blank" rel="noopener">REPLICATION DATA</a>
+            </div>
+          </div>
         </div>
 
         <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">2</div>
-                <div>
-                    <div class="pub-title">Target Hardening and Non-State Armed Groups' Target Selection: Evidence from India</div>
-                    <div>Ilayda B. Onder</div>
-                    <div><i>Terrorism and Political Violence</i> 36 (8): 1105-1126</div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2023</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          <div class="pub-header">
+            <div class="pub-number">4</div>
+            <div>
+              <div class="pub-title">How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies</div>
+              <div>Ilayda B. Onder</div>
+              <div><i>Journal of Conflict Resolution</i> 69 (4): 701-730</div>
             </div>
-            <div class="pub-content">
-                <img src="abstract2.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="https://www.tandfonline.com/doi/full/10.1080/09546553.2023.2252917" target="_blank">ARTICLE</a>
-                    <a href="pubs 02.pdf" target="_blank">PREPRINT</a>
-                    <a href="https://doi.org/10.7910/DVN/GPIYPO" target="_blank">REPLICATION DATA</a>
-                </div>
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-arrow">&#x2193;</span>
             </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract4.png" style="max-width:100%; height:auto;" alt="Abstract 4">
+            <div class="button-group">
+              <a href="https://doi.org/10.1177/00220027241263006" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 04.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="https://doi.org/10.7910/DVN/AKAR6Q" target="_blank" rel="noopener">REPLICATION DATA</a>
+            </div>
+          </div>
         </div>
 
         <div class="pub-box">
-            <div class="pub-header">
-                <div class="pub-number">1</div>
-                <div>
-                    <div class="pub-title">Signaling Resolve through Credit-claiming</div>
-                    <div>Ilayda B. Onder</div>
-                    <div><i>International Interactions</i> 49 (5): 755-784</div>
-                </div>
-                <div class="pub-meta">
-                    <span class="pub-year">2023</span>
-                    <span class="pub-arrow">&#x2193;</span>
-                </div>
+          <div class="pub-header">
+            <div class="pub-number">3</div>
+            <div>
+              <div class="pub-title">The Legacies of Rebel Rule in Southeast Turkey</div>
+              <div>Cyanne E. Loyle and Ilayda B. Onder</div>
+              <div><i>Comparative Political Studies</i> 57 (11): 1771-1803</div>
             </div>
-            <div class="pub-content">
-                <img src="abstract1.png" style="max-width:100%; height:auto;">
-                <div class="button-group">
-                    <a href="https://www.tandfonline.com/doi/full/10.1080/03050629.2023.2216352" target="_blank">ARTICLE</a>
-                    <a href="pubs 01.pdf" target="_blank">PREPRINT</a>
-                    <a href="https://doi.org/10.7910/DVN/JPOLZB" target="_blank">REPLICATION DATA</a>
-                </div>
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-arrow">&#x2193;</span>
             </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract3.png" style="max-width:100%; height:auto;" alt="Abstract 3">
+            <div class="button-group">
+              <a href="https://doi.org/10.1177/00104140231204223" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 03.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="https://doi.org/10.7910/DVN/LB7L5T" target="_blank" rel="noopener">REPLICATION DATA</a>
+            </div>
+          </div>
         </div>
 
+        <div class="pub-box">
+          <div class="pub-header">
+            <div class="pub-number">2</div>
+            <div>
+              <div class="pub-title">Target Hardening and Non-State Armed Groups' Target Selection: Evidence from India</div>
+              <div>Ilayda B. Onder</div>
+              <div><i>Terrorism and Political Violence</i> 36 (8): 1105-1126</div>
+            </div>
+            <div class="pub-meta">
+              <span class="pub-year">2023</span>
+              <span class="pub-arrow">&#x2193;</span>
+            </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract2.png" style="max-width:100%; height:auto;" alt="Abstract 2">
+            <div class="button-group">
+              <a href="https://www.tandfonline.com/doi/full/10.1080/09546553.2023.2252917" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 02.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="https://doi.org/10.7910/DVN/GPIYPO" target="_blank" rel="noopener">REPLICATION DATA</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-box">
+          <div class="pub-header">
+            <div class="pub-number">1</div>
+            <div>
+              <div class="pub-title">Signaling Resolve through Credit-claiming</div>
+              <div>Ilayda B. Onder</div>
+              <div><i>International Interactions</i> 49 (5): 755-784</div>
+            </div>
+            <div class="pub-meta">
+              <span class="pub-year">2023</span>
+              <span class="pub-arrow">&#x2193;</span>
+            </div>
+          </div>
+          <div class="pub-content">
+            <img src="abstract1.png" style="max-width:100%; height:auto;" alt="Abstract 1">
+            <div class="button-group">
+              <a href="https://www.tandfonline.com/doi/full/10.1080/03050629.2023.2216352" target="_blank" rel="noopener">ARTICLE</a>
+              <a href="pubs 01.pdf" target="_blank" rel="noopener">PREPRINT</a>
+              <a href="https://doi.org/10.7910/DVN/JPOLZB" target="_blank" rel="noopener">REPLICATION DATA</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
     </div>
-</div>
+  </main>
 
-<script>
+  <script>
     document.querySelectorAll('.pub-header').forEach(header => {
-        header.addEventListener('click', (e) => {
-            const box = header.closest('.pub-box');
-            box.classList.toggle('active');
-        });
+      header.addEventListener('click', () => {
+        const box = header.closest('.pub-box');
+        box.classList.toggle('active');
+      });
     });
 
-    // Prevent clicks on links and buttons inside pub-content from toggling
     document.querySelectorAll('.pub-content a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
+      link.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
     });
-</script>
+  </script>
 
-
-<footer>
+  <footer>
     &copy; 2025 Ilayda B. Onder
-</footer>
-
+  </footer>
 </body>
-
 </html>
