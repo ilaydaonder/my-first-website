@@ -1,237 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7HJCT0LDMJ');
+  </script>
 
-  gtag('config', 'G-7HJCT0LDMJ');
-</script>
-    <meta charset="UTF-8">
-    <title>Teaching — Ilayda B. Onder</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.4;
-            font-size: 16px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teaching — Ilayda B. Onder</title>
 
-        nav {
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
-            font-size: 15px;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #808080;
-            padding-bottom: 5px;
-            font-weight: normal;
-            font-size: 18px;
-        }
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:#000;
+      line-height:1.5;
+      font-size:13px;
+    }
 
-        nav a:hover,
-        nav a.active {
-            border-bottom: 2px solid #3B739E;
-            color: #3B739E;
-            font-weight: bold;
-        }
+    nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      border-bottom:1px solid #ccc;
+      padding:10px 0;
+    }
 
-        .container {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            margin: 50px 0 50px 100px; /* keep your original offset */
-            align-items: flex-start;
-            flex-wrap: wrap; /* so it wraps on mobile */
-        }
+    nav a{
+      margin:5px 15px;
+      text-decoration:none;
+      color:#808080;
+      padding-bottom:5px;
+      font-size:18px;
+    }
 
-        .left {
-            width: 300px;
-            text-align: center;
-            padding-right: 40px;
-            margin-top: 80px;  /* moves the whole left column down */
-        }
+    nav a:hover,
+    nav a.active{
+      border-bottom:2px solid #3B739E;
+      color:#3B739E;
+      font-weight:bold;
+    }
 
-        .left img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+    .page{
+      max-width:1000px;
+      margin:35px auto;
+      padding:0 20px;
+      box-sizing:border-box;
+    }
 
-        h1.name {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
+    .two-col{
+      display:flex;
+      gap:28px;
+      align-items:flex-start;
+    }
 
-        .titleblock {
-            font-size: 15px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
+    .left{
+      flex:0 0 260px;
+      text-align:center;
+    }
 
-        .icons {
-            margin-top: 15px;
-            font-size: 20px;
-        }
+    .card{
+      border:1px solid #e6e6e6;
+      border-radius:10px;
+      padding:18px;
+      background:#fff;
+    }
 
-        .icons a {
-            margin: 0 6px;
-            text-decoration: none;
-            color: #000;
-        }
+    .left .card{
+      max-width:240px;
+      margin:0 auto;
+    }
 
-        .icons a:hover {
-            color: #3B739E;
-        }
+    .profile{
+      width:180px;
+      height:180px;
+      object-fit:cover;
+      border-radius:50%;
+      border:1px solid #e6e6e6;
+    }
 
-        .right {
-            flex: 1;
-            max-width: 800px;
-            align-self: flex-start;
-            padding-top: 0;
-        }
+    h1.name{
+      font-size:20px;
+      font-weight:700;
+      margin:14px 0 6px 0;
+    }
 
-        .right h1, .right .section-title {
-            margin-top: 0;
-            padding-top: 0;
-        }
+    .titleblock{
+      font-size:13px;
+      line-height:1.4;
+      margin:0;
+      color:#444;
+      text-align:center;
+    }
 
-        .category-box {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+    .icons{
+      margin-top:12px;
+      font-size:18px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
 
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            font-size: 20px;
-        }
+    .icons a{
+      color:#000;
+      text-decoration:none;
+    }
 
-        .category-content {
-            display: none;
-            margin-top: 15px;
-        }
+    .icons a:hover{
+      color:#3B739E;
+    }
 
-        .category-box.active .category-content {
-            display: block;
-        }
+    .right{
+      flex:1 1 auto;
+      min-width:0;
+    }
 
-        .course-list p {
-            margin: 3px 0;
-        }
+    .right h1{
+      font-size:22px;
+      font-weight:700;
+      margin:0 0 12px 0;
+    }
 
-        a {
-            color: #3B739E;            /* Sets the text color of links to the calm blue you specified */
-            font-weight: bold;         /* Makes all link text bold */
-            text-decoration: none;     /* Removes the default underline from links */
-        }
+    .category-box{
+      border:1px solid #e6e6e6;
+      border-radius:10px;
+      padding:18px;
+      background:#fff;
+    }
 
-        footer {
-            text-align: center;
-            font-size: 11px;
-            margin: 50px 0 10px 0;
-            color: #999;
-        }
-    </style>
+    /* Larger section headers */
+    .section-subtitle{
+      font-size:18px;
+      font-weight:700;
+      margin:0 0 14px 0;
+    }
+
+    .course-list p{
+      margin:6px 0;
+    }
+
+    /* Extra spacing between sections */
+    .section-spacing{
+      margin-top:26px;
+    }
+
+    a{
+      color:#3B739E;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    footer{
+      text-align:center;
+      font-size:11px;
+      margin:40px 0 20px 0;
+      color:#999;
+    }
+
+    @media (max-width:800px){
+      .two-col{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      .left{
+        width:100%;
+        max-width:420px;
+      }
+
+      .left .card{
+        max-width:320px;
+      }
+
+      .right{
+        width:100%;
+      }
+    }
+
+    @media (max-width:600px){
+      .page{
+        margin:20px auto;
+      }
+
+      nav a{
+        margin:5px 10px;
+        font-size:16px;
+      }
+
+      .left .card{
+        max-width:100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<nav>
+  <nav>
     <a href="index.html">Home</a>
     <a href="cv.html">CV</a>
     <a href="publications.html">Publications</a>
     <a href="ongoing.html">Ongoing Projects</a>
     <a href="data.html">Datasets</a>
     <a href="teaching.html" class="active">Teaching</a>
-</nav>
+  </nav>
 
-<div class="container">
-    <div class="left">
-        <img src="profile.webp" alt="Ilayda Onder">
-        <h1 class="name">Ilayda B. Onder</h1>
-        <div class="titleblock">
-            Assistant Professor of Political Science<br>
+  <main class="page">
+    <div class="two-col">
+      <aside class="left">
+        <div class="card">
+          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
+          <h1 class="name">Ilayda B. Onder</h1>
+          <p class="titleblock">
+            Assistant Professor<br>
             Department of Political Science<br>
             Texas A&amp;M University
-        </div>
-        <div class="icons">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank"><i class="fas fa-globe"></i></a>
-        </div>
-    </div>
+          </p>
 
-    <div class="right">
+          <div class="icons">
+            <a href="mailto:ilaydaonder@tamu.edu"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-5712-8131"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ilaydaonder"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ilaydaonder.bsky.social"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+      </aside>
+
+      <section class="right">
         <h1>Teaching</h1>
 
-        <!-- Box 1 -->
-        <div class="category-box">
-            <div class="category-header">Instructor of Record &#x25BC;</div>
-            <div class="category-content course-list">
-                <p><b>Texas A&amp;M University</b></p>
-                <p>POLS 209 Introduction to Political Science Research, <i>Fall 2024, Fall 2025</i></p>
-                <p>POLS 312 Ethnic Conflict, <i>Spring 2026</i></p>
+        <div class="category-box course-list">
+          <p class="section-subtitle">Instructor of Record</p>
 
-                <br>
+          <p><b>Texas A&amp;M University</b></p>
+          <p>POLS 209 Introduction to Political Science Research, <i>Fall 2024, Fall 2025</i></p>
+          <p>POLS 312 Ethnic Conflict, <i>Spring 2026</i></p>
 
-                <p><b>Penn State University</b></p>
-                <p>PLSC 418 International Relations Theory, <i>Spring 2024</i></p>
-                <p>PLSC 309 Quantitative Political Analysis, <i>Fall 2023</i></p>
-                <p>R Boot Camp for Incoming Ph.D. Students, <i>Fall 2021</i></p>
-            </div>
+          <p><b>Penn State University</b></p>
+          <p>PLSC 418 International Relations Theory, <i>Spring 2024</i></p>
+          <p>PLSC 309 Quantitative Political Analysis, <i>Fall 2023</i></p>
+          <p>R Boot Camp for Incoming Ph.D. Students, <i>Fall 2021</i></p>
+
+          <div class="section-spacing"></div>
+
+          <p class="section-subtitle">Guest Lectures</p>
+
+          <p><b>Penn State University</b></p>
+          <p>PLSC 503 Multivariate Analysis for Political Research, <i>Spring 2022</i></p>
+          <p>PLSC 439 Politics of Terrorism, <i>Spring 2022</i></p>
+          <p>PLSC 439 Politics of Terrorism, <i>Spring 2019</i></p>
         </div>
 
-        <!-- Box 2 -->
-        <div class="category-box">
-            <div class="category-header">Guest Lectures &#x25BC;</div>
-            <div class="category-content course-list">
-                <p><b>Penn State University</b></p>
-                <p>PLSC 503 Multivariate Analysis for Political Research, <i>Spring 2022</i></p>
-                <p>PLSC 439 Politics of Terrorism, <i>Spring 2022</i></p>
-                <p>PLSC 439 Politics of Terrorism, <i>Spring 2019</i></p>
-            </div>
-        </div>
-
+      </section>
     </div>
-</div>
+  </main>
 
-<script>
-    document.querySelectorAll('.category-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const box = header.parentElement;
-            box.classList.toggle('active');
-        });
-    });
-</script>
-
-<footer>
+  <footer>
     &copy; 2025 Ilayda B. Onder
-</footer>
-
+  </footer>
 </body>
-
 </html>
