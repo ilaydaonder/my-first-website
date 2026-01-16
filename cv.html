@@ -1,172 +1,233 @@
+<!-- cv.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7HJCT0LDMJ');
+  </script>
 
-  gtag('config', 'G-7HJCT0LDMJ');
-</script>
-    <meta charset="UTF-8">
-    <title>Curriculum Vitae — Ilayda B. Onder</title>
-    <style>
-        /* use exactly the same CSS as your main page */
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.4;
-            font-size: 16px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curriculum Vitae — Ilayda B. Onder</title>
 
-        nav {
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
-            font-size: 15px;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #808080;
-            padding-bottom: 5px;
-            font-weight: normal;
-            font-size: 18px;
-        }
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:#000;
+      line-height:1.5;
+      font-size:13px;
+    }
 
-        nav a:hover,
-        nav a.active {
-            border-bottom: 2px solid #3B739E;
-            color: #3B739E;
-            font-weight: bold;
-        }
+    nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      border-bottom:1px solid #ccc;
+      padding:10px 0;
+    }
 
-        .container {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            margin: 50px 0 50px 100px; /* keep your original offset */
-            align-items: flex-start;
-            flex-wrap: wrap; /* so it wraps on mobile */
-        }
+    nav a{
+      margin:5px 15px;
+      text-decoration:none;
+      color:#808080;
+      padding-bottom:5px;
+      font-size:18px;
+    }
 
-        .left {
-            width: 300px;
-            text-align: center;
-            padding-right: 40px;
-            margin-top: 80px;  /* moves the whole left column down */
-        }
+    nav a:hover,
+    nav a.active{
+      border-bottom:2px solid #3B739E;
+      color:#3B739E;
+      font-weight:bold;
+    }
 
-        .left img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+    .page{
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 0 20px;
+      box-sizing:border-box;
+    }
 
-        h1.name {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
+    .two-col{
+      display:flex;
+      gap:28px;
+      align-items:flex-start;
+    }
 
-        .titleblock {
-            font-size: 15px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
+    .left{
+      flex: 0 0 260px;
+      text-align:center;
+    }
 
-        .icons {
-            margin-top: 15px;
-            font-size: 20px;
-        }
+    .card{
+      border:1px solid #e6e6e6;
+      border-radius:10px;
+      padding:18px;
+      box-sizing:border-box;
+    }
 
-        .icons a {
-            margin: 0 6px;
-            text-decoration: none;
-            color: #000;
-        }
+    .left .card{
+      max-width:240px;
+      margin:0 auto;
+    }
 
-        .icons a:hover {
-            color: #3B739E;
-        }
+    .profile{
+      width: 180px;
+      height: 180px;
+      object-fit:cover;
+      border-radius:50%;
+      border:1px solid #e6e6e6;
+    }
 
-        .right {
-            flex: 1;
-            max-width: 800px;
-        }
+    h1.name{
+      font-size:20px;
+      font-weight:700;
+      margin:14px 0 6px 0;
+    }
 
-        iframe {
-            width: 100%;
-            height: 1000px;
-            border: none;
-        }
+    .titleblock{
+      font-size:13px;
+      line-height:1.4;
+      margin:0;
+      color:#444;
+      text-align:center;
+    }
 
-        a {
-            color: #3B739E;            /* Sets the text color of links to the calm blue you specified */
-            font-weight: bold;         /* Makes all link text bold */
-            text-decoration: none;     /* Removes the default underline from links */
-        }
+    .icons{
+      margin-top:12px;
+      font-size:18px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
 
-        footer {
-            text-align: center;
-            font-size: 11px;
-            margin-top: 40px;
-            color: #999;
-        }
-    </style>
+    .icons a{
+      color:#000;
+      text-decoration:none;
+    }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    .icons a:hover{
+      color:#3B739E;
+    }
 
+    .right{
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .cv-frame{
+      width:100%;
+      height:1050px;
+      border:1px solid #e6e6e6;
+      border-radius:10px;
+    }
+
+    a{
+      color:#3B739E;
+      font-weight:bold;
+      text-decoration:none;
+    }
+
+    footer{
+      text-align:center;
+      font-size:11px;
+      margin:40px 0 20px 0;
+      color:#999;
+    }
+
+    @media (max-width: 800px){
+      .two-col{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      .left{
+        flex:none;
+        width:100%;
+        max-width:420px;
+      }
+
+      .left .card{
+        max-width:320px;
+      }
+
+      .right{
+        width:100%;
+      }
+
+      .cv-frame{
+        height:78vh;
+      }
+    }
+
+    @media (max-width: 600px){
+      .page{
+        margin:20px auto;
+      }
+
+      nav a{
+        margin:5px 10px;
+        font-size:16px;
+      }
+
+      .left .card{
+        max-width:100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<nav>
+  <nav>
     <a href="index.html">Home</a>
     <a href="cv.html" class="active">CV</a>
     <a href="publications.html">Publications</a>
     <a href="ongoing.html">Ongoing Projects</a>
     <a href="data.html">Datasets</a>
     <a href="teaching.html">Teaching</a>
-</nav>
+  </nav>
 
-<div class="container">
-    <div class="left">
-        <img src="profile.webp" alt="Ilayda Onder">
-        <h1 class="name">Ilayda B. Onder</h1>
-        <div class="titleblock">
-            Assistant Professor of Political Science<br>
+  <main class="page">
+    <div class="two-col">
+      <aside class="left">
+        <div class="card">
+          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
+          <h1 class="name">Ilayda B. Onder</h1>
+          <p class="titleblock">
+            Assistant Professor<br>
             Department of Political Science<br>
             Texas A&amp;M University
-        </div>
-        <div class="icons">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank"><i class="fas fa-globe"></i></a>
-        </div>
-    </div>
+          </p>
 
-    <div class="right">
-        <iframe src="cv.pdf"></iframe>
-    </div>
-</div>
+          <div class="icons" aria-label="Links">
+            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+      </aside>
 
-<footer>
+      <section class="right">
+        <iframe class="cv-frame" src="cv.pdf" title="Curriculum Vitae PDF"></iframe>
+      </section>
+    </div>
+  </main>
+
+  <footer>
     &copy; 2025 Ilayda B. Onder
-</footer>
-
+  </footer>
 </body>
-
 </html>
