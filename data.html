@@ -10,374 +10,267 @@
     gtag('config', 'G-7HJCT0LDMJ');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets — Ilayda B. Onder</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <title>Ilayda B. Onder | Datasets</title>
+  <base target="_blank">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", serif;
-      background:#fff;
-      color:#000;
-      line-height:1.5;
-      font-size:14.5px;
+    :root {
+      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
+      --font-body:    'Geist', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      border-bottom:1px solid #ccc;
-      padding:10px 0;
+    /* ===== Global typography ===== */
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 0;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    nav a{
-      margin:5px 15px;
-      text-decoration:none;
-      color:#808080;
-      padding-bottom:5px;
-      font-size:18px;
+    a { color: #000099; text-decoration: none; }
+    a:visited { color: #000099; }
+    a:hover { color: #0066FF; }
+
+    /* Italic emphasis (e.g. journal names) renders in the display serif,
+       since Geist isn't loaded with an italic. */
+    em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05em;
     }
 
-    nav a:hover,
-    nav a.active{
-      border-bottom:2px solid #800000;
-      color:#800000;
-      font-weight:bold;
+    img { border-width: 0; }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      background: #ffffff;
     }
 
-    .page{
-      max-width: 1000px;
-      margin: 35px auto;
-      padding: 0 20px;
-      box-sizing:border-box;
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px 6px 24px;
     }
 
-    .two-col{
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -.005em;
+      margin: 0;
+      line-height: 1.05;
     }
 
-    .left{
-      flex: 0 0 260px;
-      text-align:center;
+    .title-block .subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 19px;
+      color: #555;
+      line-height: 1.2;
+      margin-top: 4px;
     }
 
-    .card{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      box-sizing:border-box;
+    /* ===== Navigation ===== */
+    nav {
+      background: #D8D8D8;
+      text-align: right;
+      padding: 6px 20px;
+      font-family: var(--font-body);
+      font-size: 11pt;
+      font-weight: 500;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
     }
 
-    .left .card{
-      max-width:240px;
-      margin:0 auto;
+    nav a, nav a:visited { color: #000; margin: 0 4px; }
+    nav a:hover { color: #0066FF; }
+    nav .sep { color: #555; margin: 0 2px; font-weight: 400; }
+
+    /* ===== Intro / summary block ===== */
+    .intro {
+      padding: 22px 22px 24px 22px;
+      border-bottom: 1px solid #000;
     }
 
-    .profile{
-      width:180px;
-      height:180px;
-      object-fit:cover;
-      border-radius:50%;
-      border:1px solid #e6e6e6;
+    .intro p {
+      text-align: justify;
+      margin: 0;
+      font-size: 10pt;
+      line-height: 1.55;
     }
 
-    h1.name{
-      font-size:20px;
-      font-weight:700;
-      margin:14px 0 6px 0;
+    /* ===== Section heading — mono eyebrow label ===== */
+    .section-title {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #333;
+      padding: 14px 0;
+      border-bottom: 1px solid #000;
     }
 
-    .titleblock{
-      font-size:14.5px;
-      line-height:1.4;
-      margin:0;
-      color:#444;
-      text-align:center;
+    /* ===== Dataset / publication row ===== */
+    .publication {
+      display: flex;
+      gap: 22px;
+      padding: 22px 22px;
+      border-bottom: 1px solid #000;
+      align-items: center;
     }
 
-    .icons{
-      margin-top:12px;
-      font-size:18px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
+    .publication-image {
+      flex: 0 0 220px;
+      width: 220px;
+      height: auto;
+      object-fit: contain;
     }
 
-    .icons a{
-      color:#000;
-      text-decoration:none;
+    .publication-body {
+      flex: 1;
+      font-size: 9.5pt;
+      line-height: 1.55;
     }
 
-    .icons a:hover{
-      color:#800000;
+    .publication-body h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      margin: 0 0 8px 0;
+      font-size: 15pt;
+      line-height: 1.15;
     }
 
-    .right{
-      flex: 1 1 auto;
-      min-width: 0;
+    /* Default paragraph (used for the "Please cite as:" line and the
+       description that follows) */
+    .publication-body p {
+      text-align: justify;
+      margin: 0 0 10px 0;
     }
 
-    h1.section-title{
-      font-size:22px;
-      font-weight:700;
-      margin:0 0 12px 0;
+    /* First paragraph in each entry is the dataset name — rendered in
+       the display serif at the established 12pt. The "Please cite as:"
+       line and the description below stay in the default Geist body. */
+    .publication-body p:first-of-type {
+      font-family: var(--font-display);
+      font-size: 14pt;
+      line-height: 1.25;
+      letter-spacing: -.005em;
+      color: #000;
+      text-align: left;
+      margin-bottom: 10px;
     }
 
-    /* Dataset (pub-style) boxes */
-    .pub-box{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:16px;
-      margin-bottom:14px;
-      cursor:pointer;
-      background:#fff;
-      transition: all 0.2s;
+    /* Link row at the bottom of each entry */
+    .publication-body a {
+      font-size: 9.5pt;
     }
 
-    .pub-header{
-      display:grid;
-      grid-template-columns: 1fr auto;
-      align-items:center;
-      column-gap:16px;
+    /* ===== Footer ===== */
+    footer {
+      background: #D8D8D8;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 9.5pt;
+      border-top: 1px solid #000;
     }
 
-    .pub-title{
-      font-weight:700;
-      margin-bottom:2px;
-    }
-
-    .pub-meta{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      min-width:70px;
-    }
-
-    .pub-year{
-      font-size:14px;
-      font-weight:700;
-      margin-bottom:6px;
-      text-align:center;
-    }
-
-    .pub-arrow{
-      font-size:22px;
-      font-weight:700;
-      color:#555;
-      transition: transform 0.2s;
-      line-height:1;
-    }
-
-    .pub-content{
-      display:none;
-      margin-top:14px;
-    }
-
-    .pub-box.active .pub-content{
-      display:block;
-    }
-
-    .pub-box.active .pub-arrow{
-      transform: rotate(180deg);
-    }
-
-    .pub-text p{
-      margin:0 0 12px 0;
-    }
-
-    .button-group a{
-      display:inline-block;
-      padding:5px 10px;
-      margin:8px 8px 0 0;
-      border:1px solid #800000;
-      border-radius:8px;
-      text-decoration:none;
-      color:#800000;
-      font-weight:700;
-      font-size:13px;
-    }
-
-    .button-group a:hover{
-      background-color:#800000;
-      color:#fff;
-    }
-
-    a{
-      color:#800000;
-      font-weight:700;
-      text-decoration:none;
-    }
-
-    footer{
-      text-align:center;
-      font-size:11px;
-      margin:40px 0 20px 0;
-      color:#999;
-    }
-
-    @media (max-width: 800px){
-      .two-col{
-        flex-direction:column;
-        align-items:center;
-      }
-
-      .left{
-        flex:none;
-        width:100%;
-        max-width:420px;
-      }
-
-      .left .card{
-        max-width:320px;
-      }
-
-      .right{
-        width:100%;
-      }
-    }
-
-    @media (max-width: 600px){
-      .page{
-        margin:20px auto;
-      }
-
-      nav a{
-        margin:5px 10px;
-        font-size:16px;
-      }
-
-      .left .card{
-        max-width:100%;
-      }
+    footer .contact {
+      font-family: var(--font-mono);
+      font-size: 8pt;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+      color: #333;
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="publications.html">Publications</a>
-    <a href="ongoing.html">Ongoing Projects</a>
-    <a href="data.html" class="active">Datasets</a>
-    <a href="teaching.html">Teaching</a>
-  </nav>
+  <div class="container">
 
-  <main class="page">
-    <div class="two-col">
-      <aside class="left">
-        <div class="card">
-          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
-          <h1 class="name">Ilayda B. Onder</h1>
-          <p class="titleblock">
-            Assistant Professor<br>
-            Department of Political Science<br>
-            Texas A&amp;M University
-          </p>
+    <!-- Header -->
+    <header>
+      <div class="title-block">
+        <h1>Ilayda B. Onder</h1>
+        <div class="subtitle">Political Science<br>International Relations</div>
+      </div>
+    </header>
 
-          <div class="icons" aria-label="Links">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
-          </div>
-        </div>
-      </aside>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" target="_self">home</a><span class="sep">|</span>
+      <a href="cv.html" target="_self">cv</a><span class="sep">|</span>
+      <a href="publications.html" target="_self">publications</a><span class="sep">|</span>
+      <a href="ongoing.html" target="_self">ongoing projects</a><span class="sep">|</span>
+      <a href="data.html" target="_self">datasets</a><span class="sep">|</span>
+      <a href="teaching.html" target="_self">teaching</a>
+    </nav>
 
-      <section class="right">
-        <h1 class="section-title">Datasets</h1>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div>
-              <div class="pub-title">Jihadist Leaders Dataset (JLD)</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <div class="pub-text">
-              <p><b>Please cite as:</b> Amjad, Maria, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner. 2026. “Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset.” <i>Journal of Peace Research</i>.</p>
-              <p>The Jihadist Leaders Dataset (JLD) provides original data on the biographical attributes of 238 leaders from 110 jihadist groups. We conceptualize jihadist groups as an ideological subset of armed groups—non-state actors that use violence to achieve political objectives. This allows us to explore variation among a broad range of leaders of jihadist groups operating across Africa, Asia, and the Middle East between 1976 and 2023. Drawing on Arabic, English, French, German, Turkish, and Urdu sources, the JLD contains information on 31 leader-level variables, providing new insights into how militant leaders’ backgrounds and prior experiences shape their decision-making.</p>
-            </div>
-            <div class="button-group">
-              <a href="https://jlddataset.github.io/jdldataset/" target="_blank" rel="noopener">DATASET WEBSITE</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div>
-              <div class="pub-title">Northeast Indian Militant Group Networks Dataset</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <div class="pub-text">
-              <p><b>Please cite as:</b> Onder, Ilayda B. 2026. “A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups.” <i>Political Science Research and Methods.</i></p>
-              <p>The Northeast Indian Militant Group Networks Dataset is an original, disaggregated, time-series network dataset of 53 ethnonationalist militant groups active in Northeast India from 1981 through 2021. It considers all armed non-state actors, including those typically categorized as rebels, insurgents, or terrorists. It provides time variant information on 8 discrete forms of cooperation: (1) joint operations, (2) training support, (3) provision of arms and funds, (4) intelligence-sharing and logistical support, (5) joint planning or leadership meetings, (6) joint public statements, (7) participation in umbrella organizations, and (8) rhetorical support.</p>
-            </div>
-            <div class="button-group">
-              <a href="#" target="_blank" rel="noopener">DOWNLOAD DATASET</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div>
-              <div class="pub-title">Civilian Victimization in the Kurdish Insurgency Dataset</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2025</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <div class="pub-text">
-              <p><b>Please cite as:</b> Onder, Ilayda B. 2025. “How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies.” <i>Journal of Conflict Resolution</i> 69 (4): 701-730.</p>
-              <p>The dataset compiles 572 incidents of the PKK’s coercive acts, either directly targeting civilians or unintentionally harming civilian bystanders in 21 provinces located in southeastern Turkey with significant Kurdish-speaking populations between 2014-2019. 243 of these incidents have not been included in any other publicly available dataset. The characteristics of individuals (e.g., public worker, local politician, pro-government politician, alleged state informant, business owner) are recorded for each incident.</p>
-            </div>
-            <div class="button-group">
-              <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AKAR6Q" target="_blank" rel="noopener">DOWNLOAD DATASET</a>
-            </div>
-          </div>
-        </div>
-
-      </section>
+    <!-- Research summary -->
+    <div class="intro">
+      <p>I have published numerous event-, group-, and leader-level datasets on conflict processes, both independently and with collaborators, and have additional datasets in development.</p>
     </div>
-  </main>
 
-  <script>
-    document.querySelectorAll('.pub-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const box = header.closest('.pub-box');
-        box.classList.toggle('active');
-      });
-    });
+    <!-- Section title -->
+    <div class="section-title">Published Datasets</div>
 
-    document.querySelectorAll('.pub-content a').forEach(link => {
-      link.addEventListener('click', (e) => e.stopPropagation());
-    });
-  </script>
+    <!-- Dataset 3 -->
+    <div class="publication">
+      <img src="jld.png" class="publication-image">
+      <div class="publication-body">
+        <p>Jihadist Leaders Dataset (JLD)</p>
+        <p>The Jihadist Leaders Dataset (JLD) provides original data on the biographical attributes of 238 leaders from 110 jihadist groups. We conceptualize jihadist groups as an ideological subset of armed groups&mdash;non-state actors that use violence to achieve political objectives. This allows us to explore variation among a broad range of leaders of jihadist groups operating across Africa, Asia, and the Middle East between 1976 and 2023. Drawing on Arabic, English, French, German, Turkish, and Urdu sources, the JLD contains information on 31 leader-level variables, providing new insights into how militant leaders' backgrounds and prior experiences shape their decision-making.</p>
+        <p>Please cite as: Amjad, Maria, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner. 2026. &ldquo;Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset.&rdquo; <em>Journal of Peace Research.</em></p>
+        <a href="https://jlddataset.github.io/jdldataset/">Dataset Website</a>
+      </div>
+    </div>
 
-  <footer>
-    &copy; 2025 Ilayda B. Onder
-  </footer>
+    <!-- Dataset 2 -->
+    <div class="publication">
+      <img src="northeast.png" class="publication-image">
+      <div class="publication-body">
+        <p>Northeast Indian Militant Group Networks Dataset</p>
+        <p>The Northeast Indian Militant Group Networks Dataset is an original, disaggregated, time-series network dataset of 53 ethnonationalist militant groups active in Northeast India from 1981 through 2021. It considers all armed non-state actors, including those typically categorized as rebels, insurgents, or terrorists. It provides time variant information on 8 discrete forms of cooperation: (1) joint operations, (2) training support, (3) provision of arms and funds, (4) intelligence-sharing and logistical support, (5) joint planning or leadership meetings, (6) joint public statements, (7) participation in umbrella organizations, and (8) rhetorical support.</p>
+        <p>Please cite as: Onder, Ilayda B. 2026. &ldquo;A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups.&rdquo; <em>Political Science Research and Methods.</em></p>
+        <a href="">Download Dataset</a>
+      </div>
+    </div>
+
+    <!-- Dataset 1 -->
+    <div class="publication">
+      <img src="pkkvictimization.png" class="publication-image">
+      <div class="publication-body">
+        <p>Civilian Victimization in the Kurdish Insurgency Dataset</p>
+        <p>The dataset compiles 572 incidents of the PKK's coercive acts, either directly targeting civilians or unintentionally harming civilian bystanders in 21 provinces located in southeastern Turkey with significant Kurdish-speaking populations between 2014&ndash;2019. 243 of these incidents have not been included in any other publicly available dataset. The characteristics of individuals (e.g., public worker, local politician, pro-government politician, alleged state informant, business owner) are recorded for each incident.</p>
+        <p>Please cite as: Onder, Ilayda B. 2025. &ldquo;How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies.&rdquo; <em>Journal of Conflict Resolution</em> 69(4): 701&ndash;730.</p>
+        <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AKAR6Q">Download Dataset</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="contact">3046 Allen Building &nbsp;·&nbsp; ilaydaonder [at] tamu [dot] edu</div>
+      <div>
+        <a href="https://bush.tamu.edu/pols/">Department of Political Science</a> |
+        <a href="https://bush.tamu.edu/">Bush School of Government and Public Service</a> |
+        <a href="https://www.tamu.edu/">Texas A&amp;M University</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
