@@ -11,273 +11,163 @@
     gtag('config', 'G-7HJCT0LDMJ');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Curriculum Vitae — Ilayda B. Onder</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <title>Ilayda B. Onder | CV</title>
+  <base target="_blank">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", serif;
-      background:#fff;
-      color:#000;
-      line-height:1.5;
-      font-size:14.5px;
+    :root {
+      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
+      --font-body:    'Geist', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      border-bottom:1px solid #ccc;
-      padding:10px 0;
+    /* ===== Global typography ===== */
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 0;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    nav a{
-      margin:5px 15px;
-      text-decoration:none;
-      color:#808080;
-      padding-bottom:5px;
-      font-size:18px;
+    a { color: #000099; text-decoration: none; }
+    a:visited { color: #000099; }
+    a:hover { color: #0066FF; }
+
+    em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05em;
     }
 
-    nav a:hover,
-    nav a.active{
-      border-bottom:2px solid #800000;
-      color:#800000;
-      font-weight:bold;
+    /* ===== Container ===== */
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      background: #ffffff;
     }
 
-    .page{
-      max-width: 1000px;
-      margin: 35px auto;
-      padding: 0 20px;
-      box-sizing:border-box;
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px 6px 24px;
     }
 
-    .two-col{
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -.005em;
+      margin: 0;
+      line-height: 1.05;
     }
 
-    .left{
-      flex: 0 0 260px;
-      text-align:center;
+    .title-block .subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 19px;
+      color: #555;
+      line-height: 1.2;
+      margin-top: 4px;
     }
 
-    .card{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      box-sizing:border-box;
+    /* ===== Navigation ===== */
+    nav {
+      background: #D8D8D8;
+      text-align: right;
+      padding: 6px 20px;
+      font-family: var(--font-body);
+      font-size: 11pt;
+      font-weight: 500;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
     }
 
-    .left .card{
-      max-width:240px;
-      margin:0 auto;
+    nav a, nav a:visited { color: #000; margin: 0 4px; }
+    nav a:hover { color: #0066FF; }
+    nav .sep { color: #555; margin: 0 2px; font-weight: 400; }
+
+    /* ===== PDF embed ===== */
+    .pdf-wrapper {
+      padding: 22px;
+      border-bottom: 1px solid #000;
     }
 
-    .profile{
-      width: 180px;
-      height: 180px;
-      object-fit:cover;
-      border-radius:50%;
-      border:1px solid #e6e6e6;
+    .pdf-wrapper embed {
+      width: 100%;
+      height: 900px;
+      border: 1px solid #000;
     }
 
-    h1.name{
-      font-size:20px;
-      font-weight:700;
-      margin:14px 0 6px 0;
+    .pdf-fallback {
+      margin-top: 12px;
+      font-size: 9.5pt;
+      color: #555;
     }
 
-    .titleblock{
-      font-size:14.5px;
-      line-height:1.4;
-      margin:0;
-      color:#444;
-      text-align:center;
+    /* ===== Footer ===== */
+    footer {
+      background: #D8D8D8;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 9.5pt;
+      border-top: 1px solid #000;
     }
 
-    .icons{
-      margin-top:12px;
-      font-size:18px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .icons a{
-      color:#000;
-      text-decoration:none;
-    }
-
-    .icons a:hover{
-      color:#800000;
-    }
-
-    .right{
-      flex: 1 1 auto;
-      min-width: 0;
-    }
-
-    /* Desktop/large screens: embedded PDF */
-    .cv-box{
-      width:100%;
-      height:1050px;
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      overflow:hidden;
-      background:#fff;
-    }
-
-    .cv-frame{
-      width:100%;
-      height:100%;
-      border:0;
-    }
-
-    /* Mobile fallback card */
-    .cv-mobile{
-      display:none;
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      box-sizing:border-box;
-      background:#fff;
-    }
-
-    .cv-mobile p{
-      margin:0 0 12px 0;
-      color:#444;
-      font-size:13px;
-      line-height:1.4;
-    }
-
-    .cv-btn{
-      display:inline-block;
-      padding:10px 14px;
-      border:1px solid #800000;
-      border-radius:10px;
-      color:#800000;
-      font-weight:bold;
-      text-decoration:none;
-      font-size:14px;
-    }
-
-    .cv-btn:hover{
-      background:#800000;
-      color:#fff;
-    }
-
-    a{
-      color:#800000;
-      font-weight:bold;
-      text-decoration:none;
-    }
-
-    footer{
-      text-align:center;
-      font-size:11px;
-      margin:40px 0 20px 0;
-      color:#999;
-    }
-
-    @media (max-width: 800px){
-      .two-col{
-        flex-direction:column;
-        align-items:center;
-      }
-
-      .left{
-        flex:none;
-        width:100%;
-        max-width:420px;
-      }
-
-      .left .card{
-        max-width:320px;
-      }
-
-      .right{
-        width:100%;
-      }
-
-      /* Prefer native PDF viewer on mobile */
-      .cv-box{ display:none; }
-      .cv-mobile{ display:block; }
-    }
-
-    @media (max-width: 600px){
-      .page{
-        margin:20px auto;
-      }
-
-      nav a{
-        margin:5px 10px;
-        font-size:16px;
-      }
-
-      .left .card{
-        max-width:100%;
-      }
+    footer .contact {
+      font-family: var(--font-mono);
+      font-size: 8pt;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+      color: #333;
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html" class="active">CV</a>
-    <a href="publications.html">Publications</a>
-    <a href="ongoing.html">Ongoing Projects</a>
-    <a href="data.html">Datasets</a>
-    <a href="teaching.html">Teaching</a>
-  </nav>
+  <div class="container">
 
-  <main class="page">
-    <div class="two-col">
-      <aside class="left">
-        <div class="card">
-          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
-          <h1 class="name">Ilayda B. Onder</h1>
-          <p class="titleblock">
-            Assistant Professor<br>
-            Department of Political Science<br>
-            Texas A&amp;M University
-          </p>
+    <header>
+      <div class="title-block">
+        <h1>Ilayda B. Onder</h1>
+        <div class="subtitle">Political Science<br>International Relations</div>
+      </div>
+    </header>
 
-          <div class="icons" aria-label="Links">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
-          </div>
-        </div>
-      </aside>
+    <nav>
+      <a href="index.html" target="_self">home</a><span class="sep">|</span>
+      <a href="cv.html" target="_self">cv</a><span class="sep">|</span>
+      <a href="publications.html" target="_self">publications</a><span class="sep">|</span>
+      <a href="ongoing.html" target="_self">ongoing projects</a><span class="sep">|</span>
+      <a href="data.html" target="_self">datasets</a><span class="sep">|</span>
+      <a href="teaching.html" target="_self">teaching</a>
+    </nav>
 
-      <section class="right">
-        <!-- Desktop/tablet embed -->
-        <div class="cv-box">
-          <iframe class="cv-frame" src="cv.pdf" title="Curriculum Vitae PDF"></iframe>
-        </div>
-
-        <!-- Mobile: native PDF viewer link (reliable scrolling) -->
-        <div class="cv-mobile">
-          <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-        </div>
-      </section>
+    <div class="pdf-wrapper">
+      <embed src="cv.pdf" type="application/pdf" />
+      <div class="pdf-fallback">
+        If the PDF doesn't display, <a href="cv.pdf">download it here</a>.
+      </div>
     </div>
-  </main>
 
-  <footer>
-    &copy; 2025 Ilayda B. Onder
-  </footer>
+    <footer>
+      <div class="contact">3046 Allen Building &nbsp;·&nbsp; ilaydaonder [at] tamu [dot] edu</div>
+      <div>
+        <a href="https://bush.tamu.edu/pols/">Department of Political Science</a> |
+        <a href="https://bush.tamu.edu/">Bush School of Government and Public Service</a> |
+        <a href="https://www.tamu.edu/">Texas A&amp;M University</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
