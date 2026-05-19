@@ -11,259 +11,247 @@
     gtag('config', 'G-7HJCT0LDMJ');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>Ilayda B. Onder</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <base target="_blank">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", serif;
-      background:#fff;
-      color:#000;
-      line-height:1.5;
-      font-size:15.5px;
+    :root {
+      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
+      --font-body:    'Geist', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      border-bottom:1px solid #ccc;
-      padding:10px 0;
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 0;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    nav a{
-      margin:5px 15px;
-      text-decoration:none;
-      color:#808080;
-      padding-bottom:5px;
-      font-size:18px;
+    a { color: #000099; text-decoration: none; }
+    a:visited { color: #000099; }
+    a:hover { color: #0066FF; }
+
+    /* Italic emphasis (e.g. journal names) renders in the display serif,
+       since Geist isn't loaded with an italic. */
+    em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05em;
     }
 
-    nav a:hover,
-    nav a.active{
-      border-bottom:2px solid #800000;
-      color:#800000;
-      font-weight:bold;
+    img { border-width: 0; }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      background: #ffffff;
     }
 
-    .page{
-      max-width: 1000px;
-      margin: 35px auto;
-      padding: 0 20px;
-      box-sizing:border-box;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px 6px 24px;
     }
 
-    .two-col{
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -.005em;
+      margin: 0;
+      line-height: 1.05;
     }
 
-    .left{
-      flex: 0 0 260px;
-      text-align:center;
+    .title-block .subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 19px;
+      color: #555;
+      line-height: 1.2;
+      margin-top: 4px;
     }
 
-    .card{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      box-sizing:border-box;
+    nav {
+      background: #D8D8D8;
+      text-align: right;
+      padding: 6px 20px;
+      font-family: var(--font-body);
+      font-size: 11pt;
+      font-weight: 500;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
     }
 
-    .left .card{
-      max-width:240px;
-      margin:0 auto;
+    nav a, nav a:visited { color: #000; margin: 0 4px; }
+    nav a:hover { color: #0066FF; }
+    nav .sep { color: #555; margin: 0 2px; font-weight: 400; }
+
+    /* ===== Two-column home content ===== */
+    .home-main {
+      display: flex;
+      gap: 24px;
+      padding: 24px 20px;
+      align-items: center;
+      border-bottom: 1px solid #000;
     }
 
-    .profile{
-      width: 180px;
-      height: 180px;
-      object-fit:cover;
-      border-radius:50%;
-      border:1px solid #e6e6e6;
+    .home-sidebar {
+      flex: 0 0 200px;
+      text-align: center;
     }
 
-    h1.name{
-      font-size:20px;
-      font-weight:700;
-      margin:14px 0 6px 0;
+    .home-sidebar .profile {
+      display: block;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 12px auto;
     }
 
-    .titleblock{
-      font-size:14.5px;
-      line-height:1.4;
-      margin:0;
-      color:#444;
-      text-align:center;
+    .home-sidebar .name {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 20pt;
+      line-height: 1.15;
+      margin-bottom: 10px;
+      text-align: center;
     }
 
-    .icons{
-      margin-top:12px;
-      font-size:18px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
+    /* Institutional credentials — small uppercase metadata in mono,
+       echoing the role/byline pattern used on the RIG site. */
+    .home-sidebar .info {
+      font-family: var(--font-mono);
+      font-size: 7.5pt;
+      line-height: 1.5;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 14px;
+      text-align: center;
     }
 
-    .icons a{
-      color:#000;
-      text-decoration:none;
+    .home-sidebar .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-size: 14pt;
     }
 
-    .icons a:hover{
-      color:#800000;
+    .home-sidebar .icons a,
+    .home-sidebar .icons a:visited { color: #000; }
+    .home-sidebar .icons a:hover { color: #0066FF; }
+
+    .home-sidebar .icons svg {
+      vertical-align: middle;
     }
 
-    .right{
-      flex: 1 1 auto;
-      min-width: 0;
+    .home-bio {
+      flex: 1;
     }
 
-    /* IMPORTANT: only style right-side paragraphs (so left title doesn't get justified) */
-    .right p{
-      margin:0 0 12px 0;
+    .home-bio p {
       text-align: justify;
+      margin: 0 0 11px 0;
+      font-size: 10pt;
+      line-height: 1.5;
     }
 
-    h2{
-      font-size:22px;
-      font-weight:700;
-      margin:0 0 12px 0;
+    .home-bio p:last-child { margin-bottom: 0; }
+
+    footer {
+      background: #D8D8D8;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 9.5pt;
+      border-top: 1px solid #000;
     }
 
-    a{
-      color:#800000;
-      font-weight:bold;
-      text-decoration:none;
-    }
-
-    a:hover{
-      opacity:0.7;
-    }
-
-    footer{
-      text-align:center;
-      font-size:11px;
-      margin:40px 0 20px 0;
-      color:#999;
-    }
-
-    @media (max-width: 800px){
-      .two-col{
-        flex-direction:column;
-        align-items:center;
-      }
-
-      .left{
-        flex:none;
-        width:100%;
-        max-width:420px;
-      }
-
-      .left .card{
-        max-width:320px;
-      }
-
-      .right{
-        width:100%;
-      }
-
-      .right p{ text-align:left; }
-    }
-
-    @media (max-width: 600px){
-      .page{
-        margin:20px auto;
-      }
-
-      nav a{
-        margin:5px 10px;
-        font-size:16px;
-      }
-
-      .left .card{
-        max-width:100%;
-      }
+    footer .contact {
+      font-family: var(--font-mono);
+      font-size: 8pt;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+      color: #333;
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="publications.html">Publications</a>
-    <a href="ongoing.html">Ongoing Projects</a>
-    <a href="data.html">Datasets</a>
-    <a href="teaching.html">Teaching</a>
-  </nav>
+  <div class="container">
 
-  <main class="page">
-    <div class="two-col">
-      <aside class="left">
-        <div class="card">
-          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
-          <h1 class="name">Ilayda B. Onder</h1>
-          <p class="titleblock">
-            Assistant Professor<br>
-            Department of Political Science<br>
-            Texas A&amp;M University
-          </p>
+    <header>
+      <div class="title-block">
+        <h1>Ilayda B. Onder</h1>
+        <div class="subtitle">Political Science<br>International Relations</div>
+      </div>
+    </header>
 
-          <div class="icons" aria-label="Links">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
-          </div>
+    <nav>
+      <a href="index.html" target="_self">home</a><span class="sep">|</span>
+      <a href="cv.html" target="_self">cv</a><span class="sep">|</span>
+      <a href="publications.html" target="_self">publications</a><span class="sep">|</span>
+      <a href="ongoing.html" target="_self">ongoing projects</a><span class="sep">|</span>
+      <a href="data.html" target="_self">datasets</a><span class="sep">|</span>
+      <a href="teaching.html" target="_self">teaching</a>
+    </nav>
+
+    <!-- Two-column main: sidebar + biography -->
+    <div class="home-main">
+
+      <div class="home-sidebar">
+        <img src="IMG_0611_edited.webp" class="profile" alt="">
+        <div class="name">Ilayda B. Onder</div>
+        <div class="info">
+          Assistant Professor<br>
+          Department of Political Science<br>
+          Texas A&amp;M University
         </div>
-      </aside>
-
-      <section class="right">
-        <div class="card">
-          <h2>Biography</h2>
-          <p>I am an Assistant Professor in the Department of Political Science at 
-            <a href="https://bush.tamu.edu/pols/" target="_blank" rel="noopener">Texas A&amp;M University</a>. 
-            I received my Ph.D. in Political Science from The Pennsylvania State University in 2024.</p>
-
-          <p>My research examines political violence and civil war, 
-            focusing on how rebel groups' engagement with allies, rivals, civilians, and international audiences shapes 
-            conflict processes and outcomes, including civilian victimization, rebel recruitment, and post-conflict state and society.
-            My work centers on four closely related areas: 
-            (1) rebel-civilian ties, (2) rebel public communication strategies, 
-            (3) multi-party civil conflicts, and (4) rebel intra-group politics.
-            I use a variety of quantitative methods, including network analysis, quasi-experiments, and survey experiments.</p>
-
-          <p>My work has been published or is forthcoming in <i>Comparative Political Studies</i>, 
-            <i>Journal of Conflict Resolution (x2)</i>, <i>Journal of Global Security Studies</i>, <i>Journal of Peace Research</i>, 
-            <i>Political Psychology</i>, <i>Political Science Research and Methods</i>, <i>PS: Political Science & Politics</i>, among others. 
-            My research has been funded by the Minerva Research Initiative, Scowcroft Institute of International Affairs, and 
-            Melbern G. Glasscock Center.</p>
-
-          <p>I co-organize the <a href="https://junior-quant-conflict-workshop.github.io/" target="_blank" rel="noopener">Junior 
-            Scholars in Quantitative Conflict Workshop</a>.
-
-          <p>Please reach me at ilaydaonder [at] tamu [dot] edu.</p>
-
-          <h2 style="margin-top:22px;">Recent Publications</h2>
-          <p>Amjad, Maria, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner. 2026.
-            “Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset.” 
-            <i><a href="https://doi.org/10.1093/jopres/xjaf016" target="_blank" rel="noopener">Journal of Peace Research</a></i> 63(2): 289–297.</p>
+        <div class="icons">
+          <a href="mailto:ilaydaonder@tamu.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="https://orcid.org/0000-0002-5712-8131" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+          <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://x.com/ilaydaonder" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://bsky.app/profile/ilaydaonder.bsky.social" title="Bluesky">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" width="18" height="18" fill="currentColor">
+              <path d="M135.72 44.03C202.216 93.951 273.74 195.17 300 249.49c26.262-54.316 97.782-155.54 164.28-205.46C512.26 8.009 590-19.862 590 68.825c0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.45-163.25-81.433C20.15 217.61 9.997 86.535 9.997 68.825c0-88.687 77.742-60.816 125.72-24.795z"/>
+            </svg>
+          </a>
         </div>
-      </section>
+      </div>
+
+      <div class="home-bio">
+        <p>I am an Assistant Professor in the Department of Political Science at Texas A&amp;M University. I received my Ph.D. in Political Science from The Pennsylvania State University in 2024.</p>
+        <p>My research examines political violence and civil war, focusing on how rebel groups' engagement with allies, rivals, civilians, and international audiences shapes conflict processes and outcomes, including civilian victimization, rebel recruitment, and post-conflict state and society. My work centers on four closely related areas: (1) rebel-civilian ties, (2) rebel public communication strategies, (3) multi-party civil conflicts, and (4) rebel intra-group politics. I use a variety of quantitative methods, including network analysis, quasi-experiments, and survey experiments.</p>
+        <p>My work has been published or is forthcoming in <em>Comparative Political Studies</em>, <em>Journal of Conflict Resolution (x2)</em>, <em>Journal of Global Security Studies</em>, <em>Journal of Peace Research</em>, <em>Political Psychology</em>, <em>Political Science Research and Methods</em>, and <em>PS: Political Science &amp; Politics</em>, among others. My research has been funded by the Minerva Research Initiative, Scowcroft Institute of International Affairs, and Melbern G. Glasscock Center.</p>
+        <p>I co-organize the <a href="https://junior-quant-conflict-workshop.github.io/">Junior Scholars in Quantitative Conflict Workshop</a>.</p>
+        <p>Please reach me at ilaydaonder [at] tamu [dot] edu.</p>
+      </div>
+
     </div>
-  </main>
 
-  <footer>
-    &copy; 2025 Ilayda B. Onder
-  </footer>
+    <footer>
+      <div class="contact">3046 Allen Building &nbsp;·&nbsp; ilaydaonder [at] tamu [dot] edu</div>
+      <div>
+        <a href="https://bush.tamu.edu/pols/">Department of Political Science</a> |
+        <a href="https://bush.tamu.edu/">Bush School of Government and Public Service</a> |
+        <a href="https://www.tamu.edu/">Texas A&amp;M University</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
