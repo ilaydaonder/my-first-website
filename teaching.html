@@ -10,262 +10,263 @@
     gtag('config', 'G-7HJCT0LDMJ');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teaching — Ilayda B. Onder</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <title>Ilayda B. Onder | Teaching</title>
+  <base target="_blank">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", serif;
-      background:#fff;
-      color:#000;
-      line-height:1.5;
-      font-size:14.5px;
+    :root {
+      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
+      --font-body:    'Geist', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      border-bottom:1px solid #ccc;
-      padding:10px 0;
+    /* ===== Global typography ===== */
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 0;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    nav a{
-      margin:5px 15px;
-      text-decoration:none;
-      color:#808080;
-      padding-bottom:5px;
-      font-size:18px;
+    a { color: #000099; text-decoration: none; }
+    a:visited { color: #000099; }
+    a:hover { color: #0066FF; }
+
+    /* Italic emphasis renders in the display serif, since Geist isn't
+       loaded with an italic. */
+    em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05em;
     }
 
-    nav a:hover,
-    nav a.active{
-      border-bottom:2px solid #800000;
-      color:#800000;
-      font-weight:bold;
+    img { border-width: 0; }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      background: #ffffff;
     }
 
-    .page{
-      max-width:1000px;
-      margin:35px auto;
-      padding:0 20px;
-      box-sizing:border-box;
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px 6px 24px;
     }
 
-    .two-col{
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -.005em;
+      margin: 0;
+      line-height: 1.05;
     }
 
-    .left{
-      flex:0 0 260px;
-      text-align:center;
+    .title-block .subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 19px;
+      color: #555;
+      line-height: 1.2;
+      margin-top: 4px;
     }
 
-    .card{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      background:#fff;
+    /* ===== Navigation ===== */
+    nav {
+      background: #D8D8D8;
+      text-align: right;
+      padding: 6px 20px;
+      font-family: var(--font-body);
+      font-size: 11pt;
+      font-weight: 500;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
     }
 
-    .left .card{
-      max-width:240px;
-      margin:0 auto;
+    nav a, nav a:visited { color: #000; margin: 0 4px; }
+    nav a:hover { color: #0066FF; }
+    nav .sep { color: #555; margin: 0 2px; font-weight: 400; }
+
+    /* ===== Intro / summary block ===== */
+    .intro {
+      padding: 22px 22px 24px 22px;
+      border-bottom: 1px solid #000;
     }
 
-    .profile{
-      width:180px;
-      height:180px;
-      object-fit:cover;
-      border-radius:50%;
-      border:1px solid #e6e6e6;
+    .intro p {
+      text-align: justify;
+      margin: 0;
+      font-size: 10pt;
+      line-height: 1.55;
     }
 
-    h1.name{
-      font-size:20px;
-      font-weight:700;
-      margin:14px 0 6px 0;
+    /* ===== Section heading — mono eyebrow label ===== */
+    .section-title {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #333;
+      padding: 14px 0;
+      border-bottom: 1px solid #000;
     }
 
-    .titleblock{
-      font-size:14.5px;
-      line-height:1.4;
-      margin:0;
-      color:#444;
-      text-align:center;
+    /* ===== Course / publication row ===== */
+    .publication {
+      display: flex;
+      gap: 22px;
+      padding: 22px 22px;
+      border-bottom: 1px solid #000;
+      align-items: center;
     }
 
-    .icons{
-      margin-top:12px;
-      font-size:18px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
+    .publication-image {
+      flex: 0 0 220px;
+      width: 220px;
+      height: auto;
+      object-fit: contain;
     }
 
-    .icons a{
-      color:#000;
-      text-decoration:none;
+    .publication-body {
+      flex: 1;
+      font-size: 9.5pt;
+      line-height: 1.55;
     }
 
-    .icons a:hover{
-      color:#800000;
+    .publication-body h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      margin: 0 0 8px 0;
+      font-size: 15pt;
+      line-height: 1.15;
     }
 
-    .right{
-      flex:1 1 auto;
-      min-width:0;
+    /* Default paragraph (used for the course description) */
+    .publication-body p {
+      text-align: justify;
+      margin: 0 0 10px 0;
     }
 
-    .category-box{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      background:#fff;
+    /* First paragraph in each entry is the course title — rendered in
+       the display serif at the established 12pt, matching the title
+       treatment elsewhere on the site. */
+    .publication-body p:first-of-type {
+      font-family: var(--font-display);
+      font-size: 14pt;
+      line-height: 1.25;
+      letter-spacing: -.005em;
+      color: #000;
+      text-align: left;
+      margin-bottom: 12px;
     }
 
-    /* Teaching title inside box */
-    .box-title{
-      font-size:22px;
-      font-weight:700;
-      margin:0 0 18px 0;
+    /* Link row at the bottom of each entry */
+    .publication-body a {
+      font-size: 9.5pt;
     }
 
-    .section-subtitle{
-      font-size:18px;
-      font-weight:700;
-      margin:0 0 14px 0;
+    /* ===== Footer ===== */
+    footer {
+      background: #D8D8D8;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 9.5pt;
+      border-top: 1px solid #000;
     }
 
-    .course-list p{
-      margin:6px 0;
-    }
-
-    .section-spacing{
-      margin-top:26px;
-    }
-
-    a{
-      color:#800000;
-      font-weight:700;
-      text-decoration:none;
-    }
-
-    footer{
-      text-align:center;
-      font-size:11px;
-      margin:40px 0 20px 0;
-      color:#999;
-    }
-
-    @media (max-width:800px){
-      .two-col{
-        flex-direction:column;
-        align-items:center;
-      }
-
-      .left{
-        width:100%;
-        max-width:420px;
-      }
-
-      .left .card{
-        max-width:320px;
-      }
-
-      .right{
-        width:100%;
-      }
-    }
-
-    @media (max-width:600px){
-      .page{
-        margin:20px auto;
-      }
-
-      nav a{
-        margin:5px 10px;
-        font-size:16px;
-      }
-
-      .left .card{
-        max-width:100%;
-      }
+    footer .contact {
+      font-family: var(--font-mono);
+      font-size: 8pt;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+      color: #333;
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="publications.html">Publications</a>
-    <a href="ongoing.html">Ongoing Projects</a>
-    <a href="data.html">Datasets</a>
-    <a href="teaching.html" class="active">Teaching</a>
-  </nav>
+  <div class="container">
 
-  <main class="page">
-    <div class="two-col">
-      <aside class="left">
-        <div class="card">
-          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
-          <h1 class="name">Ilayda B. Onder</h1>
-          <p class="titleblock">
-            Assistant Professor<br>
-            Department of Political Science<br>
-            Texas A&amp;M University
-          </p>
+    <!-- Header -->
+    <header>
+      <div class="title-block">
+        <h1>Ilayda B. Onder</h1>
+        <div class="subtitle">Political Science<br>International Relations</div>
+      </div>
+    </header>
 
-          <div class="icons">
-            <a href="mailto:ilaydaonder@tamu.edu"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social"><i class="fas fa-globe"></i></a>
-          </div>
-        </div>
-      </aside>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" target="_self">home</a><span class="sep">|</span>
+      <a href="cv.html" target="_self">cv</a><span class="sep">|</span>
+      <a href="publications.html" target="_self">publications</a><span class="sep">|</span>
+      <a href="ongoing.html" target="_self">ongoing projects</a><span class="sep">|</span>
+      <a href="data.html" target="_self">datasets</a><span class="sep">|</span>
+      <a href="teaching.html" target="_self">teaching</a>
+    </nav>
 
-      <section class="right">
-        <div class="category-box course-list">
-          <p class="box-title">Teaching</p>
-
-          <p class="section-subtitle">Instructor of Record</p>
-
-          <p><b>Texas A&amp;M University</b></p>
-          <p>POLS 209 Introduction to Political Science Research (Undergraduate), <i>Fall 2024, Fall 2025</i></p>
-          <p>POLS 312 Ethnic Conflict (Undergraduate), <i>Spring 2026</i></p>
-          <p>POLS 631 Conflict Studies (Graduate), <i>Fall 2026</i></p>
-
-          <p><b>Penn State University</b></p>
-          <p>PLSC 418 International Relations Theory (Undergraduate), <i>Spring 2024</i></p>
-          <p>PLSC 309 Quantitative Political Analysis (Undergraduate), <i>Fall 2023</i></p>
-          <p>R Boot Camp for Incoming Ph.D. Students, <i>Fall 2021</i></p>
-
-          <div class="section-spacing"></div>
-
-          <p class="section-subtitle">Guest Lectures</p>
-
-          <p><b>Penn State University</b></p>
-          <p>PLSC 503 Multivariate Analysis for Political Research (Graduate), <i>Spring 2022</i></p>
-          <p>PLSC 439 Politics of Terrorism (Undergraduate), <i>Spring 2022</i></p>
-          <p>PLSC 439 Politics of Terrorism (Undergraduate), <i>Spring 2019</i></p>
-        </div>
-      </section>
+    <!-- Research summary -->
+    <div class="intro">
+      <p>At Texas A&amp;M University, I teach undergraduate and graduate courses on conflict and quantitative research methods.</p>
     </div>
-  </main>
 
-  <footer>
-    &copy; 2025 Ilayda B. Onder
-  </footer>
+    <!-- Section title -->
+    <div class="section-title">Course Syllabi</div>
+
+    <!-- Course 1 -->
+    <div class="publication">
+      <img src="631.png" class="publication-image">
+      <div class="publication-body">
+        <p>POLS 631 Conflict Studies (Graduate)</p>
+        <p>This seminar surveys major theoretical and empirical research on international and civil conflict. The course introduces students to the core analytical frameworks used in the study of war, beginning with foundational debates about why wars occur. Early weeks focus on rationalist approaches to conflict, including bargaining theory, information problems, and commitment problems. The course then examines how domestic politics shapes the outbreak and conduct of international conflict, with readings exploring the role of political institutions, leader incentives, and audience costs in influencing signaling, credibility, and crisis escalation. The second half of the course turns to intrastate violence. Students engage with major explanations for the onset of civil war, including ethnic conflict, political exclusion, economic incentives, and state capacity. Later weeks consider the behavior of armed actors during civil war and the political orders that emerge in contested territories. The final weeks examine state responses to insurgency and terrorism, including counterinsurgency strategies, repression, and leadership targeting, before concluding with recent work on the long-term political and social legacies of civil war and rebel rule.</p>
+        <a href="POLS_631_Syllabus.pdf">Syllabus</a>
+      </div>
+    </div>
+
+    <!-- Course 2 -->
+    <div class="publication">
+      <img src="312.png" class="publication-image">
+      <div class="publication-body">
+        <p>POLS 312 Ethnic Conflict (Undergraduate)</p>
+        <p>This course examines the causes, dynamics, and resolution of ethnic conflict through a comparative and theoretically grounded perspective. The course is organized into six parts. We begin by unpacking key concepts such as ethnicity, nationalism, and religion, and by examining how ethnic identities become politically salient. The second part explores the causes of violent ethnic conflict. The third part investigates mobilization in violent ethnic conflict, focusing on how individuals and communities join or support ethnic violence. The fourth part turns to the dynamics of violence, examining why and how ethnically motivated armed groups target civilians, engage in mass killing, terrorism, or sexual violence, and how local-level interactions shape patterns of violence in ethnic conflict. In the fifth part, we move beyond violence to study the non-violent dimensions of ethnic conflict, including ethnic voting and public goods provision, during and in the aftermath of conflict.</p>
+        <a href="POLS_312_Syllabus.pdf">Syllabus</a>
+      </div>
+    </div>
+
+    <!-- Course 3 -->
+    <div class="publication">
+      <img src="209.png" class="publication-image">
+      <div class="publication-body">
+        <p>POLS 209 Introduction to Political Science Research (Undergraduate)</p>
+        <p>The primary goal of this course is to teach you how to turn things into data, analyze them using statistics, and make inferences using statistical analysis about real-world issues. The syllabus lists some more specific course objectives below, but the &ldquo;big picture&rdquo; purpose of this course is to give you the foundational quantitative tools you may need to answer questions about the political and social scientific phenomena you are interested in. We will spend part of the course discussing how to generate hypotheses and design research in a way that allows you to answer research questions using quantitative data. We will learn about various statistical techniques for analyzing data and testing hypotheses. Yes, that means we will do some math. And yes, that means we will use computer software (R and RStudio specifically) to visualize and analyze data as well. Throughout the semester, you will also design and carry out an independent research project to test your own theory about a topic of your own choosing. My goal is to help you develop a statistical literacy that will help you become a conscientious and critical consumer of news, political events, and scientific research. Hopefully, the skills you acquire in this class will also assist you to develop competency in the technical tools you may need to compete in an increasingly large-N, data-driven world.</p>
+        <a href="POLS_209_Syllabus.pdf">Syllabus</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="contact">3046 Allen Building &nbsp;·&nbsp; ilaydaonder [at] tamu [dot] edu</div>
+      <div>
+        <a href="https://bush.tamu.edu/pols/">Department of Political Science</a> |
+        <a href="https://bush.tamu.edu/">Bush School of Government and Public Service</a> |
+        <a href="https://www.tamu.edu/">Texas A&amp;M University</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
