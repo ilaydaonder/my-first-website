@@ -10,587 +10,334 @@
     gtag('config', 'G-7HJCT0LDMJ');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ongoing Projects — Ilayda B. Onder</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <title>Ilayda B. Onder | Ongoing Projects</title>
+  <base target="_blank">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", serif;
-      background:#fff;
-      color:#000;
-      line-height:1.5;
-      font-size:14.5px;
+    :root {
+      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
+      --font-body:    'Geist', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      border-bottom:1px solid #ccc;
-      padding:10px 0;
+    /* ===== Global typography ===== */
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 0;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    nav a{
-      margin:5px 15px;
-      text-decoration:none;
-      color:#808080;
-      padding-bottom:5px;
-      font-size:18px;
+    a { color: #000099; text-decoration: none; }
+    a:visited { color: #000099; }
+    a:hover { color: #0066FF; }
+
+    /* Italic emphasis renders in the display serif, since Geist isn't
+       loaded with an italic. */
+    em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05em;
     }
 
-    nav a:hover,
-    nav a.active{
-      border-bottom:2px solid #800000;
-      color:#800000;
-      font-weight:bold;
+    img { border-width: 0; }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      background: #ffffff;
     }
 
-    .page{
-      max-width: 1000px;
-      margin: 35px auto;
-      padding: 0 20px;
-      box-sizing:border-box;
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px 6px 24px;
     }
 
-    .two-col{
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -.005em;
+      margin: 0;
+      line-height: 1.05;
     }
 
-    .left{
-      flex: 0 0 260px;
-      text-align:center;
+    .title-block .subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 19px;
+      color: #555;
+      line-height: 1.2;
+      margin-top: 4px;
     }
 
-    .card{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      box-sizing:border-box;
+    /* ===== Navigation ===== */
+    nav {
+      background: #D8D8D8;
+      text-align: right;
+      padding: 6px 20px;
+      font-family: var(--font-body);
+      font-size: 11pt;
+      font-weight: 500;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
     }
 
-    .left .card{
-      max-width:240px;
-      margin:0 auto;
+    nav a, nav a:visited { color: #000; margin: 0 4px; }
+    nav a:hover { color: #0066FF; }
+    nav .sep { color: #555; margin: 0 2px; font-weight: 400; }
+
+    /* ===== Intro / summary block ===== */
+    .intro {
+      padding: 22px 22px 24px 22px;
+      border-bottom: 1px solid #000;
     }
 
-    .profile{
-      width:180px;
-      height:180px;
-      object-fit:cover;
-      border-radius:50%;
-      border:1px solid #e6e6e6;
+    .intro p {
+      text-align: justify;
+      margin: 0;
+      font-size: 10pt;
+      line-height: 1.55;
     }
 
-    h1.name{
-      font-size:20px;
-      font-weight:700;
-      margin:14px 0 6px 0;
+    /* ===== Section heading — mono eyebrow label ===== */
+    .section-title {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #333;
+      padding: 14px 0;
+      border-bottom: 1px solid #000;
     }
 
-    .titleblock{
-      font-size:14.5px;
-      line-height:1.4;
-      margin:0;
-      color:#444;
-      text-align:center;
+    /* ===== Project / publication row ===== */
+    .publication {
+      display: flex;
+      gap: 22px;
+      padding: 22px 22px;
+      border-bottom: 1px solid #000;
+      align-items: center;
     }
 
-    .icons{
-      margin-top:12px;
-      font-size:18px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
+    .publication-image {
+      flex: 0 0 220px;
+      width: 220px;
+      height: auto;
+      object-fit: contain;
     }
 
-    .icons a{
-      color:#000;
-      text-decoration:none;
+    .publication-body {
+      flex: 1;
+      font-size: 9.5pt;
+      line-height: 1.55;
     }
 
-    .icons a:hover{
-      color:#800000;
+    .publication-body h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      margin: 0 0 8px 0;
+      font-size: 15pt;
+      line-height: 1.15;
     }
 
-    .right{
-      flex: 1 1 auto;
-      min-width: 0;
+    /* First paragraph holds the project title (<strong>) and an optional
+       co-author byline after a <br>. Title gets the display serif; byline
+       stays in the body font, slightly muted. */
+    .publication-body p {
+      text-align: justify;
+      margin: 0 0 10px 0;
     }
 
-    /* Page title matches other pages’ heading scale */
-    .right h1{
-      font-size:22px;
-      font-weight:700;
-      margin:0 0 12px 0;
+    .publication-body p:first-of-type {
+      font-size: 10pt;
+      line-height: 1.4;
+      color: #555;
+      margin-bottom: 12px;
+      text-align: left;
     }
 
-    /* Category (accordion) cards */
-    .category-box{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:16px;
-      margin-bottom:14px;
-      background:#fff;
+    .publication-body p:first-of-type strong {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 14pt;
+      letter-spacing: -.005em;
+      line-height: 1.25;
+      color: #000;
     }
 
-    .category-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      font-weight:700;
-      font-size:18px;
-      cursor:pointer;
-      user-select:none;
+    .publication-body a {
+      font-size: 9.5pt;
     }
 
-    .category-arrow{
-      font-size:18px;
-      color:#555;
-      transition: transform 0.2s;
-      line-height:1;
-      margin-left:12px;
+    /* ===== Footer ===== */
+    footer {
+      background: #D8D8D8;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 9.5pt;
+      border-top: 1px solid #000;
     }
 
-    .category-content{
-      display:none;
-      margin-top:14px;
-    }
-
-    .category-box.active .category-content{
-      display:block;
-    }
-
-    .category-box.active .category-arrow{
-      transform: rotate(180deg);
-    }
-
-    /* Project (pub-style) boxes */
-    .pub-box{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:14px;
-      margin-bottom:12px;
-      cursor:pointer;
-      background:#fff;
-    }
-
-    .pub-box.no-toggle{
-      cursor:default;
-    }
-
-    .pub-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:14px;
-    }
-
-    .pub-title{
-      font-weight:700;
-      margin-bottom:2px;
-    }
-
-    .pub-meta{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      min-width:86px;
-    }
-
-    .pub-year{
-      font-size:14px;
-      font-weight:700;
-      margin-bottom:6px;
-      text-align:center;
-    }
-
-    .pub-arrow{
-      font-size:22px;
-      font-weight:700;
-      color:#555;
-      transition: transform 0.2s;
-      line-height:1;
-    }
-
-    .pub-content{
-      display:none;
-      margin-top:12px;
-    }
-
-    .pub-box.active .pub-content{
-      display:block;
-    }
-
-    .pub-box.active .pub-arrow{
-      transform: rotate(180deg);
-    }
-
-    /* No-toggle boxes: no arrow, no expansion */
-    .pub-box.no-toggle .pub-arrow{
-      display:none;
-    }
-
-    .button-group a{
-      display:inline-block;
-      padding:5px 10px;
-      margin:8px 8px 0 0;
-      border:1px solid #800000;
-      border-radius:8px;
-      text-decoration:none;
-      color:#800000;
-      font-weight:700;
-      font-size:13px;
-    }
-
-    .button-group a:hover{
-      background-color:#800000;
-      color:#fff;
-    }
-
-    a{
-      color:#800000;
-      font-weight:700;
-      text-decoration:none;
-    }
-
-    footer{
-      text-align:center;
-      font-size:11px;
-      margin:40px 0 20px 0;
-      color:#999;
-    }
-
-    @media (max-width: 800px){
-      .two-col{
-        flex-direction:column;
-        align-items:center;
-      }
-
-      .left{
-        flex:none;
-        width:100%;
-        max-width:420px;
-      }
-
-      .left .card{
-        max-width:320px;
-      }
-
-      .right{
-        width:100%;
-      }
-    }
-
-    @media (max-width: 600px){
-      .page{
-        margin:20px auto;
-      }
-
-      nav a{
-        margin:5px 10px;
-        font-size:16px;
-      }
-
-      .left .card{
-        max-width:100%;
-      }
+    footer .contact {
+      font-family: var(--font-mono);
+      font-size: 8pt;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+      color: #333;
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="publications.html">Publications</a>
-    <a href="ongoing.html" class="active">Ongoing Projects</a>
-    <a href="data.html">Datasets</a>
-    <a href="teaching.html">Teaching</a>
-  </nav>
+  <div class="container">
 
-  <main class="page">
-    <div class="two-col">
-      <aside class="left">
-        <div class="card">
-          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
-          <h1 class="name">Ilayda B. Onder</h1>
-          <p class="titleblock">
-            Assistant Professor<br>
-            Department of Political Science<br>
-            Texas A&amp;M University
-          </p>
+    <!-- Header -->
+    <header>
+      <div class="title-block">
+        <h1>Ilayda B. Onder</h1>
+        <div class="subtitle">Political Science<br>International Relations</div>
+      </div>
+    </header>
 
-          <div class="icons" aria-label="Links">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
-          </div>
-        </div>
-      </aside>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" target="_self">home</a><span class="sep">|</span>
+      <a href="cv.html" target="_self">cv</a><span class="sep">|</span>
+      <a href="publications.html" target="_self">publications</a><span class="sep">|</span>
+      <a href="ongoing.html" target="_self">ongoing projects</a><span class="sep">|</span>
+      <a href="data.html" target="_self">datasets</a><span class="sep">|</span>
+      <a href="teaching.html" target="_self">teaching</a>
+    </nav>
 
-      <section class="right">
-        <h1>Ongoing Projects</h1>
-
-        <div class="category-box">
-          <div class="category-header">
-            <span>Rebel-Civilian Interactions</span>
-            <span class="category-arrow">&#x25BC;</span>
-          </div>
-          <div class="category-content">
-
-            <div class="pub-box">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">When Constituencies Unite but Recruitment Competition Divides</div>
-                  <div>Ilayda B. Onder</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">Under Review</span>
-                  <span class="pub-arrow">&#x2193;</span>
-                </div>
-              </div>
-              <div class="pub-content">
-                <p>Why do some militant groups that appeal to the same constituency cooperate, while others descend into violent rivalry? I develop a theoretical framework that distinguishes between shared constituencies-the broader social groups on whose behalf militants claim to fight and shared recruitment pools-the specific social networks from which they draw members. I argue that shared constituencies facilitate cooperation only when groups recruit from distinct social bases, whereas overlapping recruitment pools pose existential threats, fueling infighting. I test these expectations using Temporal Exponential Random Graph Models (TERGMs) on an original temporal network dataset of 53 militant organizations active in India between 1981-2021. To operationalize recruitment pool overlap, I introduce a novel behavioral proxy based on documented cases of rank-and-file defections across groups. The results are consistent with the proposed theory. These findings advance our understanding of militant behavior and speak to broader debates on representation and competition in contentious politics.</p>
-                <img src="ongoing03.png" style="max-width:100%; height:auto;" alt="Project figure">
-                <div class="button-group">
-                  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5316610" target="_blank" rel="noopener">PRE-PRINT</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="pub-box">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Performative Rebel Governance and Legibility</div>
-                  <div>Ilayda B. Onder</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">Revise &amp; Resubmit</span>
-                  <span class="pub-arrow">&#x2193;</span>
-                </div>
-              </div>
-              <div class="pub-content">
-                <p>Rebel groups engage in performative governance acts that mimic the symbolic repertoires of sovereign states, such as martyr funerals or mass demonstrations. How do these acts shape civilian participation in rebellion? I conceptualize performative rebel governance as a legibility-oriented strategy through which rebels map civilian loyalties beyond their immediate networks. Voluntary participation in public acts allows rebels to identify potential supporters who might otherwise remain outside the movement, including women and politically inactive individuals. At the same time, these acts increase the visibility of rebellion to the state, exposing participants to surveillance and raising the costs of mobilization. Using a difference-in-differences design that combines original data on PKK fighter funerals in Southeast Turkey with individual-level recruitment data, I show that rebel funerals expand recruitment among harder-to-reach groups while reducing overall mobilization. Rebel governance in contested spaces thus entails a dilemma: efforts to increase legibility also increase legibility to the state.</p>
-                <img src="ongoing04.png" style="max-width:100%; height:auto;" alt="Project figure">
-                <div class="button-group">
-                  <a href="ongoing 04.pdf" target="_blank" rel="noopener">PRE-PRINT</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="pub-box no-toggle">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Part-Time Rebels</div>
-                  <div>Ilayda B. Onder</div>
-                  <br>
-                  <div class="pub-title">Rebel Recruitment under State Repression</div>
-                  <div>Muge Acarlar and Ilayda B. Onder</div>
-                  <br>
-                  <div class="pub-title">Rebel Territorial Control, Tax Evasion, and Kidnapping</div>
-                  <div>Mark Berlin, Timothy Jones, and Ilayda B. Onder</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">In Progress (Selected)</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="category-box">
-          <div class="category-header">
-            <span>Rebel Communication Strategies</span>
-            <span class="category-arrow">&#x25BC;</span>
-          </div>
-          <div class="category-content">
-
-            <div class="pub-box">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Populism and Counterterrorism Preferences</div>
-                  <div>Ilayda B. Onder and James Piazza</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">Under Review</span>
-                  <span class="pub-arrow">&#x2193;</span>
-                </div>
-              </div>
-              <div class="pub-content">
-                <p>What kinds of counterterrorism policies do populist individuals in the United States prefer in the aftermath of terrorist attacks? We theorize that these preferences are shaped by attitudes toward liberal institutions, social outgroups, and conspiratorial beliefs. To test this, we conducted an original survey of 1,940 subjects living in the United States. We found that subjects exhibiting populist attitudes were more likely to support unilateral, militarized counterterrorism policies in response to terrorist attacks but were less supportive of cooperative, or multilateral counterterrorism policies. We also found greater support among these individuals for restrictive domestic security measures, including immigration and border controls, and expanded government authority related to surveillance, detention, and arrest. To understand more about these patterns, we also conducted mediation tests and found that support for strongman rule, perceived threats from outgroups, and conspiratorial thinking patterns are strong and substantive mediators for the relationship between populism and counterterrorism preferences.</p>
-                <img src="ongoing06.png" style="max-width:100%; height:auto;" alt="Project figure">
-                <div class="button-group">
-                  <a href="ongoing 06.pdf" target="_blank" rel="noopener">PRE-PRINT</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="pub-box no-toggle">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Denial and Rebuttal in Rebellion</div>
-                  <div>Mark Berlin, Ilayda B. Onder, and Kate Willey</div>
-                  <br>
-                  <div class="pub-title">Rebel Service Provision and Foreign Public Opinion</div>
-                  <div>Yu Bin Kim, Ilayda B. Onder, and Gidong Kim</div>
-                  <br>
-                  <div class="pub-title">Rhetorical and Behavioral Compliance with IHL by Rebel Groups</div>
-                  <div>Merve Keskin, Yu Bin Kim, Ilayda B. Onder, and Blair Welsh</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">In Progress (Selected)</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="category-box">
-          <div class="category-header">
-            <span>Multiparty Conflicts</span>
-            <span class="category-arrow">&#x25BC;</span>
-          </div>
-          <div class="category-content">
-
-            <div class="pub-box">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Inter-Group Learning and Diffusion in Militant Alliances</div>
-                  <div>Ilayda B. Onder</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">Working Paper</span>
-                  <span class="pub-arrow">&#x2193;</span>
-                </div>
-              </div>
-              <div class="pub-content">
-                <p>This study examines how the nature of alliances shapes militant groups’ capacity to adopt tactics that demand organizational change. Challenging the view that tactical diffusion is an automatic byproduct of alliances, I argue that only alliances involving joint training, rather than those limited to arms, funds, or rhetorical support, facilitate the mindset shifts, socialization processes, and skill acquisition needed for adopting new tactics from allies. Joint training fosters not only elite-level exchanges but also fighter-level interactions that build shared norms, understandings, and practices. I test this argument with an original cross-sectional time-series dataset on 53 militant groups in Northeast India (1980–2021), focusing on the diffusion of kidnapping-a tactic that requires normative reorientation toward restraint and non-combat skills. Evidence from split-halves tests, staggered difference-in-differences analyses, panel vector autoregression models, and additional analyses leveraging placebo tests and exogenous shocks shows that alliances involving joint training with kidnapping-proficient allies significantly increase adoption, whereas other alliance forms do not. Once adopted, kidnapping persists, consistent with a complex contagion process in which norms and practices are reinforced within a community of interacting groups. By linking tactical diffusion to organizational learning, the findings show how specific inter-militant interactions can drive organizational change, opening avenues for research on whether similar mechanisms transmit norms and practices beyond violence, including governance, diplomacy, and transnational campaigning.</p>
-                <img src="ongoing09.png" style="max-width:100%; height:auto;" alt="Project figure">
-                <div class="button-group">
-                  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5393196" target="_blank" rel="noopener">PRE-PRINT</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="pub-box no-toggle">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Inter-Organizational Mobility in Multi-Actor Conflict</div>
-                  <div>Finn Klebe and Ilayda B. Onder</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">In Progress</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="category-box">
-          <div class="category-header">
-            <span>Rebel Intra-Group Politics</span>
-            <span class="category-arrow">&#x25BC;</span>
-          </div>
-          <div class="category-content">
-
-            <div class="pub-box">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Introducing the Rebel Internal Governance (RIG) Dataset</div>
-                  <div>Ilayda B. Onder and Hongbi Choi</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">Revise &amp; Resubmit</span>
-                  <span class="pub-arrow">&#x2193;</span>
-                </div>
-              </div>
-              <div class="pub-content">
-                <p>Existing research shows that rebel groups develop strategies to mitigate principal-agent problems and align the preferences of rank-and-file fighters with those of leaders, and that these strategies influence conflict processes. Yet, systematic cross-national data on how groups regulate fighters, foster cohesion, and punish disobedience remain absent. To address this gap, we introduce the Rebel Internal Governance (RIG) Dataset, which codes original, time-variant information on 14 internal institutions and practices of 166 rebel groups across 57 countries between 1990 and 2012. By capturing both written and de facto regulatory frameworks, judicial procedures, and disciplinary practices used to regulate fighter behavior, the dataset provides new leverage to examine how internal governance (or its absence) shapes rebels' violent behavior and relations with civilian populations. We demonstrate the utility of the dataset through an empirical application to wartime rape, reassessing the argument that weak discipline or efforts to foster cohesion precipitate rebel-perpetrated sexual violence. By leveraging groups' internal governance practices as a more direct proxy of cohesion and discipline, we bring new evidence to this debate. The RIG advances research on rebel governance by adding a new dimension: how groups govern their own members, alongside how they govern civilians.</p>
-                <img src="ongoingrig.png" style="max-width:100%; height:auto;" alt="Project figure">
-                <div class="button-group">
-                  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5864422" target="_blank" rel="noopener">PRE-PRINT</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="pub-box">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Civilian Victimization by Governance-Oriented Rebels</div>
-                  <div>Ilayda B. Onder and Hongbi Choi</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">Working Paper</span>
-                  <span class="pub-arrow">&#x2193;</span>
-                </div>
-              </div>
-              <div class="pub-content">
-                <p>Why do governance-oriented rebel groups victimize civilians while building state-like institutions? Existing theories treat governance and violence as substitutes for securing civilian compliance, yet many rebels pursue both simultaneously. To address this puzzle, we advance a theory that disaggregates rebel institutions by purpose and target, distinguishing between internal institutions that regulate fighters and external institutions that regulate civilians. Drawing on insights from the literatures on civil war and authoritarian politics, we theorize how different combinations of internal and external governance shape civilian victimization by constraining, or failing to constrain, two pathways to harm: leader-authorized strategic violence and leader-disavowed opportunistic violence by rank-and-file combatants. To test the observable implications of this theory, we introduce a novel dataset on rebel internal governance and pair it with existing data on civilian-facing governance institutions and civilian victimization. Using a research design that exploits the unexpected death of rebel leaders to address endogeneity concerns, we analyze 166 rebel organizations operating in 57 countries between 1990 and 2012. We corroborate these findings with subnational evidence from the PKK insurgency in Turkey and illustrative case evidence from Al-Qaeda in the Islamic Maghreb and the Indigenous People of Biafra. Across levels of analysis, we find that governance institutions reduce civilian victimization only when they jointly regulate both fighters and civilians. Internal or external institutions alone fail to produce systematic reductions in civilian harm. These findings show that rebel governance can coexist with, enable, or constrain violence depending on whom institutions are designed to control, refining theories of rebel governance and offering a more nuanced account of civilian life under armed group rule.</p>
-                <img src="ongoingrig2.png" style="max-width:100%; height:auto;" alt="Project figure">
-                <div class="button-group">
-                  <a href="#" target="_blank" rel="noopener">PRE-PRINT</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="pub-box no-toggle">
-              <div class="pub-header">
-                <div>
-                  <div class="pub-title">Leadership Succession and Social Service Provision in Rebel Groups</div>
-                  <div>Joshua Fawcett Weiner, Ilayda B. Onder, and Mark Berlin</div>
-                </div>
-                <div class="pub-meta">
-                  <span class="pub-year">In Progress (Selected)</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </section>
+    <!-- Research summary -->
+    <div class="intro">
+      <p>My ongoing projects span four interrelated lines of inquiry: (1) rebel-civilian ties, (2) rebel public communication strategies, (3) multi-party civil conflicts, and (4) rebel intra-group politics. <em>On rebel-civilian ties:</em> I study how rebel groups interact with civilians, facilitate civilian participation in rebellion, and how these ties shape civilian victimization and post-conflict state and society. <em>On rebel public communication strategies:</em> I explore how armed groups use public communication and diplomacy to shape perceptions of their violence, goals, identities, and mobilization efforts. <em>On multi-party civil conflicts:</em> I examine how rebel inter-group cooperation and competition in multi-party civil conflicts shape strategic decision-making and civilian victimization. <em>On rebel intra-group politics:</em> I focus on how rebel internal governance (i.e., institutions and practices that codify and enforce fighter behavior to maintain cohesion and discipline) as well as leadership dynamics influence conflict processes. Below is a selection of my ongoing projects.</p>
     </div>
-  </main>
 
-  <script>
-    // Category toggles
-    document.querySelectorAll('.category-header').forEach(header => {
-      header.addEventListener('click', () => {
-        header.closest('.category-box').classList.toggle('active');
-      });
-    });
+    <!-- ===== Rebel-Civilian Ties ===== -->
+    <div class="section-title">Rebel-Civilian Ties</div>
 
-    // Project toggles (skip .no-toggle)
-    document.querySelectorAll('.pub-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const box = header.closest('.pub-box');
-        if (box.classList.contains('no-toggle')) return;
-        box.classList.toggle('active');
-      });
-    });
+    <!-- Project 1 -->
+    <div class="publication">
+      <img src="performative.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Performative Rebel Governance and Legibility</strong></p>
+        <p>Rebel groups engage in performative governance acts that mimic the symbolic repertoires of sovereign states, such as martyr funerals or mass demonstrations. How do these acts shape civilian participation in rebellion? I conceptualize performative rebel governance as a legibility-oriented strategy through which rebels map civilian loyalties beyond their immediate networks. Voluntary participation in public acts allows rebels to identify potential supporters who might otherwise remain outside the movement, including women and politically inactive individuals. At the same time, these acts increase the visibility of rebellion to the state, exposing participants to surveillance and raising the costs of mobilization. Using a difference-in-differences design that combines original data on PKK fighter funerals in Southeast Turkey with individual-level recruitment data, I show that rebel funerals expand recruitment among harder-to-reach groups while reducing overall mobilization. Rebel governance in contested spaces thus entails a dilemma: efforts to increase legibility also increase legibility to the state.</p>
+        <a href="performativepreprint.pdf">Pre-Print</a>
+      </div>
+    </div>
 
-    // Prevent clicks on links/buttons inside expanded content from toggling
-    document.querySelectorAll('.pub-content a').forEach(link => {
-      link.addEventListener('click', (e) => e.stopPropagation());
-    });
-  </script>
+    <!-- Project 2 -->
+    <div class="publication">
+      <img src="kinsoldier.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Kin-Soldier Martyrs and Incumbent Electoral Support in Rebel Constituencies</strong></p>
+        <p>Civil wars often witness members of the population rebels claim to represent serving as soldiers in the state forces that fight them. How do their battlefield deaths shape electoral support for the incumbent in the rebels' claimed constituency? I theorize that these "kin-soldier martyrs" erode the credibility of rebels' claim to fight on their constituency's behalf, while local legacies of war shape how civilians assign blame for them. I test this using Turkey's lottery-based conscription system for causal identification, combining an original dataset of conscripts from Kurdish provinces who died fighting Kurdish insurgents with electoral records and a national survey. Within Kurdish provinces, these "kin-soldier martyrs" produce incumbent gains where the rebels' constituency is locally dense and where prior rebel-state combat is heaviest. Placebo tests and survey evidence corroborate the mechanisms. The findings recast wartime electoral accountability as contingent on rebel constituency politics, with implications for counterinsurgency and ethnic voting.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6790778">Pre-Print</a>
+      </div>
+    </div>
 
-  <footer>
-    &copy; 2025 Ilayda B. Onder
-  </footer>
-    <!-- trigger rebuild -->
+    <!-- Project 3 -->
+    <div class="publication">
+      <img src="constituency.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>When Constituencies Unite but Recruitment Competition Divides</strong></p>
+        <p>Why do some militant groups that appeal to the same constituency cooperate, while others descend into violent rivalry? I develop a theoretical framework that distinguishes between shared constituencies&mdash;the broader social groups on whose behalf militants claim to fight&mdash;and shared recruitment pools&mdash;the specific social networks from which they draw members. I argue that shared constituencies facilitate cooperation only when groups recruit from distinct social bases, whereas overlapping recruitment pools pose existential threats, fueling infighting. I test these expectations using Temporal Exponential Random Graph Models (TERGMs) on an original temporal network dataset of 53 militant organizations active in India between 1981&ndash;2021. To operationalize recruitment pool overlap, I introduce a novel behavioral proxy based on documented cases of rank-and-file defections across groups. The results are consistent with the proposed theory. These findings advance our understanding of militant behavior and speak to broader debates on representation and competition in contentious politics.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5316610">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- ===== Rebel-Communication Strategies ===== -->
+    <div class="section-title">Rebel-Communication Strategies</div>
+
+    <!-- Project 1 -->
+    <div class="publication">
+      <img src="female.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Female Fighters and Rebel Compliance with International Humanitarian Law</strong><br>(with Merve Keskin, Yu Bin Kim, and Blair Welsh)</p>
+        <p>This paper examines the relationship between women's participation in rebel organizations and rebel compliance with international humanitarian law (IHL). Existing scholarship often treats female combatant recruitment as evidence of progressive ideology, implicitly associating women's inclusion with improved IHL compliance and reduced harm to civilians. We argue that this view overlooks the strategic role that gendered recruitment can play in rebel legitimacy management. We begin with a cross-national analysis showing that rebel groups that recruit female combatants are significantly more likely to publicly commit to IHL through written documents, which suggests that women's inclusion is tied to international reputational concerns. We then develop a theoretical framework linking gendered recruitment to rebel strategies of legitimation, arguing that female participation can help offset the reputational costs of civilian victimization. To probe this, we turn to subnational evidence from the Kurdistan Workers' Party (PKK) in southeast Turkey. Using original province-month data, we examine how variation in the share of female PKK combatants relates to civilian targeting. We find consistent evidence that higher female fighter ratios are associated with an increased likelihood, frequency, and share of civilian-targeting incidents. Taken together, our findings suggest that women's participation in rebel groups serves multiple strategic functions. While female recruitment is associated cross-nationally with symbolic commitments to IHL, it can also facilitate violence against civilians by reducing the perceived moral and political costs of such violence. The paper advances debates on rebel governance, civilian victimization, and gender in armed conflict by demonstrating how women's participation can be strategically instrumentalized to reconcile legitimacy-seeking with coercive practices.</p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="publication">
+      <img src="populism.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Right-Wing Populism and Counterterrorism Preferences</strong><br>(with James A. Piazza)</p>
+        <p>How do right-wing populist attitudes shape citizens' counterterrorism policy preferences? While a growing literature examines the foreign policies pursued by populist leaders, far less is known about how populist attitudes at the mass level translate into preferences on international security issues. We address this gap by focusing on the United States. Drawing on the ideational approach to populism, we argue that the defining features of right-wing populism&mdash;anti-elitism, a Manichean worldview, and a nativist conception of &ldquo;the people&rdquo;&mdash;generate distinct counterterrorism preferences that operate through three mechanisms: support for strongman rule, perceived threats from outgroups, and conspiratorial thinking. Using an original survey of 1,940 U.S. respondents fielded in 2023, we find that individuals holding right-wing populist attitudes are more likely to support unilateral, militarized responses to terrorism abroad while expressing no greater support for multilateral cooperation or democracy promotion. Domestically, they favor restrictive immigration and border policies and expanded surveillance, detention, and arrest powers. Structural equation models show that support for strongman rule, outgroup threat perceptions, and conspiratorial thinking substantively mediate these relationships, with effects that persist after accounting for partisanship and ideological conservatism. The findings suggest that right-wing populist attitudes exert an independent influence on counterterrorism preferences in the U.S. context.</p>
+        <a href="populismpreprint.pdf">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- ===== Multi-Party Conflicts ===== -->
+    <div class="section-title">Multi-Party Conflicts</div>
+
+    <!-- Project 1 -->
+    <div class="publication">
+      <img src="learning.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Inter-Group Learning and Diffusion in Militant Alliances</strong></p>
+        <p>This study examines how the nature of alliances shapes militant groups' capacity to adopt tactics that demand organizational change. Challenging the view that tactical diffusion is an automatic byproduct of alliances, I argue that only alliances involving joint training, rather than those limited to arms, funds, or rhetorical support, facilitate the mindset shifts, socialization processes, and skill acquisition needed for adopting new tactics from allies. Joint training fosters not only elite-level exchanges but also fighter-level interactions that build shared norms, understandings, and practices. I test this argument with an original cross-sectional time-series dataset on 53 militant groups in Northeast India (1980&ndash;2021), focusing on the diffusion of kidnapping&mdash;a tactic that requires normative reorientation toward restraint and non-combat skills. Evidence from split-halves tests, staggered difference-in-differences analyses, panel vector autoregression models, and additional analyses leveraging placebo tests and exogenous shocks shows that alliances involving joint training with kidnapping-proficient allies significantly increase adoption, whereas other alliance forms do not. Once adopted, kidnapping persists, consistent with a complex contagion process in which norms and practices are reinforced within a community of interacting groups. By linking tactical diffusion to organizational learning, the findings show how specific inter-militant interactions can drive organizational change, opening avenues for research on whether similar mechanisms transmit norms and practices beyond violence, including governance, diplomacy, and transnational campaigning.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5393196">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="publication">
+      <img src="mobility.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Limits to Fragmentation? The Impact of Defection and Co-Membership on Civilian Victimization</strong><br>(with Finn Klebe)</p>
+        <p>What explains the variation in the level of civilian victimization during conflict? Extant research suggests that competition over territory and resources can lead to outbidding dynamics and higher levels of civilian victimization. However, the underlying conceptualization and measurement of competition is often reserved to the number of organizations and their violent battles, only. We introduce the concept of inter-organizational mobility, that is co-membership and defection as interactions on an individual level, to re-assess the variation in civilian victimization. We argue that co-membership can induce stability and cohesion, lowering the need for outbidding and civilian victimization. Conversely, defection undermines organizations' reputation as high-capacity actors, heightening the risk of outbidding and civilian victimization. We leverage a novel dataset on defection and co-membership in Africa from 1990&ndash;2015 and use two case episodes on South Africa and Angola to further illustrate the causal mechanism. Our varied empirical evidence converges: Co-membership can dampen levels of violence, even offsetting the impact of a high number of organizations. Defection exacerbates levels of civilian victimization even at a low number of organizations. The findings add an important scope to the &lsquo;numbers&rsquo; argument in our study of conflict and emphasize the importance of relational patterns beyond violent competition, only.</p>
+      </div>
+    </div>
+
+    <!-- ===== Rebel Intra-Group Politics ===== -->
+    <div class="section-title">Rebel Intra-Group Politics</div>
+
+    <!-- Project 1 -->
+    <div class="publication">
+      <img src="rig.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Introducing the Rebel Internal Governance (RIG) Dataset</strong><br>(with Hongbi Choi)</p>
+        <p>Existing research shows that rebel groups develop strategies to mitigate principal-agent problems and align the preferences of rank-and-file fighters with those of leaders, and that these strategies influence conflict processes. Yet, systematic cross-national data on how groups regulate fighters, foster cohesion, and punish disobedience remain absent. To address this gap, we introduce the Rebel Internal Governance (RIG) Dataset, which codes original, time-variant information on 14 internal institutions and practices of 166 rebel groups across 57 countries between 1990 and 2012. By capturing both written and de facto regulatory frameworks, judicial procedures, and disciplinary practices used to regulate fighter behavior, the dataset provides new leverage to examine how internal governance (or its absence) shapes rebels' violent behavior and relations with civilian populations. We demonstrate the utility of the dataset through an empirical application to wartime rape, reassessing the argument that weak discipline or efforts to foster cohesion precipitate rebel-perpetrated sexual violence. By leveraging groups' internal governance practices as a more direct proxy of cohesion and discipline, we bring new evidence to this debate. The RIG advances research on rebel governance by adding a new dimension: how groups govern their own members, alongside how they govern civilians.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5864422">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="publication">
+      <img src="governancevictimization.png" class="publication-image">
+      <div class="publication-body">
+        <p><strong>Civilian Victimization by Governance-Oriented Rebels</strong><br>(with Hongbi Choi)</p>
+        <p>Why do governance-oriented rebel groups victimize civilians while building state-like institutions? Existing theories treat governance and violence as substitutes for securing civilian compliance, yet many rebels pursue both simultaneously. To address this puzzle, we advance a theory that disaggregates rebel institutions by purpose and target, distinguishing between internal institutions that regulate fighters and external institutions that regulate civilians. Drawing on insights from the literatures on civil war and authoritarian politics, we theorize how different combinations of internal and external governance shape civilian victimization by constraining, or failing to constrain, two pathways to harm: leader-authorized strategic violence and leader-disavowed opportunistic violence by rank-and-file combatants. To test the observable implications of this theory, we introduce a novel dataset on rebel internal governance and pair it with existing data on civilian-facing governance institutions and civilian victimization. Using a research design that exploits the unexpected death of rebel leaders to address endogeneity concerns, we analyze 166 rebel organizations operating in 57 countries between 1990 and 2012. We corroborate these findings with granular subnational evidence from the PKK insurgency. Across levels of analysis, we find that governance institutions reduce civilian victimization only when they jointly regulate both fighters and civilians. Internal or external institutions alone fail to produce systematic reductions in civilian harm. A complementary analysis of public claims and denials of attacks across MENA rebel organizations further supports our theoretical distinction between leader-authorized and leader-disavowed violence: internal institutions are associated with claiming attacks while external institutions are associated with denying them. These findings show that rebel governance can coexist with, enable, or constrain violence depending on whom institutions are designed to control, refining theories of rebel governance and offering a more nuanced account of civilian life under armed group rule.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="contact">3046 Allen Building &nbsp;·&nbsp; ilaydaonder [at] tamu [dot] edu</div>
+      <div>
+        <a href="https://bush.tamu.edu/pols/">Department of Political Science</a> |
+        <a href="https://bush.tamu.edu/">Bush School of Government and Public Service</a> |
+        <a href="https://www.tamu.edu/">Texas A&amp;M University</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
