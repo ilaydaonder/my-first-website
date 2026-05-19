@@ -10,576 +10,356 @@
     gtag('config', 'G-7HJCT0LDMJ');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publications — Ilayda B. Onder</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <title>Ilayda B. Onder | Publications</title>
+  <base target="_blank">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", serif;
-      background:#fff;
-      color:#000;
-      line-height:1.5;
-      font-size:15.5px;
+    :root {
+      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
+      --font-body:    'Geist', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      border-bottom:1px solid #ccc;
-      padding:10px 0;
+    /* ===== Global typography ===== */
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 0;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    nav a{
-      margin:5px 15px;
-      text-decoration:none;
-      color:#808080;
-      padding-bottom:5px;
-      font-size:18px;
+    a { color: #000099; text-decoration: none; }
+    a:visited { color: #000099; }
+    a:hover { color: #0066FF; }
+
+    /* Italic emphasis (e.g. journal names) renders in the display serif,
+       since Geist isn't loaded with an italic. */
+    em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05em;
     }
 
-    nav a:hover,
-    nav a.active{
-      border-bottom:2px solid #800000;
-      color:#800000;
-      font-weight:bold;
+    img { border-width: 0; }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      background: #ffffff;
     }
 
-    .page{
-      max-width: 1000px;
-      margin: 35px auto;
-      padding: 0 20px;
-      box-sizing:border-box;
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px 6px 24px;
     }
 
-    .two-col{
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -.005em;
+      margin: 0;
+      line-height: 1.05;
     }
 
-    .left{
-      flex: 0 0 260px;
-      text-align:center;
+    .title-block .subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 19px;
+      color: #555;
+      line-height: 1.2;
+      margin-top: 4px;
     }
 
-    .card{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:18px;
-      box-sizing:border-box;
+    /* ===== Navigation ===== */
+    nav {
+      background: #D8D8D8;
+      text-align: right;
+      padding: 6px 20px;
+      font-family: var(--font-body);
+      font-size: 11pt;
+      font-weight: 500;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
     }
 
-    .left .card{
-      max-width:240px;
-      margin:0 auto;
+    nav a, nav a:visited { color: #000; margin: 0 4px; }
+    nav a:hover { color: #0066FF; }
+    nav .sep { color: #555; margin: 0 2px; font-weight: 400; }
+
+    /* ===== Intro / summary block ===== */
+    .intro {
+      padding: 22px 22px 24px 22px;
+      border-bottom: 1px solid #000;
     }
 
-    .profile{
-      width:180px;
-      height:180px;
-      object-fit:cover;
-      border-radius:50%;
-      border:1px solid #e6e6e6;
+    .intro p {
+      text-align: justify;
+      margin: 0;
+      font-size: 10pt;
+      line-height: 1.55;
     }
 
-    h1.name{
-      font-size:20px;
-      font-weight:700;
-      margin:14px 0 6px 0;
+    /* ===== Section heading — mono eyebrow label ===== */
+    .section-title {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #333;
+      padding: 14px 0;
+      border-bottom: 1px solid #000;
     }
 
-    .titleblock{
-      font-size:14.5px;
-      line-height:1.4;
-      margin:0;
-      color:#444;
-      text-align:center;
+    /* ===== Publication row ===== */
+    .publication {
+      display: flex;
+      gap: 22px;
+      padding: 22px 22px;
+      border-bottom: 1px solid #000;
+      align-items: center;
     }
 
-    .icons{
-      margin-top:12px;
-      font-size:18px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
+    .publication-image {
+      flex: 0 0 220px;
+      width: 220px;
+      height: auto;
+      object-fit: contain;
     }
 
-    .icons a{
-      color:#000;
-      text-decoration:none;
+    .publication-body {
+      flex: 1;
+      font-size: 9.5pt;
+      line-height: 1.55;
     }
 
-    .icons a:hover{
-      color:#800000;
+    .publication-body h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      margin: 0 0 8px 0;
+      font-size: 15pt;
+      line-height: 1.15;
     }
 
-    .right{
-      flex: 1 1 auto;
-      min-width: 0;
+    /* Default paragraph (used for the abstract that follows the citation) */
+    .publication-body p {
+      text-align: justify;
+      margin: 0 0 10px 0;
     }
 
-    h1.section-title{
-      font-size:22px;
-      font-weight:700;
-      margin:0 0 12px 0;
+    /* First paragraph in each entry is the citation — rendered in the
+       display serif to match the project-title treatment on the
+       ongoing-projects page. Left-aligned (justified serif at this size
+       can produce uneven word-spacing on multi-line citations). The
+       inline-bolded author name keeps its emphasis through the browser's
+       weight synthesis on Instrument Serif. */
+    .publication-body p:first-of-type {
+      font-family: var(--font-display);
+      font-size: 14pt;
+      line-height: 1.35;
+      letter-spacing: -.005em;
+      color: #000;
+      text-align: left;
+      margin-bottom: 14px;
     }
 
-    .pub-box{
-      border:1px solid #e6e6e6;
-      border-radius:10px;
-      padding:16px;
-      margin-bottom:14px;
-      cursor:pointer;
-      transition: all 0.2s;
-      background:#fff;
+    /* Link row at the bottom of each entry */
+    .publication-body a {
+      font-size: 9.5pt;
     }
 
-    .pub-header{
-      display:grid;
-      grid-template-columns: auto 1fr auto;
-      align-items:center;
-      column-gap:16px;
+    /* ===== Footer ===== */
+    footer {
+      background: #D8D8D8;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 9.5pt;
+      border-top: 1px solid #000;
     }
 
-    .pub-number{
-      font-size:30px;
-      font-weight:700;
-      line-height:1;
-      color:#000;
-      min-width: 28px;
-      text-align:right;
-    }
-
-    .pub-title{
-      font-weight:700;
-      margin-bottom:2px;
-    }
-
-    .pub-meta{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      min-width:56px;
-    }
-
-    .pub-year{
-      font-size:16px;
-      font-weight:700;
-      margin-bottom:6px;
-    }
-
-    .pub-arrow{
-      font-size:22px;
-      font-weight:700;
-      color:#555;
-      transition: transform 0.2s;
-      line-height:1;
-    }
-
-    .pub-content{
-      display:none;
-      margin-top:14px;
-    }
-
-    .pub-box.active .pub-content{
-      display:block;
-    }
-
-    .pub-box.active .pub-arrow{
-      transform: rotate(180deg);
-    }
-
-    .button-group a{
-      display:inline-block;
-      padding:5px 10px;
-      margin:8px 8px 0 0;
-      border:1px solid #800000;
-      border-radius:8px;
-      text-decoration:none;
-      color:#800000;
-      font-weight:700;
-      font-size:13px;
-    }
-
-    .button-group a:hover{
-      background-color:#800000;
-      color:#fff;
-    }
-
-    a{
-      color:#800000;
-      font-weight:700;
-      text-decoration:none;
-    }
-
-    footer{
-      text-align:center;
-      font-size:11px;
-      margin:40px 0 20px 0;
-      color:#999;
-    }
-
-    @media (max-width: 800px){
-      .two-col{
-        flex-direction:column;
-        align-items:center;
-      }
-
-      .left{
-        flex:none;
-        width:100%;
-        max-width:420px;
-      }
-
-      .left .card{
-        max-width:320px;
-      }
-
-      .right{
-        width:100%;
-      }
-    }
-
-    @media (max-width: 600px){
-      .page{
-        margin:20px auto;
-      }
-
-      nav a{
-        margin:5px 10px;
-        font-size:16px;
-      }
-
-      .left .card{
-        max-width:100%;
-      }
-
-      .pub-header{
-        grid-template-columns: auto 1fr auto;
-        column-gap:12px;
-      }
-
-      .pub-number{
-        font-size:26px;
-      }
+    footer .contact {
+      font-family: var(--font-mono);
+      font-size: 8pt;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+      color: #333;
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="publications.html" class="active">Publications</a>
-    <a href="ongoing.html">Ongoing Projects</a>
-    <a href="data.html">Datasets</a>
-    <a href="teaching.html">Teaching</a>
-  </nav>
+  <div class="container">
 
-  <main class="page">
-    <div class="two-col">
-      <aside class="left">
-        <div class="card">
-          <img src="profile.webp" alt="Ilayda Onder" class="profile" />
-          <h1 class="name">Ilayda B. Onder</h1>
-          <p class="titleblock">
-            Assistant Professor<br>
-            Department of Political Science<br>
-            Texas A&amp;M University
-          </p>
-          <div class="icons" aria-label="Links">
-            <a href="mailto:ilaydaonder@tamu.edu" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://orcid.org/0000-0002-5712-8131" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
-            <a href="https://www.linkedin.com/in/ilayda-onder-b7a522287/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/ilaydaonder" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ilaydaonder.bsky.social" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
-          </div>
-        </div>
-      </aside>
+    <!-- Header -->
+    <header>
+      <div class="title-block">
+        <h1>Ilayda B. Onder</h1>
+        <div class="subtitle">Political Science<br>International Relations</div>
+      </div>
+    </header>
 
-      <section class="right">
-        <h1 class="section-title">Peer-Reviewed Publications</h1>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" target="_self">home</a><span class="sep">|</span>
+      <a href="cv.html" target="_self">cv</a><span class="sep">|</span>
+      <a href="publications.html" target="_self">publications</a><span class="sep">|</span>
+      <a href="ongoing.html" target="_self">ongoing projects</a><span class="sep">|</span>
+      <a href="data.html" target="_self">datasets</a><span class="sep">|</span>
+      <a href="teaching.html" target="_self">teaching</a>
+    </nav>
 
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">11</div>
-            <div>
-              <div class="pub-title">Quantitative Premises and Challenges in Studying the Kurdish Conflict in Turkey</div>
-              <div>Ilayda B. Onder</div>
-              <div><i>PS: Political Science & Politics.</i> Forthcoming. </div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract11.png" style="max-width:100%; height:auto;" alt="Abstract 8">
-            <div class="button-group">
-              <a href="#" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6264958" target="_blank" rel="noopener">PREPRINT</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">10</div>
-            <div>
-              <div class="pub-title">Leadership Succession and Jihadist Beheadings</div>
-              <div>Mark Berlin, Ilayda B. Onder, and Joshua Fawcett Weiner</div>
-              <div><i>Journal of Global Security Studies.</i> Forthcoming. </div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract10.png" style="max-width:100%; height:auto;" alt="Abstract 8">
-            <div class="button-group">
-              <a href="#" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5258832" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="https://doi.org/10.3886/E247986V1" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">9</div>
-            <div>
-              <div class="pub-title">Beyond Outbidding: Armed Group Responses to Transnational Jihadist Competition</div>
-              <div>Mark Berlin and Ilayda B. Onder</div>
-              <div><i>Journal of Conflict Resolution.</i> Forthcoming. </div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract9.png" style="max-width:100%; height:auto;" alt="Abstract 8">
-            <div class="button-group">
-              <a href="#" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5259513" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="https://doi.org/10.3886/E247637V1" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">8</div>
-            <div>
-              <div class="pub-title">A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups</div>
-              <div>Ilayda B. Onder</div>
-              <div><i>Political Science Research and Methods.</i> Forthcoming. </div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract8.png" style="max-width:100%; height:auto;" alt="Abstract 8">
-            <div class="button-group">
-              <a href="#" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5325780" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="#" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">7</div>
-            <div>
-              <div class="pub-title">Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset (JLD)</div>
-              <div>Maria Amjad, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner</div>
-              <div><i>Journal of Peace Research</i> 63(2): 289–297.</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2026</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract6.png" style="max-width:100%; height:auto;" alt="Abstract 6">
-            <div class="button-group">
-              <a href="https://doi.org/10.1093/jopres/xjaf016" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="pubs 06.pdf" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="https://www.prio.org/journals/jpr/replicationdata" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">6</div>
-            <div>
-              <div class="pub-title">How Statements of Denial by Armed Actors Shape Public Perceptions and Emotions</div>
-              <div>Ilayda B. Onder and Mark Berlin</div>
-              <div><i>Political Psychology.</i></div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2025</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract7.png" style="max-width:100%; height:auto;" alt="Abstract 7">
-            <div class="button-group">
-              <a href="https://doi.org/10.1111/pops.70079" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5259511" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="#" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">5</div>
-            <div>
-              <div class="pub-title">Credit Claims and the Survival of Terrorist Organizations</div>
-              <div>Ilayda B. Onder, Nazli Avdan, and Aaron Hoffman</div>
-              <div><i>International Interactions</i> 51 (6): 1050–1066</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2025</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract5.png" style="max-width:100%; height:auto;" alt="Abstract 5">
-            <div class="button-group">
-              <a href="https://doi.org/10.1080/03050629.2025.2505010" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="pubs 05.pdf" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="#" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">4</div>
-            <div>
-              <div class="pub-title">How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies</div>
-              <div>Ilayda B. Onder</div>
-              <div><i>Journal of Conflict Resolution</i> 69 (4): 701-730</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2024</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract4.png" style="max-width:100%; height:auto;" alt="Abstract 4">
-            <div class="button-group">
-              <a href="https://doi.org/10.1177/00220027241263006" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4437602" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="https://doi.org/10.7910/DVN/AKAR6Q" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">3</div>
-            <div>
-              <div class="pub-title">The Legacies of Rebel Rule in Southeast Turkey</div>
-              <div>Cyanne E. Loyle and Ilayda B. Onder</div>
-              <div><i>Comparative Political Studies</i> 57 (11): 1771-1803</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2024</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract3.png" style="max-width:100%; height:auto;" alt="Abstract 3">
-            <div class="button-group">
-              <a href="https://doi.org/10.1177/00104140231204223" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="pubs 03.pdf" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="https://doi.org/10.7910/DVN/LB7L5T" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">2</div>
-            <div>
-              <div class="pub-title">Target Hardening and Non-State Armed Groups' Target Selection: Evidence from India</div>
-              <div>Ilayda B. Onder</div>
-              <div><i>Terrorism and Political Violence</i> 36 (8): 1105-1126</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2023</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract2.png" style="max-width:100%; height:auto;" alt="Abstract 2">
-            <div class="button-group">
-              <a href="https://www.tandfonline.com/doi/full/10.1080/09546553.2023.2252917" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="pubs 02.pdf" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="https://doi.org/10.7910/DVN/GPIYPO" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-box">
-          <div class="pub-header">
-            <div class="pub-number">1</div>
-            <div>
-              <div class="pub-title">Signaling Resolve through Credit-claiming</div>
-              <div>Ilayda B. Onder</div>
-              <div><i>International Interactions</i> 49 (5): 755-784</div>
-            </div>
-            <div class="pub-meta">
-              <span class="pub-year">2023</span>
-              <span class="pub-arrow">&#x2193;</span>
-            </div>
-          </div>
-          <div class="pub-content">
-            <img src="abstract1.png" style="max-width:100%; height:auto;" alt="Abstract 1">
-            <div class="button-group">
-              <a href="https://www.tandfonline.com/doi/full/10.1080/03050629.2023.2216352" target="_blank" rel="noopener">ARTICLE</a>
-              <a href="pubs 01.pdf" target="_blank" rel="noopener">PREPRINT</a>
-              <a href="https://doi.org/10.7910/DVN/JPOLZB" target="_blank" rel="noopener">REPLICATION DATA</a>
-            </div>
-          </div>
-        </div>
-
-      </section>
+    <!-- Research summary -->
+    <div class="intro">
+      <p>My published work advances conflict studies by reframing core conflict processes around organizational mediation between violence and society. My research centers on the meso-level organizational mechanisms that link rebel governance, communication, recruitment, civilian victimization, and alliance politics. I develop socio-organizational theories of rebellion that explain how insurgent groups identify, categorize, and manage civilian populations, coordinate with other armed actors, and communicate both violence and restraint to domestic and international audiences.</p>
     </div>
-  </main>
 
-  <script>
-    document.querySelectorAll('.pub-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const box = header.closest('.pub-box');
-        box.classList.toggle('active');
-      });
-    });
+    <!-- Section title -->
+    <div class="section-title">Peer-Reviewed Journal Articles</div>
 
-    document.querySelectorAll('.pub-content a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
-    });
-  </script>
+    <!-- Publication 11 -->
+    <div class="publication">
+      <img src="psrm.jpg" class="publication-image"> 
+      <div class="publication-body">
+        <p>Onder, Ilayda B.</span> 2026. &ldquo;A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups.&rdquo; <em>Political Science Research and Methods.</em> Accepted Pending Replication.</p>
+        <p>This study develops a principal&ndash;agent theory of why and how armed groups engage in high-end cooperation involving training, intelligence, and logistical support. While such cooperation enhances operational capacity, it also redistributes power and generates downstream political risks. Principals mitigate these risks by selecting agents who are skill-wise complementary but politically non-substitutable, while agents accept high-end support when doing so does not risk becoming politically overshadowed by a dominant actor. Using original temporal network data on 53 groups in Northeast India (1981&ndash;2021) and Temporal Exponential Random Graph Models (TERGMs), I show that high-end cooperation is more likely in asymmetric dyads characterized by organizational capacity differentials, complementary attack portfolios, and distinct civilian constituencies. The findings recast militant alliances as products of competitive threat perception and carry broader implications for multiparty conflicts and the delegation of violence in civil wars.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5325780">Pre-Print</a>
+      </div>
+    </div>
 
-  <footer>
-    &copy; 2025 Ilayda B. Onder
-  </footer>
+    <!-- Publication 10 -->
+    <div class="publication">
+      <img src="jogss.jpg" class="publication-image"> 
+      <div class="publication-body">
+        <p>Berlin, Mark, Ilayda B. Onder, and Joshua Fawcett Weiner. 2026. &ldquo;Leadership Succession and Jihadist Beheadings.&rdquo; <em>Journal of Global Security Studies.</em> Forthcoming.</p>
+        <p>Why do armed groups use extreme forms of violence? Existing research argues that ideological beliefs and attempts to intimidate civilians, provoke enemies, and generate publicity drive armed groups' use of extreme violence. Building on existing scholarship, this study explores the incentives of different types of militant leaders to sanction extreme violence. Leadership transitions create authority crises within armed groups. We argue that these pressures incentivize successor leaders to employ extreme violence like beheadings as a tool of internal consolidation and external signaling. To examine these arguments, we combine an original dataset of the biographical attributes of 206 leaders of 108 different jihadist groups with event-level data on jihadist beheading attacks. In doing so, we find that jihadist organizations are significantly more likely to use beheadings under successor leaders. This effect is pronounced among successors who come to power following the arrest or death of their predecessors at the hands of state forces. However, the use of beheadings under successors decreases as their time in power increases, indicating the diminishing returns of using extreme violence over time. These findings contribute to scholarship on militant leaders, the consequences of counterterrorism policies, and the strategic logic of extreme violence.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5258832">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- Publication 9 -->
+    <div class="publication">
+      <img src="jcr.jpg" class="publication-image">
+      <div class="publication-body">
+        <p>Berlin, Mark, and Ilayda B. Onder. 2026. &ldquo;Beyond Outbidding: Armed Group Responses to Transnational Jihadist Competition.&rdquo; <em>Journal of Conflict Resolution.</em> Forthcoming.</p>
+        <p>Numerous jihadist organizations pledged allegiance to al-Qaeda (AQ) or the Islamic State (IS) in recent years. How do armed groups respond to competition from transnational jihadist rivals? A prominent strand of research argues that increased competition leads armed groups to outbid rivals through increased violence. However, alternative theories suggest that groups can restrain their violence to distinguish themselves from extremist rivals and appeal to local and international audiences. We test these competing hypotheses surrounding outbidding and restraint using original data on pledges to AQ and IS and a Difference-in-Differences (DiD) analysis of militant violence against civilians. We find that pledges to AQ or IS are associated with a moderate decline in the violence of other armed groups against civilians. Importantly, these findings are primarily driven by non-religious organizations and groups that are not formally designated as terrorists. This study contributes to research on militant competition, civilian victimization, and transnational actors.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5259513">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- Publication 8 -->
+    <div class="publication">
+      <img src="ps.jpg" class="publication-image">
+      <div class="publication-body">
+        <p>Onder, Ilayda B. 2026. &ldquo;Quantitative Premises and Challenges in Studying the Kurdish Conflict in Turkey.&rdquo; <em>PS: Political Science &amp; Politics.</em> Forthcoming.</p>
+        <p>This article examines the conditions that make the Kurdish conflict in Turkey, particularly the PKK insurgency, unusually amenable to large-N quantitative analysis, and discusses the inferential limits those same conditions impose. The PKK's sustained archival production over multiple decades has generated an exceptional volume of publicly accessible written and digital materials that enable disaggregated measurement at the individual, district, and monthly level, a form of granularity rarely achievable in conflict research. Such data enable direct measurement of outcomes often treated as latent, including rebel recruitment, and support research designs that can approximate causal identification at fine temporal and spatial scales. At the same time, PKK materials are instruments of information warfare that embed biases, including omission and severity biases whereby controversial practices are underreported and their most sensitive dimensions concealed, as well as the invisibility of civilian agency in rebel-produced records. After discussing potential empirical strategies for assessing and validating rebel-produced data, I conclude by positioning survey research as a partial corrective that can recover civilian agency in several areas of inquiry, especially civilian interactions with rebel governance attempts, while underscoring the financial and ethical constraints that limit the precision, scalability, and reproducibility of survey research in this setting.</p>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6264958">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- Publication 7 -->
+    <div class="publication">
+      <img src="jpr.jpg" class="publication-image">
+      <div class="publication-body">
+        <p>Amjad, Maria, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner. 2026. &ldquo;Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset.&rdquo; <em>Journal of Peace Research</em> 63(2): 289&ndash;297.</p>
+        <p>Recent research has explored how militant leaders' backgrounds shape their decision-making while in power. However, existing studies primarily focus on leaders of rebel groups participating in civil wars, overlooking smaller, yet lethal and influential, armed groups that operate outside civil war contexts. To address this gap, we introduce the Jihadist Leaders Dataset (JLD), which provides original, systematic data on the backgrounds and prewar experiences of 237 leaders from 110 jihadist organizations. The dataset covers organizations operating across Africa, Asia, and the Middle East between 1976 and 2023, capturing a broad range of actors that are central to contemporary conflicts. Drawing on Arabic, English, French, German, Turkish, and Urdu sources, we document biographical information on 31 leader-level variables, offering the potential for analyzing how jihadist leaders' prior experiences shape their preferences and the behavior of the groups they command. We detail our data collection procedures and present descriptive statistics before illustrating the JLD's utility through a quantitative analysis of the leader-level determinants of suicide bombings. The JLD advances research on militant leaders, jihadist actors, and the role of individual decision-makers in shaping conflict processes and provides multiple avenues for new research on leader-level explanations of various consequential outcomes in conflict zones, including organizational splintering, tactical choices, and militant alliances.</p>
+        <a href="https://doi.org/10.1093/jopres/xjaf016">Article</a> |
+        <a href="jprpreprint.pdf">Pre-Print</a> |
+        <a href="https://www.prio.org/journals/jpr/replicationdata">Replication Data</a>
+      </div>
+    </div>
+
+    <!-- Publication 6 -->
+    <div class="publication">
+      <img src="polpsych.jpg" class="publication-image">
+      <div class="publication-body">
+        <p>Onder, Ilayda B., and Mark Berlin. 2025. &ldquo;We Have Nothing to Do with It: How Statements of Denial by Armed Actors Shape Public Perceptions and Emotions.&rdquo; <em>Political Psychology.</em></p>
+        <p>Armed groups operating in conflicts around the world publish statements of denial to dissociate themselves from acts of violence. Existing research argues that armed groups publish denial statements to avoid public backlash, favorably frame the conduct of their campaigns, and distance themselves from unsanctioned actions conducted by rank-and-file members. However, the broader psychological impact of denial statements on public perceptions remains unexplored. Investigating the effects of denial statements published by armed groups, we conducted a novel survey experiment with a national sample of 1616 adults in the United States. Participants were presented with a fictional attack attributed to an armed group by the government and randomly assigned to conditions in which the group denied, claimed, or remained silent about the attack. Our findings reveal that denials reduce perceived culpability in attacks, undermine trust in government, and alter emotional responses to violence. These results highlight how denial statements may serve as important rhetorical tools in armed groups' discursive repertoire. This study contributes to scholarship on the communication strategies of armed groups, psychological responses to violence, and the effects of militant discourse on public perceptions.</p>
+        <a href="https://doi.org/10.1111/pops.70079">Article</a> |
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5259511">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- Publication 5 -->
+    <div class="publication">
+      <img src="ii.png" class="publication-image">
+      <div class="publication-body">
+        <p>Onder, Ilayda B., Nazli Avdan, and Aaron M. Hoffman. 2025. &ldquo;Credit Claims and the Survival Rates of Terrorist Organizations.&rdquo; <em>International Interactions</em> 51(6): 1050&ndash;1066.</p>
+        <p>This study investigates the relationship between terrorist credit claims and government counterterrorism efforts, focusing on the impact of claims on group survival. Using data from the Extended Data on Terrorist Groups (EDTG) and Global Terrorism Database (GTD), we find that groups issuing credit claims have shorter lifespans than groups that remain silent. We are unable, however, to connect this increased mortality to government counterterrorism efforts even though government action is supposed to deter groups from issuing credit claims. Instead, we find that credit claiming groups are more likely to merge with other terrorist organizations, splinter apart, or fade away through inactivity. These findings raise questions about how the prospect of government counterterrorism efforts influences terrorist activity. The idea that the threat of government retaliation dissuades groups from issuing credit claims may require a reassessment.</p>
+        <a href="https://doi.org/10.1080/03050629.2025.2505010">Article</a> |
+        <a href="ii2preprint.pdf">Pre-Print</a>
+      </div>
+    </div>
+
+    <!-- Publication 4 -->
+    <div class="publication">
+      <img src="jcr.jpg" class="publication-image">
+      <div class="publication-body">
+        <p>Onder, Ilayda B. 2025. &ldquo;How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies.&rdquo; <em>Journal of Conflict Resolution</em> 69(4): 701&ndash;730.</p>
+        <p>Rebels rely on the support of their civilian constituency, but often victimize them to enforce compliance. Scholars know relatively little about how rebels strategize violence against civilians in conflicts where the rebel constituency overlaps with the government's political support base. This gap is problematic because the rebel constituency comprises a diverse group with varying attitudinal and behavioral characteristics. Offering a novel typology of rebel constituency members&mdash;loyals, disloyals, fence-sitters, and free-riders&mdash;this study examines the impact of rebel constituency support for the government on the rebels' targeting of their civilian constituency. Leveraging an original dataset of the PKK's coercive acts targeting civilians in Kurdish-majority provinces of Turkey between 2014 and 2019, I proxy rebel constituency support for the government with district-level data on incumbent party victory in the 2014 municipal elections and employ a regression-discontinuity approach. I find that the spatial distribution of loyal and disloyal rebel constituency members is crucial in explaining subnational variations in civilian victimization, specifically who is targeted and where. This study enhances our understanding of rebels' use of coercion to alter their constituencies' political allegiances and calls for greater attention to individual or community-level characteristics of civilians, beyond ethnic or identity-cleavages, in rebel-civilian interactions.</p>
+        <a href="https://doi.org/10.1177/00220027241263006">Article</a> |
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4437602">Pre-Print</a> |
+        <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AKAR6Q">Replication Data</a>
+      </div>
+    </div>
+
+    <!-- Publication 3 -->
+    <div class="publication">
+      <img src="cps.jpg" class="publication-image">
+      <div class="publication-body">
+        <p>Loyle, Cyanne E., and Ilayda B. Onder. 2024. &ldquo;The Legacies of Rebel Rule in Southeast Turkey.&rdquo; <em>Comparative Political Studies</em> 57(11): 1771&ndash;1803.</p>
+        <p>During armed conflict civilians often inhabit areas of contested governance or areas where rebel groups, NGOs, and/or criminal syndicates vie for authority and challenge the control of the state. As non-state actors confront the authority and legitimacy of the state, civilians become central players in that competition asked to uphold or undercut these alternative governance claims. In this paper we examine the long-term impact of rebel governance for citizens living in spaces where state governance is challenged. Leveraging survey data from areas historically under PKK control in Southeastern Turkey, we focus on the ways in which contestation over governance during the conflict influenced future trust and engagement with the Turkish state. Specifically, we find that individual engagement with rebel governance institutions and personal conflict experience are important factors in understanding the effects of contested governance. Our findings increase our understanding of the long-term impact of armed conflict on civilians and the potential lasting impacts of rebel governance on the post-conflict state.</p>
+        <a href="https://journals.sagepub.com/doi/10.1177/00104140231204223">Article</a>
+      </div>
+    </div>
+
+    <!-- Publication 2 -->
+    <div class="publication">
+      <img src="tpv.png" class="publication-image">
+      <div class="publication-body">
+        <p>Onder, Ilayda B. 2024. &ldquo;Target Hardening and Non-State Armed Groups' Target Selection: Evidence from India.&rdquo; <em>Terrorism and Political Violence</em> 36(8): 1105&ndash;1126.</p>
+        <p>This study explores the variation in the non-state armed group (NSAGs)'s behavior concerning target selection. Scholars of transnational terrorism have investigated transnational NSAGs' target selection. However, we are still missing out on the most common form of terrorism, terrorism perpetrated by domestic NSAGs involved in civil conflicts. This paper's novel contribution is to the understanding of domestic NSAGs' strategic logic. I argue that hardening makes soft targets, including civilians, attractive targets when hard targets are no longer attractive. NSAGs tactically adapt to hardening by switching to soft targets or by displacing attacks to adjacent locations within their home country. The empirical results from data on relevant state-group dyads in India between 2004&ndash;2016 show that domestic NSAGs (1) switch to soft targets when faced with hardening, (2) less frequently target soft targets when more of their attacks against hard targets have been logistically successful, and (3) commit more attacks in their primary area of operation when more of their attacks in that location have been logistically successful. These findings emphasize a variety of ways through which domestic NSAGs adapt their tactics and underscore potential costs for target hardening.</p>
+        <a href="https://doi.org/10.1080/09546553.2023.2252917">Article</a> |
+        <a href="tpvpreprint.pdf">Pre-Print</a> |
+        <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GPIYPO">Replication Data</a>
+      </div>
+    </div>
+
+    <!-- Publication 1 -->
+    <div class="publication">
+      <img src="ii.png" class="publication-image">
+      <div class="publication-body">
+        <p>Onder, Ilayda B. 2023. &ldquo;Signaling Resolve through Credit-claiming.&rdquo; <em>International Interactions</em> 49(5): 755&ndash;784.</p>
+        <p>What explains when militant groups claim attacks? In this study, I argue that militant groups are more likely to claim attacks early in the organization's lifespan and after major blows to reputation like loss of a leader due to leadership decapitation. This is because credit-claiming helps militants signal resolve to a wider audience, thereby burnishing the organization's reputation. Specifically, I argue that claims of militant attacks are costly for organizations because they may be met with government retaliation. However, groups that are younger or have recently suffered the loss of a leader seek to use government retaliation to signal resolve. I find support for this proposition using two sets of empirical analyses. First, I show that claims increase the risk of government retaliation. Then, using a comprehensive data set of 592 groups, I show that militant groups are more likely to claim attacks in the earliest phases of their lifespans and after their leaders are killed/captured. Although civilian victimization and emerging due to splintering are found to be depressing credit claiming, the findings also suggest that (i) groups that only target security forces, (ii) groups that victimize civilians, (iii) groups that emerged independently without known affiliations with existing groups, and (iv) splinter groups all issue fewer claims as they age. These findings help elucidate a largely overlooked dimension of strategic militant behavior.</p>
+        <a href="https://doi.org/10.1080/03050629.2023.2216352">Article</a> |
+        <a href="ii1preprint.pdf">Pre-Print</a> |
+        <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/JPOLZB">Replication Data</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="contact">3046 Allen Building &nbsp;·&nbsp; ilaydaonder [at] tamu [dot] edu</div>
+      <div>
+        <a href="https://bush.tamu.edu/pols/">Department of Political Science</a> |
+        <a href="https://bush.tamu.edu/">Bush School of Government and Public Service</a> |
+        <a href="https://www.tamu.edu/">Texas A&amp;M University</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
