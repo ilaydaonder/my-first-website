@@ -1,27 +1,48 @@
-<!-- cv.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7HJCT0LDMJ');
-  </script>
-
   <meta charset="UTF-8">
   <title>Ilayda B. Onder | CV</title>
   <base target="_blank">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin.woff2') format('woff2'),
+           url('fonts/Fontin.otf')   format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin-Italic.woff2') format('woff2'),
+           url('fonts/Fontin-Italic.otf')   format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin-Bold.woff2') format('woff2'),
+           url('fonts/Fontin-Bold.otf')   format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Fontin SmallCaps';
+      src: url('fonts/Fontin-SmallCaps.woff2') format('woff2'),
+           url('fonts/Fontin-SmallCaps.otf')   format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
-      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
-      --font-body:    'Geist', system-ui, sans-serif;
-      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
+      --font-display: 'Fontin', 'Times New Roman', Times, serif;
+      --font-body:    'Fontin', 'Times New Roman', Times, serif;
+      --font-sc:      'Fontin SmallCaps', 'Fontin', 'Times New Roman', Times, serif;
     }
 
     /* ===== Global typography ===== */
@@ -32,7 +53,7 @@
       padding: 24px 0;
       color: #000000;
       font-size: 10.5pt;
-      line-height: 1.55;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -41,11 +62,8 @@
     a:visited { color: #000099; }
     a:hover { color: #0066FF; }
 
-    em {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: 1.05em;
-    }
+    /* Fontin ships with a true italic, so em just inherits */
+    em { font-style: italic; }
 
     /* ===== Container ===== */
     .container {
@@ -65,8 +83,8 @@
 
     .title-block h1 {
       font-family: var(--font-display);
-      font-size: 44px;
-      font-weight: 400;
+      font-size: 38px;
+      font-weight: 700;
       letter-spacing: -.005em;
       margin: 0;
       line-height: 1.05;
@@ -75,10 +93,10 @@
     .title-block .subtitle {
       font-family: var(--font-display);
       font-style: italic;
-      font-size: 19px;
+      font-size: 17px;
       color: #555;
-      line-height: 1.2;
-      margin-top: 4px;
+      line-height: 1.25;
+      margin-top: 6px;
     }
 
     /* ===== Navigation ===== */
@@ -88,7 +106,7 @@
       padding: 6px 20px;
       font-family: var(--font-body);
       font-size: 11pt;
-      font-weight: 500;
+      font-weight: 400;
       border-top: 1px solid #000;
       border-bottom: 1px solid #000;
     }
@@ -125,8 +143,8 @@
     }
 
     footer .contact {
-      font-family: var(--font-mono);
-      font-size: 8pt;
+      font-family: var(--font-sc);
+      font-size: 9.5pt;
       letter-spacing: .03em;
       margin-bottom: 6px;
       color: #333;

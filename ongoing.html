@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7HJCT0LDMJ');
-  </script>
-
   <meta charset="UTF-8">
   <title>Ilayda B. Onder | Ongoing Projects</title>
   <base target="_blank">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin.woff2') format('woff2'),
+           url('fonts/Fontin.otf')   format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin-Italic.woff2') format('woff2'),
+           url('fonts/Fontin-Italic.otf')   format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin-Bold.woff2') format('woff2'),
+           url('fonts/Fontin-Bold.otf')   format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Fontin SmallCaps';
+      src: url('fonts/Fontin-SmallCaps.woff2') format('woff2'),
+           url('fonts/Fontin-SmallCaps.otf')   format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
-      --font-display: 'Instrument Serif', 'Times New Roman', Times, serif;
-      --font-body:    'Geist', system-ui, sans-serif;
-      --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
+      --font-display: 'Fontin', 'Times New Roman', Times, serif;
+      --font-body:    'Fontin', 'Times New Roman', Times, serif;
+      --font-sc:      'Fontin SmallCaps', 'Fontin', 'Times New Roman', Times, serif;
     }
 
     /* ===== Global typography ===== */
@@ -31,7 +53,7 @@
       padding: 24px 0;
       color: #000000;
       font-size: 10.5pt;
-      line-height: 1.55;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -40,13 +62,8 @@
     a:visited { color: #000099; }
     a:hover { color: #0066FF; }
 
-    /* Italic emphasis renders in the display serif, since Geist isn't
-       loaded with an italic. */
-    em {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: 1.05em;
-    }
+    /* Fontin ships with a true italic, so em just inherits */
+    em { font-style: italic; }
 
     img { border-width: 0; }
 
@@ -68,8 +85,8 @@
 
     .title-block h1 {
       font-family: var(--font-display);
-      font-size: 44px;
-      font-weight: 400;
+      font-size: 38px;
+      font-weight: 700;
       letter-spacing: -.005em;
       margin: 0;
       line-height: 1.05;
@@ -78,10 +95,10 @@
     .title-block .subtitle {
       font-family: var(--font-display);
       font-style: italic;
-      font-size: 19px;
+      font-size: 17px;
       color: #555;
-      line-height: 1.2;
-      margin-top: 4px;
+      line-height: 1.25;
+      margin-top: 6px;
     }
 
     /* ===== Navigation ===== */
@@ -91,7 +108,7 @@
       padding: 6px 20px;
       font-family: var(--font-body);
       font-size: 11pt;
-      font-weight: 500;
+      font-weight: 400;
       border-top: 1px solid #000;
       border-bottom: 1px solid #000;
     }
@@ -109,18 +126,17 @@
     .intro p {
       text-align: justify;
       margin: 0;
-      font-size: 10pt;
-      line-height: 1.55;
+      font-size: 11pt;
+      line-height: 1.4;
     }
 
-    /* ===== Section heading — mono eyebrow label ===== */
+    /* ===== Section heading — Fontin SmallCaps eyebrow label ===== */
     .section-title {
       text-align: center;
-      font-family: var(--font-mono);
-      font-size: 9pt;
-      font-weight: 500;
-      letter-spacing: .18em;
-      text-transform: uppercase;
+      font-family: var(--font-sc);
+      font-size: 13pt;
+      font-weight: 400;
+      letter-spacing: .12em;
       color: #333;
       padding: 14px 0;
       border-bottom: 1px solid #000;
@@ -144,20 +160,20 @@
 
     .publication-body {
       flex: 1;
-      font-size: 9.5pt;
-      line-height: 1.55;
+      font-size: 10pt;
+      line-height: 1.3;
     }
 
     .publication-body h3 {
       font-family: var(--font-display);
-      font-weight: 400;
+      font-weight: 700;
       margin: 0 0 8px 0;
       font-size: 15pt;
       line-height: 1.15;
     }
 
     /* First paragraph holds the project title (<strong>) and an optional
-       co-author byline after a <br>. Title gets the display serif; byline
+       co-author byline after a <br>. Title is rendered larger/bold; byline
        stays in the body font, slightly muted. */
     .publication-body p {
       text-align: justify;
@@ -165,7 +181,7 @@
     }
 
     .publication-body p:first-of-type {
-      font-size: 10pt;
+      font-size: 11pt;
       line-height: 1.4;
       color: #555;
       margin-bottom: 12px;
@@ -174,15 +190,15 @@
 
     .publication-body p:first-of-type strong {
       font-family: var(--font-display);
-      font-weight: 400;
-      font-size: 14pt;
+      font-weight: 700;
+      font-size: 13pt;
       letter-spacing: -.005em;
       line-height: 1.25;
       color: #000;
     }
 
     .publication-body a {
-      font-size: 9.5pt;
+      font-size: 10pt;
     }
 
     /* ===== Footer ===== */
@@ -195,8 +211,8 @@
     }
 
     footer .contact {
-      font-family: var(--font-mono);
-      font-size: 8pt;
+      font-family: var(--font-sc);
+      font-size: 9.5pt;
       letter-spacing: .03em;
       margin-bottom: 6px;
       color: #333;
