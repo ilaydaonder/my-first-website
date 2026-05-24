@@ -142,7 +142,7 @@
       border-bottom: 1px solid #000;
     }
 
-    /* ===== Dataset / publication row ===== */
+    /* ===== Project / publication row ===== */
     .publication {
       display: flex;
       gap: 22px;
@@ -172,28 +172,31 @@
       line-height: 1.15;
     }
 
-    /* Default paragraph (used for the "Please cite as:" line and the
-       description that follows) */
+    /* First paragraph holds the project title (<strong>) and an optional
+       co-author byline after a <br>. Title is rendered larger/bold; byline
+       stays in the body font, slightly muted. */
     .publication-body p {
       text-align: justify;
       margin: 0 0 10px 0;
     }
 
-    /* First paragraph in each entry is the dataset name — rendered larger
-       to act as a visual title for the entry. Left-aligned to avoid
-       uneven word-spacing on multi-line names. */
     .publication-body p:first-of-type {
-      font-family: var(--font-display);
-      font-weight: 700;
       font-size: 11pt;
       line-height: 1.4;
-      letter-spacing: -.005em;
-      color: #000;
+      color: #555;
+      margin-bottom: 12px;
       text-align: left;
-      margin-bottom: 10px;
     }
 
-    /* Link row at the bottom of each entry */
+    .publication-body p:first-of-type strong {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13pt;
+      letter-spacing: -.005em;
+      line-height: 1.25;
+      color: #000;
+    }
+
     .publication-body a {
       font-size: 10pt;
     }
@@ -239,7 +242,11 @@
 
     <!-- Research summary -->
     <div class="intro">
-      <p>I have published numerous event-, group-, and leader-level datasets on conflict processes, both independently and with collaborators, and have additional datasets in development.</p>
+      <p>Original data collection is central to my research program. 
+      I have published and continue to develop event-, group-, and leader-level datasets that capture various dimensions of conflict missing from existing resources.
+      These datasets draw on multilingual primary sources, and are designed to support both my own work and that of other scholars. 
+      All published datasets are freely available for replication and extension, with documentation provided on the linked dataverse or project pages. 
+      Below are the datasets I have released to date; additional datasets are in development and will be posted as they become public.</p>
     </div>
 
     <!-- Section title -->
@@ -249,9 +256,9 @@
     <div class="publication">
       <img src="jld.png" class="publication-image">
       <div class="publication-body">
-        <p>Jihadist Leaders Dataset (JLD)</p>
+        <p><strong>Jihadist Leaders Dataset (JLD)</strong>
         <p>The Jihadist Leaders Dataset (JLD) provides original data on the biographical attributes of 238 leaders from 110 jihadist groups. We conceptualize jihadist groups as an ideological subset of armed groups&mdash;non-state actors that use violence to achieve political objectives. This allows us to explore variation among a broad range of leaders of jihadist groups operating across Africa, Asia, and the Middle East between 1976 and 2023. Drawing on Arabic, English, French, German, Turkish, and Urdu sources, the JLD contains information on 31 leader-level variables, providing new insights into how militant leaders' backgrounds and prior experiences shape their decision-making.</p>
-        <p>Please cite as: Amjad, Maria, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner. 2026. &ldquo;Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset.&rdquo; <em>Journal of Peace Research.</em></p>
+        <p>Cite as: Amjad, Maria, Mark Berlin, Sara Daub, Ilayda B. Onder, and Joshua Fawcett Weiner. 2026. &ldquo;Commanders of the Mujahideen: Introducing the Jihadist Leaders Dataset.&rdquo; <em>Journal of Peace Research.</em></p>
         <a href="https://jlddataset.github.io/jdldataset/">Dataset Website</a>
       </div>
     </div>
@@ -260,9 +267,9 @@
     <div class="publication">
       <img src="northeast.png" class="publication-image">
       <div class="publication-body">
-        <p>Northeast Indian Militant Group Networks Dataset</p>
+        <p><strong>Northeast Indian Militant Group Networks Dataset</strong>
         <p>The Northeast Indian Militant Group Networks Dataset is an original, disaggregated, time-series network dataset of 53 ethnonationalist militant groups active in Northeast India from 1981 through 2021. It considers all armed non-state actors, including those typically categorized as rebels, insurgents, or terrorists. It provides time variant information on 8 discrete forms of cooperation: (1) joint operations, (2) training support, (3) provision of arms and funds, (4) intelligence-sharing and logistical support, (5) joint planning or leadership meetings, (6) joint public statements, (7) participation in umbrella organizations, and (8) rhetorical support.</p>
-        <p>Please cite as: Onder, Ilayda B. 2026. &ldquo;A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups.&rdquo; <em>Political Science Research and Methods.</em></p>
+        <p>Cite as: Onder, Ilayda B. 2026. &ldquo;A Principal-Agent Theory and Network Analysis of High-End Cooperation Among Militant Groups.&rdquo; <em>Political Science Research and Methods.</em></p>
         <a href="">Download Dataset</a>
       </div>
     </div>
@@ -271,9 +278,9 @@
     <div class="publication">
       <img src="pkkvictimization.png" class="publication-image">
       <div class="publication-body">
-        <p>Civilian Victimization in the Kurdish Insurgency Dataset</p>
+        <p><strong>Civilian Victimization in the Kurdish Insurgency Dataset</strong>
         <p>The dataset compiles 572 incidents of the PKK's coercive acts, either directly targeting civilians or unintentionally harming civilian bystanders in 21 provinces located in southeastern Turkey with significant Kurdish-speaking populations between 2014&ndash;2019. 243 of these incidents have not been included in any other publicly available dataset. The characteristics of individuals (e.g., public worker, local politician, pro-government politician, alleged state informant, business owner) are recorded for each incident.</p>
-        <p>Please cite as: Onder, Ilayda B. 2025. &ldquo;How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies.&rdquo; <em>Journal of Conflict Resolution</em> 69(4): 701&ndash;730.</p>
+        <p>Cite as: Onder, Ilayda B. 2025. &ldquo;How Civilian Loyalties Shape Rebel-led Victimization of Rebel Constituencies.&rdquo; <em>Journal of Conflict Resolution</em> 69(4): 701&ndash;730.</p>
         <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AKAR6Q">Download Dataset</a>
       </div>
     </div>

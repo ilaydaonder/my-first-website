@@ -142,7 +142,7 @@
       border-bottom: 1px solid #000;
     }
 
-    /* ===== Course / publication row ===== */
+    /* ===== Project / publication row ===== */
     .publication {
       display: flex;
       gap: 22px;
@@ -172,26 +172,31 @@
       line-height: 1.15;
     }
 
-    /* Default paragraph (used for the course description) */
+    /* First paragraph holds the project title (<strong>) and an optional
+       co-author byline after a <br>. Title is rendered larger/bold; byline
+       stays in the body font, slightly muted. */
     .publication-body p {
       text-align: justify;
       margin: 0 0 10px 0;
     }
 
-    /* First paragraph in each entry is the course title — rendered in
-       Fontin bold to match the title treatment elsewhere on the site. */
     .publication-body p:first-of-type {
-      font-family: var(--font-display);
-      font-weight: 700;
       font-size: 11pt;
       line-height: 1.4;
-      letter-spacing: -.005em;
-      color: #000;
-      text-align: left;
+      color: #555;
       margin-bottom: 12px;
+      text-align: left;
     }
 
-    /* Link row at the bottom of each entry */
+    .publication-body p:first-of-type strong {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13pt;
+      letter-spacing: -.005em;
+      line-height: 1.25;
+      color: #000;
+    }
+
     .publication-body a {
       font-size: 10pt;
     }
@@ -237,7 +242,10 @@
 
     <!-- Research summary -->
     <div class="intro">
-      <p>At Texas A&amp;M University, I teach undergraduate and graduate courses on conflict and quantitative research methods.</p>
+      <p>At Texas A&M University, I teach undergraduate and graduate courses in international relations, conflict studies, and quantitative research methods. 
+      My teaching brings the substantive concerns of my research into dialogue with the methodological tools students need to engage with this scholarship. 
+      At the undergraduate level, my courses introduce students to core debates in the study of conflict and equip them with foundational skills in statistical analysis. 
+      At the graduate level, my seminars survey theoretical and empirical traditions in the study of international and civil conflict.</p>
     </div>
 
     <!-- Section title -->
@@ -247,7 +255,7 @@
     <div class="publication">
       <img src="631.png" class="publication-image">
       <div class="publication-body">
-        <p>POLS 631 Conflict Studies (Graduate)</p>
+        <p><strong>POLS 631 Conflict Studies (Graduate)</strong>
         <p>This seminar surveys major theoretical and empirical research on international and civil conflict. The course introduces students to the core analytical frameworks used in the study of war, beginning with foundational debates about why wars occur. Early weeks focus on rationalist approaches to conflict, including bargaining theory, information problems, and commitment problems. The course then examines how domestic politics shapes the outbreak and conduct of international conflict, with readings exploring the role of political institutions, leader incentives, and audience costs in influencing signaling, credibility, and crisis escalation. The second half of the course turns to intrastate violence. Students engage with major explanations for the onset of civil war, including ethnic conflict, political exclusion, economic incentives, and state capacity. Later weeks consider the behavior of armed actors during civil war and the political orders that emerge in contested territories. The final weeks examine state responses to insurgency and terrorism, including counterinsurgency strategies, repression, and leadership targeting, before concluding with recent work on the long-term political and social legacies of civil war and rebel rule.</p>
         <a href="POLS_631_Syllabus.pdf">Syllabus</a>
       </div>
@@ -257,7 +265,7 @@
     <div class="publication">
       <img src="312.png" class="publication-image">
       <div class="publication-body">
-        <p>POLS 312 Ethnic Conflict (Undergraduate)</p>
+        <p><strong>POLS 312 Ethnic Conflict (Undergraduate)</strong>
         <p>This course examines the causes, dynamics, and resolution of ethnic conflict through a comparative and theoretically grounded perspective. The course is organized into six parts. We begin by unpacking key concepts such as ethnicity, nationalism, and religion, and by examining how ethnic identities become politically salient. The second part explores the causes of violent ethnic conflict. The third part investigates mobilization in violent ethnic conflict, focusing on how individuals and communities join or support ethnic violence. The fourth part turns to the dynamics of violence, examining why and how ethnically motivated armed groups target civilians, engage in mass killing, terrorism, or sexual violence, and how local-level interactions shape patterns of violence in ethnic conflict. In the fifth part, we move beyond violence to study the non-violent dimensions of ethnic conflict, including ethnic voting and public goods provision, during and in the aftermath of conflict.</p>
         <a href="POLS_312_Syllabus.pdf">Syllabus</a>
       </div>
@@ -267,7 +275,7 @@
     <div class="publication">
       <img src="209.png" class="publication-image">
       <div class="publication-body">
-        <p>POLS 209 Introduction to Political Science Research (Undergraduate)</p>
+        <p><strong>POLS 209 Introduction to Political Science Research (Undergraduate)</strong>
         <p>The primary goal of this course is to teach you how to turn things into data, analyze them using statistics, and make inferences using statistical analysis about real-world issues. The syllabus lists some more specific course objectives below, but the &ldquo;big picture&rdquo; purpose of this course is to give you the foundational quantitative tools you may need to answer questions about the political and social scientific phenomena you are interested in. We will spend part of the course discussing how to generate hypotheses and design research in a way that allows you to answer research questions using quantitative data. We will learn about various statistical techniques for analyzing data and testing hypotheses. Yes, that means we will do some math. And yes, that means we will use computer software (R and RStudio specifically) to visualize and analyze data as well. Throughout the semester, you will also design and carry out an independent research project to test your own theory about a topic of your own choosing. My goal is to help you develop a statistical literacy that will help you become a conscientious and critical consumer of news, political events, and scientific research. Hopefully, the skills you acquire in this class will also assist you to develop competency in the technical tools you may need to compete in an increasingly large-N, data-driven world.</p>
         <a href="POLS_209_Syllabus.pdf">Syllabus</a>
       </div>
