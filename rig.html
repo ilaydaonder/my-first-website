@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ilayda B. Onder | The Rebel Internal Governance (RIG) Dataset</title>
+  <base target="_blank">
+
+  <!-- Preload fonts so they start downloading before the CSS is parsed.
+       The crossorigin attribute is REQUIRED for font preloads, even for
+       same-origin files — without it the browser downloads each font twice. -->
+  <link rel="preload" href="fonts/Fontin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-SmallCaps.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin.woff2') format('woff2'),
+           url('fonts/Fontin.otf')   format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: block; /* was swap: block waits briefly for Fontin instead of flashing Times first */
+    }
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin-Italic.woff2') format('woff2'),
+           url('fonts/Fontin-Italic.otf')   format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Fontin';
+      src: url('fonts/Fontin-Bold.woff2') format('woff2'),
+           url('fonts/Fontin-Bold.otf')   format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Fontin SmallCaps';
+      src: url('fonts/Fontin-SmallCaps.woff2') format('woff2'),
+           url('fonts/Fontin-SmallCaps.otf')   format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+
+    :root {
+      --font-display: 'Fontin', 'Times New Roman', Times, serif;
+      --font-body:    'Fontin', 'Times New Roman', Times, serif;
+      --font-sc:      'Fontin SmallCaps', 'Fontin', 'Times New Roman', Times, serif;
+
+      /* Site palette only. To restore the mockup's brick-red eyebrow
+         labels, change --accent to #7A2E27. */
+      --accent: #333333;
+    }
+
+    /* ===== Global typography ===== */
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 0;
+      color: #000000;
+      font-size: 10.5pt;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: #000099; text-decoration: none; }
+    a:visited { color: #000099; }
+    a:hover { color: #0066FF; }
+
+    em { font-style: italic; }
+
+    img { border-width: 0; }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      background: #ffffff;
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px 6px 24px;
+    }
+
+    .title-block h1 {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -.005em;
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    .title-block .subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 17px;
+      color: #555;
+      line-height: 1.25;
+      margin-top: 6px;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      background: #D8D8D8;
+      text-align: right;
+      padding: 6px 20px;
+      font-family: var(--font-body);
+      font-size: 11pt;
+      font-weight: 400;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    nav a, nav a:visited { color: #000; margin: 0 4px; }
+    nav a:hover { color: #0066FF; }
+    nav .sep { color: #555; margin: 0 2px; font-weight: 400; }
+
+    /* ===== Eyebrow label (short dash + spaced caps) ===== */
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 8.5pt;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 12px 0;
+    }
+
+    .eyebrow::before {
+      content: "";
+      flex: 0 0 32px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 28px;
+      padding: 38px 26px 34px 26px;
+    }
+
+    .hero h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 28pt;
+      line-height: 1.1;
+      letter-spacing: -.01em;
+      color: #000;
+      margin: 0;
+    }
+
+    .hero-lede {
+      align-self: start;
+      margin-top: 4px;
+      border-left: 3px solid #000;
+      padding-left: 16px;
+      font-size: 10.5pt;
+      line-height: 1.4;
+      color: #000;
+    }
+
+    .hero-lede p { margin: 0; }
+
+    /* ===== Stats band ===== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    .stat {
+      padding: 16px 18px 14px 18px;
+      border-left: 1px solid #000;
+    }
+
+    .stat:first-child { border-left: none; }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 23pt;
+      line-height: 1;
+      color: #000;
+    }
+
+    .stat-label {
+      font-size: 8.5pt;
+      color: #555;
+      margin-top: 7px;
+      letter-spacing: .02em;
+    }
+
+    /* ===== Two-column content sections =====
+       Each section uses the same five equal tracks as the stats band.
+       The heading block spans tracks 1-2, so it ends exactly where the
+       second stat cell ends; the body spans tracks 3-5, taking the same
+       space as the third + fourth + fifth cells. */
+    .section {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 34px 0;
+    }
+
+    .section > div:first-child {
+      grid-column: 1 / 3;
+      padding: 0 18px 0 26px;
+    }
+
+    .section > .section-body {
+      grid-column: 3 / 6;
+      padding: 0 26px 0 0px;
+    }
+
+    .section + .section { border-top: 1px solid #000; }
+
+    .section h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 17pt;
+      line-height: 1.2;
+      color: #000;
+      margin: 0;
+    }
+
+    .section-body {
+      font-size: 10.5pt;
+      line-height: 1.3;
+      color: #000;
+      text-align: justify;
+    }
+
+    .section-body p { margin: 0 0 10px 0; }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #D8D8D8;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 9.5pt;
+      border-top: 1px solid #000;
+    }
+
+    footer .contact {
+      font-family: var(--font-sc);
+      font-size: 9.5pt;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    /* ===== Small screens ===== */
+    @media (max-width: 620px) {
+      .hero, .section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .section > div:first-child,
+      .section > .section-body {
+        grid-column: auto;
+        padding: 0 26px;
+      }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stat { border-left: none; border-top: 1px solid #000; }
+      .stat:nth-child(-n+2) { border-top: none; }
+      .stat:nth-child(even) { border-left: 1px solid #000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="title-block">
+        <h1>Ilayda B. Onder</h1>
+        <div class="subtitle">Political Science<br>International Relations</div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" target="_self">home</a><span class="sep">|</span>
+      <a href="cv.html" target="_self">cv</a><span class="sep">|</span>
+      <a href="publications.html" target="_self">publications</a><span class="sep">|</span>
+      <a href="ongoing.html" target="_self">ongoing projects</a><span class="sep">|</span>
+      <a href="data.html" target="_self">datasets</a><span class="sep">|</span>
+      <a href="teaching.html" target="_self">teaching</a>
+    </nav>
+
+    <!-- About the dataset -->
+    <div class="section">
+      <div class="section-body" style="grid-column:1 / -1;padding:0 26px;font-size:12pt">
+        <p>The Rebel Internal Governance (RIG) Dataset codes original, time-variant information on internal institutions and practices of rebel groups to provide new leverage for examining how their sanctioning of misconduct and insubordination (or its absence) shapes rebels&rsquo; violent behavior and relations with civilian populations.</p>
+        <p>The article introducing the RIG is forthcoming at <em>International Studies Quarterly</em>. The pre-print version of the article can be found <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5864422">here</a>.</p>
+    </div>
+    </div>
+
+    <!-- Stats band -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">166</div>
+        <div class="stat-label">Rebel groups</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">57</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">14</div>
+        <div class="stat-label">Variables</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">23</div>
+        <div class="stat-label">Years (1990&ndash;2012)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2311</div>
+        <div class="stat-label">Group-years</div>
+      </div>
+    </div>
+
+    <!-- About the dataset -->
+    <div class="section">
+      <div>
+        <div class="eyebrow">About the Dataset</div>
+        <h3>A new lens on rebel organizations.</h3>
+      </div>
+      <div class="section-body">
+        <p>Existing scholarship on rebel governance has documented in rich detail how armed groups regulate civilians: taxing them, providing public goods, holding courts. Far less is known systematically about how rebels regulate their own fighters: how their behavior is codified, monitored, adjudicated, and punished.</p>
+      </div>
+    </div>
+
+    <!-- Motivation -->
+    <div class="section">
+      <div>
+        <div class="eyebrow">Motivation</div>
+        <h3>External governance <svg viewBox="0 0 24 24" role="img" aria-label="does not equal" style="width:.6em;height:.6em;vertical-align:.02em"><path d="M2.5 9.25H21.5M2.5 14.75H21.5M15.5 3.5L8.5 20.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> <br> Internal governance</h3>
+      </div>
+      <div class="section-body">
+        <p>Many groups that develop institutionalized systems for governing civilians do not build comparable structures for regulating their own fighters, and vice versa. Existing data on rebel governance of civilians cannot serve as a proxy for how groups govern their own members.</p>
+      </div>
+    </div>
+
+    <!-- Variables -->
+    <div class="section">
+      <div>
+        <div class="eyebrow">Variables</div>
+        <h3>Four dimensions, fourteen variables</h3>
+        <a href="codebook.pdf" style="display:inline-block;margin-top:16px;padding:5px 10px;background:#1A1A1A;color:#ffffff;border-radius:5px;font-size:8.5pt;text-decoration:none">Download the full codebook<svg viewBox="0 0 24 24" aria-hidden="true" style="width:.75em;height:.75em;margin-left:7px;vertical-align:-.06em"><path d="M12 3v15M5.5 11.5L12 18l6.5-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="section-body" style="text-align:left">
+        <div style="display:grid;grid-template-columns:1fr 1.3fr;column-gap:24px;row-gap:16px">
+          <div>Regulatory Frameworks</div>
+          <div>Written codes of conduct<br>Amendment procedures</div>
+          <div style="grid-column:1 / -1;border-top:0.5px solid #000;width:150px;justify-self:center"></div>
+          <div>Judicial Procedures</div>
+          <div>Official complaint mechanism<br>Investigative branches<br>Tribunal proceedings<br>Public proceedings</div>
+          <div style="grid-column:1 / -1;border-top:0.5px solid #000;width:150px;justify-self:center"></div>
+          <div>Disciplinary Measures</div>
+          <div>Death penalty<br>Incarceration<br>Reprimands or denial of promotion<br>Punishments for violators' families<br>Enforcement mechanism</div>
+          <div style="grid-column:1 / -1;border-top:0.5px solid #000;width:150px;justify-self:center"></div>
+          <div>Regulation of Personal Life</div>
+          <div>Restrictions on friendships<br>Restrictions on sexual relationships<br>Restrictions on family ties</div>
+        </div>
+      </div>
+    </div>  
+
+    <!-- Coding Procedures -->
+    <div class="section">
+      <div>
+        <div class="eyebrow">Coding Procedures</div>
+        <h3>How the data <br> were built</h3>
+      </div>
+      <div class="section-body">
+        <p>Seven coders with relevant regional and thematic expertise were trained on a standardized coding protocol, including a common set of internal governance keywords (<em>discipline, punish, code, conduct, dissent, insubordinate, misbehavior, misconduct, defect, disobey, trial</em>). Coders fluent in <strong>French, Hindi, and Turkish</strong> reviewed local news articles, government statements, and rebel-produced publications alongside English materials. Spanish-language sources were not systematically incorporated because Latin America comprises a small share of the 1990&ndash;2012 sample.</p>
+      </div>
+    </div>
+
+    <!-- Data -->
+    <div class="section">
+      <div>
+        <div class="eyebrow">Data</div>
+        <h3>A glimpse of <br> the data</h3>
+        <a href="data.xlsx" style="display:inline-block;margin-top:16px;padding:5px 10px;background:#1A1A1A;color:#ffffff;border-radius:5px;font-size:8.5pt;text-decoration:none">Download the dataset (v1)<svg viewBox="0 0 24 24" aria-hidden="true" style="width:.75em;height:.75em;margin-left:7px;vertical-align:-.06em"><path d="M12 3v15M5.5 11.5L12 18l6.5-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="section-body">
+        <div style="text-align:left">
+            <div style="font-size:13pt;color:#000">Four dimensions of internal governance</div>
+            <div style="font-size:9pt;color:#555;margin:4px 0 18px 0">Share of groups (n&nbsp;=&nbsp;166) with at least one documented practice</div>
+            <div style="display:grid;grid-template-columns:max-content 1fr max-content;column-gap:16px;row-gap:20px;align-items:center">
+              <div>Disciplinary Measures</div>
+              <div style="background:#D8D8D8;border-radius:2px;height:13px"><div style="width:95%;height:100%;background:#000;border-radius:2px"></div></div>
+              <div style="text-align:right">34.9%</div>
+              <div>Judicial Procedures</div>
+              <div style="background:#D8D8D8;border-radius:2px;height:13px"><div style="width:59%;height:100%;background:#000;border-radius:2px"></div></div>
+              <div style="text-align:right">21.7%</div>
+              <div>Regulatory Frameworks</div>
+              <div style="background:#D8D8D8;border-radius:2px;height:13px"><div style="width:48%;height:100%;background:#000;border-radius:2px"></div></div>
+              <div style="text-align:right">17.5%</div>
+              <div>Personal-Life Regulation</div>
+              <div style="background:#D8D8D8;border-radius:2px;height:13px"><div style="width:43%;height:100%;background:#000;border-radius:2px"></div></div>
+              <div style="text-align:right">15.7%</div>
+            </div>
+          </div>
+    </div>
+    </div>
+
+<!-- Research Team -->
+<div class="section">
+    <div>
+      <div class="eyebrow">Research Team</div>
+      <h3>Principal <br> Investigators</h3>
+    </div>
+    <div class="section-body">
+      <div>
+          <div style="font-family:var(--font-display);font-size:13pt;color:#000">Ilayda B. Onder</div>
+          <div style="font-size:9pt;color:#555;letter-spacing:.06em;margin:3px 0 12px 0">Assistant Professor &middot; Texas A&amp;M University</div>
+          <p style="margin:0 0 12px 0">Ilayda is an Assistant Professor of Political Science at Texas A&amp;M University. Her research investigates political violence and civil conflict processes with a focus on the intersection of violent political behavior and the socio-organizational dimensions of rebellion. Her scholarship examines rebel-civilian interactions and rebel communication strategies, with emerging projects also exploring multi-party civil conflicts and rebel intra-group politics. Lead author of the RIG.</p>
+          <div><a href="mailto:ilaydaonder@tamu.edu" style="margin-right:18px">Email</a><a href="https://www.ilaydaonder.com/" style="margin-right:18px">Website</a><a href="https://scholar.google.com/citations?user=FDoBqPgAAAAJ&hl=en">Google Scholar</a></div>
+        </div>
+      <div style="margin-top:24px">
+        <div style="font-family:var(--font-display);font-size:13pt;color:#000">Hongbi Choi</div>
+        <div style="font-size:9pt;color:#555;letter-spacing:.06em;margin:3px 0 12px 0">Ph.D. Candidate &middot; Texas A&amp;M University</div>
+        <p style="margin:0 0 12px 0">Hongbi is a Ph.D. Candidate in Political Science at Texas A&amp;M University. Her research investigates authoritarian leader survival strategies with a focus on conflict behavior. Co-author of the RIG.</p>
+        <div><a href="mailto:choi112@tamu.edu" style="margin-right:18px">Email</a><a href="https://scholar.google.com/citations?user=u6lAiIwAAAAJ&hl=ko">Google Scholar</a></div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="contact">3046 Allen Building &nbsp;&middot;&nbsp; ilaydaonder [at] tamu [dot] edu</div>
+      <div>
+        <a href="https://bush.tamu.edu/pols/">Department of Political Science</a> |
+        <a href="https://bush.tamu.edu/">Bush School of Government and Public Service</a> |
+        <a href="https://www.tamu.edu/">Texas A&amp;M University</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

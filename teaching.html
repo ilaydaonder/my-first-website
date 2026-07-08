@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7HJCT0LDMJ');
-</script>
-
   <meta charset="UTF-8">
   <title>Ilayda B. Onder | Teaching</title>
   <base target="_blank">
+
+  <!-- Preload fonts so they start downloading before the CSS is parsed.
+       The crossorigin attribute is REQUIRED for font preloads, even for
+       same-origin files — without it the browser downloads each font twice. -->
+  <link rel="preload" href="fonts/Fontin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-SmallCaps.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
     @font-face {
@@ -22,7 +20,7 @@
            url('fonts/Fontin.otf')   format('opentype');
       font-weight: 400;
       font-style: normal;
-      font-display: swap;
+      font-display: block; /* was swap: block waits briefly for Fontin instead of flashing Times first */
     }
     @font-face {
       font-family: 'Fontin';
@@ -30,7 +28,7 @@
            url('fonts/Fontin-Italic.otf')   format('opentype');
       font-weight: 400;
       font-style: italic;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'Fontin';
@@ -38,7 +36,7 @@
            url('fonts/Fontin-Bold.otf')   format('opentype');
       font-weight: 700;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'Fontin SmallCaps';
@@ -46,7 +44,7 @@
            url('fonts/Fontin-SmallCaps.otf')   format('opentype');
       font-weight: 400;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
 
     :root {

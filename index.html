@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7HJCT0LDMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7HJCT0LDMJ');
-</script>
-
   <meta charset="UTF-8">
   <title>Ilayda B. Onder</title>
   <base target="_blank">
+
+  <!-- Preload fonts so they start downloading before the CSS is parsed.
+       The crossorigin attribute is REQUIRED for font preloads, even for
+       same-origin files — without it the browser downloads each font twice. -->
+  <link rel="preload" href="fonts/Fontin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Fontin-SmallCaps.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
@@ -23,7 +22,7 @@
            url('fonts/Fontin.otf')   format('opentype');
       font-weight: 400;
       font-style: normal;
-      font-display: swap;
+      font-display: block; /* was swap: block waits briefly for Fontin instead of flashing Times first */
     }
     @font-face {
       font-family: 'Fontin';
@@ -31,7 +30,7 @@
            url('fonts/Fontin-Italic.otf')   format('opentype');
       font-weight: 400;
       font-style: italic;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'Fontin';
@@ -39,7 +38,7 @@
            url('fonts/Fontin-Bold.otf')   format('opentype');
       font-weight: 700;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
     @font-face {
       font-family: 'Fontin SmallCaps';
@@ -47,7 +46,7 @@
            url('fonts/Fontin-SmallCaps.otf')   format('opentype');
       font-weight: 400;
       font-style: normal;
-      font-display: swap;
+      font-display: block;
     }
 
     :root {
@@ -261,7 +260,7 @@
       <div class="home-bio">
         <p>I am an Assistant Professor in the Department of Political Science at Texas A&amp;M University. I received my Ph.D. in Political Science from The Pennsylvania State University in 2024.</p>
         <p>My research examines political violence and civil war, focusing on how rebel groups' engagement with allies, rivals, civilians, and international audiences shapes conflict processes and outcomes, including civilian victimization, rebel recruitment, and post-conflict state and society. My work centers on four closely related areas: (1) rebel-civilian ties, (2) rebel public communication strategies, (3) multi-party civil conflicts, and (4) rebel intra-group politics. I use a variety of quantitative methods, including network analysis, quasi-experiments, and survey experiments.</p>
-        <p>My work has been published or is forthcoming in <em>Comparative Political Studies</em>, <em>International Studies Quarterly</em>, <em>Journal of Conflict Resolution (x2)</em>, <em>Journal of Global Security Studies</em>, <em>Journal of Peace Research</em>, <em>Political Psychology</em>, <em>Political Science Research and Methods</em>, and <em>PS: Political Science &amp; Politics</em>, among others. My research has been funded by the Minerva Research Initiative, Scowcroft Institute of International Affairs, and Melbern G. Glasscock Center.</p>
+        <p>My work has been published or is forthcoming in <em>Comparative Political Studies</em>, <em>Journal of Conflict Resolution (x2)</em>, <em>Journal of Global Security Studies</em>, <em>Journal of Peace Research</em>, <em>Political Psychology</em>, <em>Political Science Research and Methods</em>, and <em>PS: Political Science &amp; Politics</em>, among others. My research has been funded by the Minerva Research Initiative, Scowcroft Institute of International Affairs, and Melbern G. Glasscock Center.</p>
         <p>I co-organize the <a href="https://junior-quant-conflict-workshop.github.io/">Junior Scholars in Quantitative Conflict Workshop</a>.</p>
         <p>Please reach me at ilaydaonder [at] tamu [dot] edu.</p>
       </div>
